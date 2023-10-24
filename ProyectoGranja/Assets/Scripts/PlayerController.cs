@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed;
+    public float prueba;
     
     // Update is called once per frame
     void FixedUpdate()
@@ -17,27 +18,46 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
+
+        prueba = horizontal;
         Animaciones(horizontal, vertical, animator);
         
         Vector3 direction = new Vector3(horizontal, vertical);
-
+        direction.Normalize();
         transform.Translate(direction * speed);
     }
 
     void Animaciones(float horizontal, float vertical, Animator animator)
     {
-        if (horizontal != 0 || vertical != 0)
+        if (vertical > 0 && horizontal == 0)
+        {
+            animator.SetBool("WalkingUp", true);
+        }
+        else
+        {
+            animator.SetBool("WalkingUp", false);
+        }
+        if (vertical < 0 && horizontal == 0) 
+        {
+            animator.SetBool("WalkingDown", true);
+        }
+        else 
+        {
+            animator.SetBool("WalkingDown", false);
+        }
+        if (horizontal != 0)
         {
             animator.SetBool("Walking", true);
-            if(horizontal < 0)
+            if (horizontal < 0)
             {
-                transform.localScale = new Vector3(-1 , 1, 0);
+                transform.localScale = new Vector3(-1, 1, 0);
             }
-            else if(horizontal > 0)
+            else if (horizontal > 0)
             {
                 transform.localScale = new Vector3(1, 1, 0);
             }
-        }else
+        }
+        else
         {
             animator.SetBool("Walking", false);
         }
