@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,7 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float prueba;
+    public float valor = 10f;
     
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -63,4 +66,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public static implicit operator PlayerController(DontDestroyOnLoad v)
+    {
+        throw new NotImplementedException();
+    }
 }
