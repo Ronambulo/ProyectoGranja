@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class Teleport : MonoBehaviour
 {
 
-    public enum TransitionType { Warp, Scene }
+    public enum TransitionType { Warp, Scene, Interior }
     [SerializeField] TransitionType transitionType;
-    [SerializeField] string transitionToScene;
+    [SerializeField] string transitionTo;
     [SerializeField] object transitionToWarp;
     private GameManager gameManagerScript;
 
@@ -22,12 +22,14 @@ public class Teleport : MonoBehaviour
             {
                 case TransitionType.Warp:
                     
-                        break;
+                    break;
                 case TransitionType.Scene:
                     GameObject gameManager = GameObject.FindWithTag("GameManager");
                     gameManagerScript = gameManager.GetComponent<GameManager>();
                     gameManagerScript.LastScene = SceneManager.GetActiveScene().name;
-                    SceneManager.LoadScene(transitionToScene);
+                    SceneManager.LoadScene(transitionTo);
+                    break;
+                 case TransitionType.Interior:
                     break;
             }
         }

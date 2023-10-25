@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,19 +27,22 @@ public class GameManager : MonoBehaviour
     {
         ThisScene = SceneManager.GetActiveScene().name;
         player = GameObject.FindWithTag("Player").transform;
-        switch (ThisScene)
+
+
+        if (ThisScene == "EscenaCamino" && LastScene == "EscenaGranja") 
+        { 
+            player.position = new Vector3(-4.945f, 1.398f, -0.01f);
+        }else if(ThisScene == "EscenaGranja" && LastScene == "EscenaCamino") 
         {
-
-            case "EscenaCamino":
-                Debug.Log("escenaCamino");
-                player.position = new Vector3(-4.945f, 1.398f, -0.01f);
-                break;
-
-            case "EscenaGranja":
-                Debug.Log("escenaGranja");
-                player.position = new Vector3(5.07f, -0.3848993f, -0.01f);
-                break;
+            player.position = new Vector3(5.07f, -0.3848993f, -0.01f);
+        }else if(ThisScene == "EscenaCamino" && LastScene == "EscenaPueblo")
+        {
+            player.position = new Vector3(5.07f, 1.398f, -0.01f);        
+        }else if(ThisScene == "EscenaPueblo" && LastScene == "EscenaCamino")
+        {
+            player.position = new Vector3(-4.913f, 0.696f, -0.01f);
         }
+
 
     }
 
