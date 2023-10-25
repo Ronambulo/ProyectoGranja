@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaPueblo.unity
     guid: 2370935669cff374c954c462cac2440c
+  - enabled: 1
+    path: Assets/Scenes/EscenaCasaPlayer.unity
+    guid: dbcceeac2eedbef428ce056132fc9d26
   m_configObjects: {}

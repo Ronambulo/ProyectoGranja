@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Invisible
   - GameManager
+  - InteriorTP
+  - EmoteObject
   layers:
   - Default
   - TransparentFX
