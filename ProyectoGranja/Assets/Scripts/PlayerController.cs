@@ -81,10 +81,8 @@ public class PlayerController : MonoBehaviour
             emoteManager = interiorTPObject.GetComponent<EmoteManager>();
             emoteManager.interact = true;
         }
-            emoteManager.interact = true;
     }
-
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D other)
     {
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;

@@ -669,19 +669,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 790698837641486218, guid: 8ac94bbd47fe04346b4f53f47e1fd6cc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5648432
+      value: 0.6708569
       objectReference: {fileID: 0}
     - target: {fileID: 790698837641486218, guid: 8ac94bbd47fe04346b4f53f47e1fd6cc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4160202
+      value: 0.6148543
       objectReference: {fileID: 0}
     - target: {fileID: 790698837641486218, guid: 8ac94bbd47fe04346b4f53f47e1fd6cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.266
+      value: -1.2395
       objectReference: {fileID: 0}
     - target: {fileID: 790698837641486218, guid: 8ac94bbd47fe04346b4f53f47e1fd6cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4307
+      value: 0.3181
       objectReference: {fileID: 0}
     - target: {fileID: 790698837641486218, guid: 8ac94bbd47fe04346b4f53f47e1fd6cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3933,6 +3933,7 @@ MonoBehaviour:
   ThisScene: 
   LastScene: 
   player: {fileID: 1800516354}
+  interiorTPObject: {fileID: 1811275968}
 --- !u!1 &1272317180
 GameObject:
   m_ObjectHideFlags: 0
@@ -13908,6 +13909,11 @@ Transform:
 --- !u!4 &1800516354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4214707214720247882, guid: c126ad1e8cf24774092c55151682e77f, type: 3}
+  m_PrefabInstance: {fileID: 520304856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1811275968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1274098582465423429, guid: c126ad1e8cf24774092c55151682e77f, type: 3}
   m_PrefabInstance: {fileID: 520304856}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938491891

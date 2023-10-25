@@ -51,13 +51,13 @@ public class GameManager : MonoBehaviour
         }
         else if (ThisScene == "EscenaCasaPlayer" && LastScene == "EscenaGranja")
         {
-            player.position = new Vector3(0f, -2.181639f, -0.01f);
+            player.position = new Vector3(0f, -2.146401f, -0.01f);
         }
         else if(ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
         {
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
         }
-        interiorTPObject = transform.Find("Emotes").gameObject;
+
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;
 
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneUnloaded(Scene scene, LoadSceneMode mode) {
         LastScene = SceneManager.GetActiveScene().name;
-        interiorTPObject = transform.Find("Emotes").gameObject;
+        //interiorTPObject = transform.Find("Emotes").gameObject;
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;
     }
