@@ -9,7 +9,6 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float speed;
     public float prueba;
     public float valor = 10f;
