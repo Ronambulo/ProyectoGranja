@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1020704743586937924}
   - component: {fileID: 7041575938772560825}
   - component: {fileID: 8440833313757733841}
+  - component: {fileID: 4576643808487258728}
+  - component: {fileID: 8035724359003166165}
   m_Layer: 0
   m_Name: Slot (0)
   m_TagString: Untagged
@@ -92,6 +94,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 7091169623158155113}
   textoCantidad: {fileID: 5985584851228129845}
+--- !u!95 &4576643808487258728
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244252051232891955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4385e4c78683d724389b41695eaff80c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8035724359003166165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244252051232891955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e716e245187d340bc421c252d4be88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enter: 0
 --- !u!1 &5651052355096841338
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,11 +235,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7538151370602015318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 153.5, y: -30}
-  m_SizeDelta: {x: 200, y: 0}
-  m_Pivot: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 41.26, y: -27.578}
+  m_SizeDelta: {x: -82.5208, y: -55.1564}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6331276219139061501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -295,7 +331,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 139.52966, w: 0}
+  m_margin: {x: 0, y: 0, z: 41.18869, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

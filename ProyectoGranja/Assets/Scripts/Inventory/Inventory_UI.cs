@@ -19,6 +19,12 @@ public class Inventory_UI : MonoBehaviour
         {
             toggleInventory();
         }
+
+        if (!inventoryPanel.activeSelf)
+        {
+            playerObject.SetActive(true);
+        }
+
     }
 
     public void toggleInventory()
