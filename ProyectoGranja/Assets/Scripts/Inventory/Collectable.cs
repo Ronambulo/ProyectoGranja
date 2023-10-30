@@ -22,6 +22,13 @@ public class Collectable : MonoBehaviour
     {
         NONE,
         CarrotSeed,
-        StrawberrySeed
+        StrawberrySeed,
+        TomatoSeed,
+
+
+
+
+
+        CarrotItem
     }
 }
