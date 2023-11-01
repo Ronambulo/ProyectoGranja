@@ -145,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   icon: {fileID: 594207485, guid: bb05a3188f00d2d49a70d988930cccd8, type: 3}
+  maxCount: 64

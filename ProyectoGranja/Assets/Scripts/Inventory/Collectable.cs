@@ -6,6 +6,7 @@ public class Collectable : MonoBehaviour
 {
     public CollectableType type;
     public Sprite icon;
+    public int maxCount = 64;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,8 +28,26 @@ public class Collectable : MonoBehaviour
 
 
 
+        CarrotItem,
+        StrawberryItem,
+        TomatoItem,
 
 
-        CarrotItem
+
+        StoneItem,
+        CopperItem,
+        GoldItem,
+        DiamondItem,
+
+        Axe,
+        Pickaxe,
+        Hoe,
+
+
+        StoneSword,
+        CopperSword,
+        GoldSword,
+        DiamondSword
+
     }
 }

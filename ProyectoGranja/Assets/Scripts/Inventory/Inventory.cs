@@ -38,7 +38,8 @@ public class Inventory
         public void AddItem(Collectable item)
         {
             this.type = item.type;
-            this.icon = item.icon;  
+            this.icon = item.icon;
+            this.maxCount = item.maxCount;
             Count++;
 
         }
