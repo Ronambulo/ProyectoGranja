@@ -67,7 +67,7 @@ public class Inventory_UI : MonoBehaviour
         {
             inventoryPanel.SetActive(true);
             playerObject.SetActive(false);
-            HUD.SetActive(false);
+            HUD.SetActive(true);
 
         }
         else
