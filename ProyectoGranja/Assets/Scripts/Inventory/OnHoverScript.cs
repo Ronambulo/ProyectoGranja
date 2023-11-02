@@ -26,10 +26,4 @@ public class OnHoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         enter = false;
     }
 
-    private void OnEnable()
-    {
-        animator.SetBool("OnHoverBool", false);
-        enter = false;
-    }
-
 }
