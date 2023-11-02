@@ -9,6 +9,7 @@ public class Slots_HUD : MonoBehaviour
 {
     public Image itemIcon;
     public TextMeshProUGUI textoCantidad;
+    public GameObject highlight;
 
     public void SetItem(Inventory.Slot slot)
     {
@@ -36,4 +37,10 @@ public class Slots_HUD : MonoBehaviour
 
         textoCantidad.text = "";
     }
+
+public void setHighlight(bool isOf)
+    {
+        highlight.SetActive(isOf);
+    }
+
 }
