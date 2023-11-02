@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,22 +9,27 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float speed;
     public float prueba;
     public float valor = 10f;
     private EmoteManager emoteManager;
     public GameObject interiorTPObject;
+    private float horizontal;
+    private float vertical;
 
+    public int vida = 100;
+    public int stamina = 100;
 
+    private float timeSinceLastMovement;
+    public int timeBetweenStaminaLoss = 10;
+    private int staminaLossAmount = 1;
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Animator animator = GetComponent<Animator>();
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
 
         prueba = horizontal;
@@ -34,6 +40,12 @@ public class PlayerController : MonoBehaviour
         transform.Translate(direction * speed);
 
         interiorTPObject = transform.Find("Emotes").gameObject;
+
+
+
+        //PERDIDA DE STAMINA
+        perididaStamina();
+
     }
 
     void Animaciones(float horizontal, float vertical, Animator animator)
@@ -92,4 +104,26 @@ public class PlayerController : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+
+    void perididaStamina()
+    {
+        if (vertical != 0 || horizontal != 0)
+        {
+            timeSinceLastMovement += Time.deltaTime;
+
+            // Verifica si ha pasado el tiempo necesario para perder stamina.
+            if (timeSinceLastMovement >= timeBetweenStaminaLoss)
+            {
+                // Reduce la stamina y reinicia el tiempo transcurrido.
+                stamina -= staminaLossAmount;
+                timeSinceLastMovement = 0.0f;
+            }
+        }
+
+
+
+    }
 }
+
+    

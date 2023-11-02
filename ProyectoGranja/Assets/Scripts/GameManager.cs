@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public string ThisScene;
     public string LastScene;
     public Transform player;
+    public GameObject toolbar;
 
     private EmoteManager emoteManager;
     public GameObject interiorTPObject;
@@ -52,10 +53,13 @@ public class GameManager : MonoBehaviour
         else if (ThisScene == "EscenaCasaPlayer" && LastScene == "EscenaGranja")
         {
             player.position = new Vector3(0f, -2.146401f, -0.01f);
+            toolbar.SetActive(false);
+
         }
         else if(ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
         {
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
+            toolbar.SetActive(true);
         }
 
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
