@@ -10,11 +10,12 @@ public class CursorManager : MonoBehaviour
     [SerializeField] public GameObject inventoryPanel;
     [SerializeField] public GameObject hotbar;
 
+    private int divisor = 10;
     private Vector2 cursorHotspot;
 
     void Start()
     {
-        cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+        cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height/ divisor);
         Cursor.SetCursor(cursorDefault,cursorHotspot, CursorMode.Auto);
     }
 
@@ -25,7 +26,7 @@ public class CursorManager : MonoBehaviour
         if (inventoryPanel.activeSelf == false)
         {
             Cursor.visible = true;
-            cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+            cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height / divisor);
             Cursor.SetCursor(cursorAtaque, cursorHotspot, CursorMode.Auto);
         }
         else
@@ -33,7 +34,7 @@ public class CursorManager : MonoBehaviour
             if (inventoryPanel.activeSelf==true)
             {
                 Cursor.visible = true;
-                cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+                cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
                 Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
             }
             else
