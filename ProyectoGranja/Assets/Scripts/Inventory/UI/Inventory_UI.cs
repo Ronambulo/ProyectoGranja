@@ -7,8 +7,12 @@ public class Inventory_UI : MonoBehaviour
 {
     [SerializeField] public GameObject inventoryPanel;
     [SerializeField] public GameObject HUD;
+    [SerializeField] public GameObject pausaPanel;
     [SerializeField] public Player player;
     [SerializeField] public GameObject playerObject;
+
+    
+
 
     
 
@@ -19,7 +23,14 @@ public class Inventory_UI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            toggleInventory();
+            if (!pausaPanel.activeSelf) {
+                toggleInventory();
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            togglePause();
         }
 
         if (!inventoryPanel.activeSelf)
@@ -76,6 +87,23 @@ public class Inventory_UI : MonoBehaviour
             playerObject.SetActive(true);
             if(SceneManager.GetActiveScene().name != "EscenaCasaPlayer")
                 HUD.SetActive(true);
+        }
+    }
+
+
+    public void togglePause()
+    {
+
+        if (!pausaPanel.activeSelf) {
+            inventoryPanel.SetActive(false);
+            playerObject.SetActive(false);
+            pausaPanel.SetActive(true);
+            
+           }
+        else { 
+        
+            pausaPanel.SetActive(false);
+            playerObject.SetActive(true);
         }
     }
 }
