@@ -5,6 +5,8 @@ using UnityEngine;
 public class SequenceAnimator : MonoBehaviour
 {
     List<Animator> _animators;
+    public float tiempoIntermedio = 0.15f;
+    public float tiempoAcabado = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +23,12 @@ public class SequenceAnimator : MonoBehaviour
             foreach (var animator in _animators)
             {
                 animator.SetTrigger("DoAnimation");
-                yield return new WaitForSeconds(2f); // "WaitForseconds" estaba mal escrito, debe ser "WaitForSeconds"
+                yield return new WaitForSeconds(tiempoIntermedio); // "WaitForseconds" estaba mal escrito, debe ser "WaitForSeconds"
             }
+                //creamos un delay para que cuando llegue al final, se espere un poco hasta volver a empezar
+                yield return new WaitForSeconds(tiempoAcabado);
         }
     }
+
+    
 }
