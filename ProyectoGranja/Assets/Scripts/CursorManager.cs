@@ -22,7 +22,7 @@ public class CursorManager : MonoBehaviour
     void Update()
     {
 
-        if (&& inventoryPanel.activeSelf == false)
+        if (inventoryPanel.activeSelf == false)
         {
             Cursor.visible = true;
             cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
@@ -34,7 +34,7 @@ public class CursorManager : MonoBehaviour
             {
                 Cursor.visible = true;
                 cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
-                Cursor.SetCursor(cursorDefault cursorHotspot, CursorMode.Auto);
+                Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
             }
             else
             {
