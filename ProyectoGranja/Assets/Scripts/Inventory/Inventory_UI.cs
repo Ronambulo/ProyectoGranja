@@ -11,7 +11,7 @@ public class Inventory_UI : MonoBehaviour
     
 
     public List<Slots_UI> slots = new List<Slots_UI>();
-
+    public List<Slots_HUD> slotshud = new List<Slots_HUD> ();
 
     void Update()
     {
@@ -25,25 +25,6 @@ public class Inventory_UI : MonoBehaviour
             playerObject.SetActive(true);
         }
 
-    }
-
-    public void toggleInventory()
-    {
-        if (!inventoryPanel.activeSelf)
-        {
-            inventoryPanel.SetActive(true);
-            playerObject.SetActive(false);
-            Setup();
-        }
-        else
-        {
-            inventoryPanel.SetActive(false);
-            playerObject.SetActive(true);
-        }
-    }
-
-    void Setup()
-    {
         if (slots.Count == player.inventory.slots.Count)
         {
             for (int i = 0; i < slots.Count; i++)
@@ -59,5 +40,73 @@ public class Inventory_UI : MonoBehaviour
             }
 
         }
+
+        if (slotshud.Count == player.inventory.slots.Count - 18)
+        {
+            for (int i = 0; i < slotshud.Count; i++)
+            {
+                if (player.inventory.slots[i].type != Collectable.CollectableType.NONE)
+                {
+                    slotshud[i].SetItem(player.inventory.slots[i]);
+                }
+                else
+                {
+                    slotshud[i].SetEmpty();
+                }
+            }
+
+        }
+
+    }
+
+    public void toggleInventory()
+    {
+        if (!inventoryPanel.activeSelf)
+        {
+            inventoryPanel.SetActive(true);
+            playerObject.SetActive(false);
+        }
+        else
+        {
+            inventoryPanel.SetActive(false);
+            playerObject.SetActive(true);
+        }
+    }
+
+    void Setup()
+    {
+
+        Update();
+       /* if (slots.Count == player.inventory.slots.Count)
+        {
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (player.inventory.slots[i].type != Collectable.CollectableType.NONE)
+                {
+                    slots[i].SetItem(player.inventory.slots[i]);
+                }
+                else
+                {
+                    slots[i].SetEmpty();
+                }
+            }
+
+        }
+
+        if (slotshud.Count == player.inventory.slots.Count - 18)
+        {
+            for (int i = 0; i < slotshud.Count; i++)
+            {
+                if (player.inventory.slots[i].type != Collectable.CollectableType.NONE)
+                {
+                    slotshud[i].SetItem(player.inventory.slots[i]);
+                }
+                else
+                {
+                    slotshud[i].SetEmpty();
+                }
+            }
+
+        }*/
     }
 }
