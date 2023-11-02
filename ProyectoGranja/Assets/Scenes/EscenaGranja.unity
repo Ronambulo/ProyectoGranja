@@ -5680,6 +5680,7 @@ GameObject:
   - component: {fileID: 701585874}
   - component: {fileID: 701585873}
   - component: {fileID: 701585875}
+  - component: {fileID: 701585876}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -5734,6 +5735,22 @@ MonoBehaviour:
   player: {fileID: 1800516354}
   toolbar: {fileID: 335804176}
   interiorTPObject: {fileID: 1811275968}
+--- !u!114 &701585876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701585872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9114eb2219fa04e8c4312655635334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 4d51ecd2b053ad8428ac5fb7dc9db25b, type: 3}
+  cursorAtaque: {fileID: 2800000, guid: 4d51ecd2b053ad8428ac5fb7dc9db25b, type: 3}
+  inventoryPanel: {fileID: 1245050452}
+  hotbar: {fileID: 1542152081}
 --- !u!1001 &720917260
 PrefabInstance:
   m_ObjectHideFlags: 0
