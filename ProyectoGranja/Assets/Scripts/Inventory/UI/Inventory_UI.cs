@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Inventory_UI : MonoBehaviour
 {
@@ -10,14 +13,24 @@ public class Inventory_UI : MonoBehaviour
     [SerializeField] public GameObject pausaPanel;
     [SerializeField] public Player player;
     [SerializeField] public GameObject playerObject;
+    [SerializeField] private Canvas canvas;
+    private bool dragSingle;
 
-    
+    private Slots_UI draggedSlot;
+    private Image draggedIcon;
 
+    public GameManager gameManager;
+    public Item ItemToDrop;
 
-    
 
     public List<Slots_UI> slots = new List<Slots_UI>();
     //public List<Slots_HUD> slotshud = new List<Slots_HUD> ();
+
+
+    private void Awake()
+    {
+        canvas = FindAnyObjectByType<Canvas>();
+    }
 
     void Update()
     {
@@ -29,6 +42,15 @@ public class Inventory_UI : MonoBehaviour
 
         }
 
+        if(Input.GetKey(KeyCode.LeftShift)) 
+        {
+            dragSingle = true;
+        }
+        else
+        {
+            dragSingle = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape)) {
             togglePause();
         }
@@ -37,39 +59,6 @@ public class Inventory_UI : MonoBehaviour
         {
             playerObject.SetActive(true);
         }
-
-        if (slots.Count == player.inventory.slots.Count)
-        {
-            for (int i = 0; i < slots.Count; i++)
-            {
-                if (player.inventory.slots[i].type != Collectable.CollectableType.NONE)
-                {
-                    slots[i].SetItem(player.inventory.slots[i]);
-                }
-                else
-                {
-                    slots[i].SetEmpty();
-                }
-            }
-
-        }
-
-        /*if (slotshud.Count == player.inventory.slots.Count - 18)
-        {
-            for (int i = 0; i < slotshud.Count; i++)
-            {
-                if (player.inventory.slots[i].type != Collectable.CollectableType.NONE)
-                {
-                    slotshud[i].SetItem(player.inventory.slots[i]);
-                }
-                else
-                {
-                    slotshud[i].SetEmpty();
-                }
-            }
-
-        }*/
-
     }
 
     public void toggleInventory()
@@ -79,6 +68,7 @@ public class Inventory_UI : MonoBehaviour
             inventoryPanel.SetActive(true);
             playerObject.SetActive(false);
             HUD.SetActive(true);
+            Refresh();
 
         }
         else
@@ -87,6 +77,89 @@ public class Inventory_UI : MonoBehaviour
             playerObject.SetActive(true);
             if(SceneManager.GetActiveScene().name != "EscenaCasaPlayer")
                 HUD.SetActive(true);
+        }
+    }
+
+    public void Refresh()
+    {
+        if (slots.Count == player.inventory.slots.Count)
+        {
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (player.inventory.slots[i].itemName != "")
+                {
+                    slots[i].SetItem(player.inventory.slots[i]);
+                }
+                else
+                {
+                    slots[i].SetEmpty();
+                }
+            }
+        }
+    }
+
+
+    public void Remove()
+    {
+        ItemToDrop = gameManager.itemManager.GetItemByName(player.inventory.slots[draggedSlot.slotID].itemName);
+        if (ItemToDrop != null)
+        {
+            if (dragSingle)
+            {
+                player.DropItem(ItemToDrop);
+                player.inventory.Remove(draggedSlot.slotID);
+            }
+            else
+            {
+                player.DropItem(ItemToDrop, player.inventory.slots[draggedSlot.slotID].Count);
+                player.inventory.Remove(draggedSlot.slotID, player.inventory.slots[draggedSlot.slotID].Count);
+            }
+
+            Refresh();
+        }
+
+        draggedSlot = null; 
+
+    }
+
+    public void SlotBeginDrag(Slots_UI slot)
+    {
+        draggedSlot = slot;
+        draggedIcon = Instantiate(draggedSlot.itemIcon);
+        draggedIcon.transform.SetParent(canvas.transform);
+        draggedIcon.raycastTarget = false;
+        draggedIcon.rectTransform.sizeDelta = new Vector2(100,100);
+
+        MoveToMousePosition(draggedIcon.gameObject);
+        Debug.Log("start drag: " + draggedSlot.name);
+    }
+
+    public void SlotDrag()
+    {
+        Debug.Log("Dragging: "+ draggedSlot.name);
+        MoveToMousePosition(draggedIcon.gameObject);
+    }
+
+    public void SlotEndDrag()
+    {
+        Destroy(draggedIcon.gameObject);
+        draggedIcon = null;
+        Debug.Log("Dragged finish: " + draggedSlot.name);
+    }
+
+    public void SlotDrop(Slots_UI slot)
+    {
+        Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
+    }
+
+    private void MoveToMousePosition(GameObject toMove)
+    {
+        if(canvas != null)
+        {
+            Vector2 position;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, null, out position);
+
+            toMove.transform.position = canvas.transform.TransformPoint(position);
         }
     }
 

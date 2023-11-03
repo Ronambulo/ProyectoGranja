@@ -11,10 +11,16 @@ public class GameManager : MonoBehaviour
     public string LastScene;
     public Transform player;
     public GameObject toolbar;
+    public GameObject CanvasDontDestroy;
+    public GameObject InventoryParent;
 
+    private GameObject other;
     private EmoteManager emoteManager;
     public GameObject interiorTPObject;
+    public ItemManager itemManager;
+    public Inventory_UI inventoryUI;
 
+    int i = 0;
 
     private void OnEnable()
     {
@@ -31,9 +37,11 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         ThisScene = SceneManager.GetActiveScene().name;
-        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.FindWithTag("Player").transform;
 
-
+        if (ThisScene == "EscenaGranja" && LastScene == "TitleScreen") { 
+        
+        }
         if (ThisScene == "EscenaCamino" && LastScene == "EscenaGranja")
         {
             player.position = new Vector3(-4.945f, 1.398f, -0.01f);
@@ -64,6 +72,28 @@ public class GameManager : MonoBehaviour
 
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;
+
+    }
+
+    private void Update()
+    {
+        if (ThisScene == "TitleScreen")
+        {
+            player.gameObject.SetActive(false);
+            toolbar.gameObject.SetActive(false);
+            CanvasDontDestroy.SetActive(false);
+        }
+        else
+        {
+            toolbar.gameObject.SetActive(true);
+            CanvasDontDestroy.SetActive(true);
+            if(i == 0)
+            {
+                inventoryUI.toggleInventory();
+                i++;
+            }   
+            if (InventoryParent.activeSelf == true){player.gameObject.SetActive(false);}else{ player.gameObject.SetActive(true); }
+        }
 
     }
 

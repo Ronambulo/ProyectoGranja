@@ -13,13 +13,13 @@ public class Inventory
     [System.Serializable]
     public class Slot
     {
-        public CollectableType type;
+        public string itemName;
         public int maxCount;
         public int Count;
         public Sprite icon;
 
         public Slot(){
-            type = CollectableType.NONE;
+            itemName = "";
             Count = 0;
             maxCount = 64;
         }
@@ -35,13 +35,27 @@ public class Inventory
             }
         }
 
-        public void AddItem(Collectable item)
+        public void AddItem(Item item)
         {
-            this.type = item.type;
-            this.icon = item.icon;
-            this.maxCount = item.maxCount;
+            this.itemName = item.data.itemName;
+            this.icon = item.data.icon;
+            this.maxCount = item.data.maxCount;
             Count++;
 
+        }
+
+        public void removeItem()
+        {
+            if(Count > 0)
+            {
+                Count--;
+                
+                if(Count == 0)
+                {
+                    icon = null;
+                    itemName = "";
+                }
+            }
         }
 
     }
@@ -56,11 +70,11 @@ public class Inventory
         }
     }
 
-    public void Add(Collectable item)
+    public void Add(Item item)
     {
         foreach (Slot slot in slots)
         {
-            if(slot.type == item.type && slot.canAddItem())
+            if(slot.itemName == item.data.itemName && slot.canAddItem())
             {
                 slot.AddItem(item);
                 return;
@@ -69,7 +83,7 @@ public class Inventory
 
         foreach (Slot slot in slots)
         {
-            if(slot.type == CollectableType.NONE)
+            if(slot.itemName == "")
             {
                 slot.AddItem(item);
                 return;
@@ -77,4 +91,21 @@ public class Inventory
         }
 
     }
+
+    public void Remove(int index)
+    {
+        slots[index].removeItem();
+    }
+
+    public void Remove(int index, int numToRemove)
+    {
+        if (slots[index].Count >= numToRemove)
+        {
+            for(int i = 0; i < numToRemove; i++)
+            {
+                Remove(index);
+            }
+        }
+    }
+
 }

@@ -53,7 +53,7 @@ public class ToolBar_UI : MonoBehaviour
         {
             for (int i = 0; i < slotshud.Count; i++)
             {
-                if (player.inventory.slots[i].type != Collectable.CollectableType.NONE)
+                if (player.inventory.slots[i].itemName != "")
                 {
                     slotshud[i].SetItem(player.inventory.slots[i]);
                 }

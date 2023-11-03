@@ -10,6 +10,8 @@ public class Slots_UI : MonoBehaviour
     public Image itemIcon;
     public TextMeshProUGUI textoCantidad;
 
+    public int slotID;
+
     public void SetItem(Inventory.Slot slot)
     {
         if(slot != null) { 

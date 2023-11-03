@@ -16,9 +16,13 @@ public class OnHoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        animator.SetBool("OnHoverBool", true);
-        enter = true;
-}
+        if (this.gameObject.activeSelf == true)
+        {
+            animator.SetBool("OnHoverBool", true);
+            enter = true;
+        }
+
+    }
 
     public void OnPointerExit(PointerEventData eventData)
     {

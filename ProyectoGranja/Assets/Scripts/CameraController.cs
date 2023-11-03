@@ -12,13 +12,17 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-       target = GameObject.FindWithTag("Player").transform;
+       
     }
 
     void FixedUpdate()
         {
-            
-            if ((target) == null)
+        if(target == null)
+        {
+            target = GameObject.FindWithTag("Player").transform;
+        }
+        
+        if ((target) == null)
                 return; // Asegurarse de que hay un objetivo para seguir
 
             // Solo ajusta la posición en el eje X y Z, mantén el valor de Y de la cámara
