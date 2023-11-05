@@ -60,7 +60,7 @@ public class Inventory
 
     }
 
-    public List<Slot> slots = new List<Slot>();
+    public List<Slot> slots = new List<Slot>(); 
 
     public Inventory(int numSlots) {
         for (int i = 0; i < numSlots; i++)

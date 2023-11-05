@@ -1037,7 +1037,7 @@ MonoBehaviour:
   pausaPanel: {fileID: 41365534}
   player: {fileID: 1818390233}
   playerObject: {fileID: 1818390232}
-  canvas: {fileID: 0}
+  canvas: {fileID: 2019414474}
   gameManager: {fileID: 1372778472}
   ItemToDrop: {fileID: 0}
   slots:
