@@ -22075,10 +22075,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9114eb2219fa04e8c4312655635334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   cursorDefault: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   inventoryPanel: {fileID: 1875645063}
-  hotbar: {fileID: 1907195766}
+  pauseMenu: {fileID: 0}
+  interactableMap: {fileID: 0}
+  floor: {fileID: 0}
 --- !u!114 &1717230808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23376,7 +23379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -515102493, guid: d4a7ebd9b7f46504cba0ffe50888267d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
