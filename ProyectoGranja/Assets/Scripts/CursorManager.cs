@@ -1,20 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class CursorManager : MonoBehaviour
 {
-
+    [SerializeField] public Player player;
     [SerializeField] public Texture2D cursorDefault;
     [SerializeField] public Texture2D cursorAtaque;
     [SerializeField] public GameObject inventoryPanel;
-    [SerializeField] public GameObject hotbar;
+    [SerializeField] public GameObject pauseMenu;
+    [SerializeField] public Tilemap interactableMap;
+    [SerializeField] public Tilemap floor;
+    private Grid grid;
 
     private int divisor = 10;
     private Vector2 cursorHotspot;
 
+    private Vector2 cursorPosition;
+    private Vector2 previousCursorPosition = new Vector2();
+
     void Start()
     {
+        cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+        grid = gameObject.GetComponent<Grid>();
         cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height/ divisor);
         Cursor.SetCursor(cursorDefault,cursorHotspot, CursorMode.Auto);
     }
@@ -26,7 +35,7 @@ public class CursorManager : MonoBehaviour
         if (inventoryPanel.activeSelf == false)
         {
             Cursor.visible = true;
-            cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height / divisor);
+            cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
             Cursor.SetCursor(cursorAtaque, cursorHotspot, CursorMode.Auto);
         }
         else
@@ -34,7 +43,8 @@ public class CursorManager : MonoBehaviour
             if (inventoryPanel.activeSelf==true)
             {
                 Cursor.visible = true;
-                cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
+
+                cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
                 Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
             }
             else
@@ -43,5 +53,10 @@ public class CursorManager : MonoBehaviour
             }
 
         }
+    }
+
+    void tileHover()
+    {
+
     }
 }
