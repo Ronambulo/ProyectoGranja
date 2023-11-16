@@ -30,6 +30,7 @@ public class Slots_HUD : MonoBehaviour
 
     }
 
+
     public void SetEmpty()
     {
         itemIcon.sprite = null;

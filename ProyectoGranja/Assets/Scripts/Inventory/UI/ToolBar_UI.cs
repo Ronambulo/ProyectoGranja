@@ -11,7 +11,8 @@ public class ToolBar_UI : MonoBehaviour
 
     public List<Slots_HUD> slotshud = new List<Slots_HUD>();
 
-    private Slots_HUD SelectedSlot;
+    public Slots_HUD SelectedSlot;
+    public string nombreSeccionado;
 
     public void SelectSlot(int index)
     {
@@ -20,6 +21,7 @@ public class ToolBar_UI : MonoBehaviour
             if(SelectedSlot != null)
             {
                 SelectedSlot.setHighlight(true);
+                nombreSeccionado = player.inventory.slots[index].itemName;
             }
             SelectedSlot = slotshud[index];
             SelectedSlot.setHighlight(false);
@@ -46,6 +48,7 @@ public class ToolBar_UI : MonoBehaviour
         SelectSlot(0);  
     }
 
+    
     void Update()
     {
 
@@ -68,4 +71,5 @@ public class ToolBar_UI : MonoBehaviour
         CheckAlphaNumericKeys();
 
     }
+    
 }

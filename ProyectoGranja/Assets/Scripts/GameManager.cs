@@ -85,7 +85,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            toolbar.gameObject.SetActive(true);
+            if(ThisScene != "EscenaCasaPlayer")
+            {
+                toolbar.gameObject.SetActive(true);
+            }
+
             CanvasDontDestroy.SetActive(true);
             if(i == 0)
             {

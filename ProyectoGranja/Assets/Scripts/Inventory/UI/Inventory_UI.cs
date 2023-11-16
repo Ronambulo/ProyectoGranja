@@ -29,7 +29,14 @@ public class Inventory_UI : MonoBehaviour
 
     private void Awake()
     {
+        Refresh();
         canvas = FindAnyObjectByType<Canvas>();
+    }
+
+    private void Start()
+    {
+        SetupSlots();
+        Refresh();
     }
 
     void Update()
@@ -63,21 +70,25 @@ public class Inventory_UI : MonoBehaviour
 
     public void toggleInventory()
     {
-        if (!inventoryPanel.activeSelf)
+        if (inventoryPanel != null)
         {
-            inventoryPanel.SetActive(true);
-            playerObject.SetActive(false);
-            HUD.SetActive(true);
-            Refresh();
-
-        }
-        else
-        {
-            inventoryPanel.SetActive(false);
-            playerObject.SetActive(true);
-            if(SceneManager.GetActiveScene().name != "EscenaCasaPlayer")
+            if (!inventoryPanel.activeSelf)
+            {
+                inventoryPanel.SetActive(true);
+                playerObject.SetActive(false);
                 HUD.SetActive(true);
+                Refresh();
+
+            }
+            else
+            {
+                inventoryPanel.SetActive(false);
+                playerObject.SetActive(true);
+                if (SceneManager.GetActiveScene().name != "EscenaCasaPlayer")
+                    HUD.SetActive(true);
+            }
         }
+        
     }
 
     public void Refresh()
@@ -94,6 +105,22 @@ public class Inventory_UI : MonoBehaviour
                 {
                     slots[i].SetEmpty();
                 }
+
+            }
+        }
+        else if (slots.Count == player.toolbar.slots.Count)
+        {
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (player.toolbar.slots[i].itemName != "")
+                {
+                    slots[i].SetItem(player.toolbar.slots[i]);
+                }
+                else
+                {
+                    slots[i].SetEmpty();
+                }
+
             }
         }
     }
@@ -149,6 +176,8 @@ public class Inventory_UI : MonoBehaviour
 
     public void SlotDrop(Slots_UI slot)
     {
+        player.inventory.moveSlot(draggedSlot.slotID, slot.slotID);
+        Refresh();
         Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
     }
 
@@ -177,6 +206,16 @@ public class Inventory_UI : MonoBehaviour
         
             pausaPanel.SetActive(false);
             playerObject.SetActive(true);
+        }
+    }
+
+    private void SetupSlots()
+    {
+        int counter = 0;
+        foreach(Slots_UI slots in slots)
+        {
+            slots.slotID = counter;
+            counter++;
         }
     }
 }

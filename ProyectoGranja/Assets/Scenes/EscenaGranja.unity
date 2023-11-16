@@ -3550,6 +3550,8 @@ MonoBehaviour:
   - {fileID: 1514463838}
   - {fileID: 412260357}
   - {fileID: 653590190}
+  SelectedSlot: {fileID: 0}
+  nombreSeccionado: 
 --- !u!222 &601268432
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23374,7 +23376,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: -515102493, guid: d4a7ebd9b7f46504cba0ffe50888267d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

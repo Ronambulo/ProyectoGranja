@@ -283,7 +283,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1718359306, guid: 9d6bf57f396ef114da37be4d01e76efe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -419,4 +419,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348a64fdba58978439bdc236b1f89f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numStrawSeeds: 0
+  inventory:
+    slots: []

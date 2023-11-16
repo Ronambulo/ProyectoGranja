@@ -5,10 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Inventory inventory;
+    public Inventory toolbar;
 
     private void Awake()
     {
         inventory = new Inventory(27);
+        toolbar = new Inventory(9);
     }
 
     public void DropItem(Item item)
