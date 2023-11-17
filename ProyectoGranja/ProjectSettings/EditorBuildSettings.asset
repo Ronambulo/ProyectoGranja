@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaCasaPlayer.unity
     guid: dbcceeac2eedbef428ce056132fc9d26
+  - enabled: 1
+    path: Assets/Scenes/EscenaMazmorraFuera.unity
+    guid: 852718917b66bef489b9abe850b4b17e
+  - enabled: 1
+    path: Assets/Scenes/EscenaMazmorraDentro.unity
+    guid: 62ec91e202b036f48b42f17870c5c539
   m_configObjects: {}

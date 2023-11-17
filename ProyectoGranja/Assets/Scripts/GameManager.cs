@@ -69,6 +69,12 @@ public class GameManager : MonoBehaviour
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
             toolbar.SetActive(true);
         }
+        else if(ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaGranja"){
+            player.position = new Vector3(0.04f, -8.523807f, -0.01f);
+        }
+        else if(ThisScene == "EscenaMazmorraDentro" && LastScene == "EscenaMazmorraFuera"){
+            player.position = new Vector3(-2.494712, -7.835793f, -0.01f);
+        }
 
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;
