@@ -56,18 +56,25 @@ public class GameManager : MonoBehaviour
         }
         else if (ThisScene == "EscenaPueblo" && LastScene == "EscenaCamino")
         {
-            player.position = new Vector3(-4.913f, 0.696f, -0.01f);
+            player.position = new Vector3(1.172709f, -0.9253911f, -0.01f);
         }
         else if (ThisScene == "EscenaCasaPlayer" && LastScene == "EscenaGranja")
         {
             player.position = new Vector3(0f, -2.146401f, -0.01f);
             toolbar.SetActive(false);
-
         }
         else if(ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
         {
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
             toolbar.SetActive(true);
+        }
+        else if(ThisScene == "EscenaGranja" && LastScene == "EscenaMazmorraFuera")
+        {
+            player.position = new Vector3(-5.528957f, 2.492904f, -0.01f);
+        }
+        else if (ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaGranja")
+        {
+            player.position = new Vector3(-2.025f, -8.349f, -0.01f);
         }
 
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
