@@ -8,10 +8,11 @@ public class CameraController : MonoBehaviour
     public Vector2 maxXYLimits = new Vector2(0.15f, 0); // L�mites m�ximos en X y Z
     public float smoothSpeed = 0.125f; // Velocidad de suavizado del movimiento de la c�mara
     public float prueba;
+    
     public Transform target;
     private void Start()
     {
-        
+            
     }
 
     void FixedUpdate()
@@ -21,7 +22,8 @@ public class CameraController : MonoBehaviour
             target = GameObject.FindWithTag("Player").transform;
         }
         
-        if ((target) == null)
+
+        if (target == null)
                 return; // Asegurarse de que hay un objetivo para seguir
 
             // Solo ajusta la posici�n en el eje X y Z, manten el valor de Y de la camara

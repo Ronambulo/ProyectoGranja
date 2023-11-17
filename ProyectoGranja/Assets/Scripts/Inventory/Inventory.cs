@@ -89,7 +89,7 @@ public class Inventory
             slots.Add(slot);
         }
     }
-
+    
     public void Add(Item item)
     {
         foreach (Slot slot in slots)

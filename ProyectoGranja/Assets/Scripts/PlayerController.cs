@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
 
     private float timeSinceLastMovement;
     public int timeBetweenStaminaLoss = 10;
-    private int staminaLossAmount = 1;
 
     void FixedUpdate()
     {
@@ -43,8 +42,8 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //PERDIDA DE STAMINA
-        perididaStamina();
+        //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
+        perididaStamina(1);
 
     }
 
@@ -88,10 +87,12 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("InteriorTP"))
+        if (other.CompareTag("InteriorTP") || other.CompareTag("NPC"))
         {
             emoteManager = interiorTPObject.GetComponent<EmoteManager>();
             emoteManager.interact = true;
+            if(other.CompareTag("NPC")){
+            }
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -106,7 +107,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void perididaStamina()
+    void perididaStamina(int staminaLossAmount)
     {
         if (vertical != 0 || horizontal != 0)
         {

@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 188158125}
   m_Layer: 0
   m_Name: Toolbar
-  m_TagString: Untagged
+  m_TagString: ToolBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7489,7 +7489,7 @@ GameObject:
   - component: {fileID: 1301795269}
   m_Layer: 0
   m_Name: InventoryParent
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
