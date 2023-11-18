@@ -412,6 +412,7 @@ Tilemap:
   - first: {x: 0, y: -3, z: 0}
     second:
       serializedVersion: 2
+
       m_TileIndex: 7
       m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
@@ -1116,6 +1117,30 @@ PrefabInstance:
     - target: {fileID: 5057925170637638700, guid: 8ac94bbd47fe04346b4f53f47e1fd6cc, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314149283831141324, guid: f5990cada997647458baa6ebbe3d872f, type: 3}
+      propertyPath: maxXYLimits.x
+      value: -2.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314149283831141324, guid: f5990cada997647458baa6ebbe3d872f, type: 3}
+      propertyPath: maxXZLimits.x
+      value: -2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314149283831141324, guid: f5990cada997647458baa6ebbe3d872f, type: 3}
+      propertyPath: maxXZLimits.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314149283831141324, guid: f5990cada997647458baa6ebbe3d872f, type: 3}
+      propertyPath: minXYLimits.x
+      value: -2.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314149283831141324, guid: f5990cada997647458baa6ebbe3d872f, type: 3}
+      propertyPath: minXZLimits.x
+      value: -2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314149283831141324, guid: f5990cada997647458baa6ebbe3d872f, type: 3}
+      propertyPath: minXZLimits.y
+      value: -6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7861,7 +7886,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -10, y: -4, z: 0}
+  - first: {x: -13, y: -4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 11
@@ -10186,6 +10211,8 @@ Tilemap:
     m_Data: {fileID: -851162416, guid: 1f7bd64c29446034b8815bb95ee56cdd, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: -851162416, guid: 1f7bd64c29446034b8815bb95ee56cdd, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0

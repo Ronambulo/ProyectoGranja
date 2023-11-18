@@ -216,12 +216,10 @@ GameObject:
   - component: {fileID: 6322241142441550948}
   - component: {fileID: 2012006451600107432}
   - component: {fileID: 7200399026937778645}
-  - component: {fileID: 8831322934013925365}
-  - component: {fileID: 5770038950018733802}
-  - component: {fileID: 8313962479584048622}
+  - component: {fileID: 2703465769867498741}
   m_Layer: 0
-  m_Name: Personaje Default
-  m_TagString: Player
+  m_Name: NPC Default
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1718359306, guid: 9d6bf57f396ef114da37be4d01e76efe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -345,10 +343,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.21581298}
+  m_Offset: {x: 0.008865356, y: -0.02583921}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -359,36 +357,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21361722, y: 0.1860007}
+  m_Size: {x: 0.9659138, y: 1.0573475}
   m_EdgeRadius: 0
---- !u!50 &8831322934013925365
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7580822406297749768}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &5770038950018733802
+--- !u!114 &2703465769867498741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,29 +368,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7580822406297749768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb5fed0ac2a63745b36718e02f63454, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d76e1b4e01313746ba926acf519cfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
-  prueba: 0
-  valor: 10
-  interiorTPObject: {fileID: 0}
-  vida: 100
-  stamina: 100
-  timeBetweenStaminaLoss: 10
---- !u!114 &8313962479584048622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7580822406297749768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348a64fdba58978439bdc236b1f89f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory:
-    slots: []
-  toolbar:
-    slots: []
+  isPlayerInside: 0

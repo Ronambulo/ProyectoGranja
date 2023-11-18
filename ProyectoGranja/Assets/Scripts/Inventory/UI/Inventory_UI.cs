@@ -30,6 +30,7 @@ public class Inventory_UI : MonoBehaviour
     private void Awake()
     {
         Refresh();
+        toggleInventory();
         canvas = FindAnyObjectByType<Canvas>();
     }
 
@@ -37,6 +38,7 @@ public class Inventory_UI : MonoBehaviour
     {
         SetupSlots();
         Refresh();
+        toggleInventory();
     }
 
     void Update()
@@ -44,9 +46,14 @@ public class Inventory_UI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (!pausaPanel.activeSelf) {
+                Refresh();
+                inventoryPanel.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
                 toggleInventory();
             }
 
+        }
+        if(Input.GetKeyDown(KeyCode.E)){
+            Refresh();
         }
 
         if(Input.GetKey(KeyCode.LeftShift)) 

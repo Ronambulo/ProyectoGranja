@@ -1,0 +1,1491 @@
+fileFormatVersion: 2
+guid: 0e30ebf51fd8dfa40ad5f015c7a80c98
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: buildingsSplit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1016
+        width: 63
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08e1f3319b0af140bdee9c75c8b9033
+      internalID: -2094419955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1016
+        width: 63
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1f739ecb535bb4fa9250c57239fab6
+      internalID: -423598643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1016
+        width: 71
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f98aa5854a95204b90b0f74ace9d356
+      internalID: 396379742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1011
+        width: 76
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2994bb80ab0e48f4f949a1aa690d15dc
+      internalID: 644762837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_4
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1011
+        width: 76
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3e79c862b349a40a1aec5d9bb97ce2
+      internalID: -595303878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_5
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1009
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f364299929a664b80dc7fc07a25c5b
+      internalID: -1080128465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_6
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1009
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a823d302241ac0469b678979d287d45
+      internalID: -1964591954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1020
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db8d91efb2bc464cb32a2626682de65
+      internalID: -1036704611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1020
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dc1788bbf0028478823bbe3e918156
+      internalID: 1161351124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_9
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1020
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a3e3b8876fde34aaf7f2e0ac3912db
+      internalID: 569943118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_10
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1020
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9c2d69d6c10494194cf7f1f7aaa774
+      internalID: -805273303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_11
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1016
+        width: 94
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c54469883802e45b01b70b12f79497
+      internalID: -253385744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_12
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1016
+        width: 94
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb08419c7ff1844ea9609f97d528311
+      internalID: 1625742977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_13
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1009
+        width: 77
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19073610f5b4d724da936a5043585290
+      internalID: -1725270145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_14
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1009
+        width: 77
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998ffac87cfaa89439204bd817eacf4b
+      internalID: 470600836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_15
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 1009
+        width: 82
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f286bdd0610f845bd366dda6777e3c
+      internalID: 556199700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_16
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 1009
+        width: 82
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7833343e88e704ea6efaf7734e3ca4
+      internalID: 1048230853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_17
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1014
+        width: 93
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee8141d039f522459c27f53c79d5d6a
+      internalID: -1299558595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_18
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1014
+        width: 93
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110abb2f9fa90a14bad5a4214d6bdc36
+      internalID: 200459431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 929
+        width: 74
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a43f096b485efe4b9e2379a33eb02c7
+      internalID: -2128377601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 929
+        width: 74
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe170daa7e1c19458667edbbf10dff7
+      internalID: -545996889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_21
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 929
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0513fba0fd3c2045bf57f815c56d761
+      internalID: -63221579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_22
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 929
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd127333c9aa64a4796b7afe836cb65b
+      internalID: -1344359549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_23
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 929
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21fe7dbdab392f4ca98d533e9736544
+      internalID: 610162537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_24
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 929
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8ba95b7c1461f448215b5258f9d318
+      internalID: 1983325727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_25
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 915
+        width: 133
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb72d62ba0e4254e8901e92291877f8
+      internalID: 1792661443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_26
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 915
+        width: 133
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13c9377a77e36848926ebd75525e814
+      internalID: -1239687525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_27
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 914
+        width: 128
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d4d698b05740141837b1180b1ad04b
+      internalID: -1200218155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_28
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 928
+        width: 91
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26942875925507a46b09b3686b1139df
+      internalID: -245815877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_29
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 928
+        width: 91
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f8ca9d9a833e5439ee6a033ca60ef9
+      internalID: 699703509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 999
+        width: 63
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd32a89820609e4296599113e486310
+      internalID: -362939411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_31
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 999
+        width: 71
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bea89deb7b97e946bdde2a72f16872b
+      internalID: -890325635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 999
+        width: 63
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0c4cd95cbfd2d4894c70fb1d0ac1d6
+      internalID: 1669335435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_33
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 992
+        width: 67
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292afdc1133b9144d93c168ac697e8c9
+      internalID: 1407556086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_34
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 994
+        width: 76
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ae306b76117e84abad90aea23208c0
+      internalID: -241596889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_35
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 994
+        width: 76
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858c86762fc9cd24e88665f0f5893699
+      internalID: 1412469571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_36
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 992
+        width: 67
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678fb3b9c9ca4ee429d290ed69a97b68
+      internalID: -927451170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1003
+        width: 60
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a497b5ac6fa0a418cc2635e3b22b38
+      internalID: -38486872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_38
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1003
+        width: 60
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf69c6483268134196b2e0e2bc590f4
+      internalID: -1290348668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_39
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1003
+        width: 36
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325bfeb20ee81e34893bb57910c320cc
+      internalID: -1926000250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_40
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1003
+        width: 36
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc282048d5c7c40479af33865da15509
+      internalID: -1504026296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_41
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 999
+        width: 94
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd080bd539a0f33468c77ca0fb5b5faf
+      internalID: 272166635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_42
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 999
+        width: 94
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7341aa518a6e1bd4ab18613585934f36
+      internalID: -1630259647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_43
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 992
+        width: 77
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182695235cd841a4fa4a7ac48d86d6f5
+      internalID: 980787843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_44
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 992
+        width: 77
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fb7c90d0598f84d833cfbdfda87760
+      internalID: 1410759768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_45
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 992
+        width: 82
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837cf604e58246d4ba6c1d8388c78cfa
+      internalID: 1744861737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_46
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 992
+        width: 82
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e9f606f3a39a2448bcc2d7a654a43a
+      internalID: -103435536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_47
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 997
+        width: 93
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3bda67b21f4944c8854cd0e696a50d
+      internalID: 1223074413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_48
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 997
+        width: 93
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5518d17c224f748ab2ee2374947d50
+      internalID: 49091318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 74
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f80d40e44f18aa49b3f73ef494062a0
+      internalID: -829095465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_50
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 912
+        width: 74
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7096bce15c589b64d9ed0433b5485539
+      internalID: 542124932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_51
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 912
+        width: 72
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f75300425882148953c5fe6fc0b2f3
+      internalID: 584804354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_52
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 912
+        width: 72
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87810ee12a0cb1b448606da1961e0fa4
+      internalID: 961992727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_53
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 912
+        width: 96
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627228829999e2341a6006e19b2f93e9
+      internalID: 389708187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_54
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 912
+        width: 96
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1506441b8401649ba18fd7791badbe
+      internalID: -1266284950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_55
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 882
+        width: 133
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5489ddd87b7ab2f45816fdfb5f87dba5
+      internalID: 1937898506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_56
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 882
+        width: 133
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856068fdb67bbda4d8c2b5e19766fd6b
+      internalID: -1844930613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_57
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 874
+        width: 128
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1b076620a44e2498805cd0ae3bf14b
+      internalID: -1762826136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_58
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 874
+        width: 128
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9143ee071b0e9b94587357d759981c97
+      internalID: 319658488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_59
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 914
+        width: 128
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b31f1fe0bb730945b0d586c16b0033c
+      internalID: -1654948381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_60
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 899
+        width: 91
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f41a42214ce714c88849b8bc87b921
+      internalID: -182411076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingsSplit_61
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 899
+        width: 91
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec94a7bee8fe944fa7616025e973b43
+      internalID: 135679136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      buildingsSplit_0: -2094419955
+      buildingsSplit_1: -423598643
+      buildingsSplit_10: -805273303
+      buildingsSplit_11: -253385744
+      buildingsSplit_12: 1625742977
+      buildingsSplit_13: -1725270145
+      buildingsSplit_14: 470600836
+      buildingsSplit_15: 556199700
+      buildingsSplit_16: 1048230853
+      buildingsSplit_17: -1299558595
+      buildingsSplit_18: 200459431
+      buildingsSplit_19: -2128377601
+      buildingsSplit_2: 396379742
+      buildingsSplit_20: -545996889
+      buildingsSplit_21: -63221579
+      buildingsSplit_22: -1344359549
+      buildingsSplit_23: 610162537
+      buildingsSplit_24: 1983325727
+      buildingsSplit_25: 1792661443
+      buildingsSplit_26: -1239687525
+      buildingsSplit_27: -1200218155
+      buildingsSplit_28: -245815877
+      buildingsSplit_29: 699703509
+      buildingsSplit_3: 644762837
+      buildingsSplit_30: -362939411
+      buildingsSplit_31: -890325635
+      buildingsSplit_32: 1669335435
+      buildingsSplit_33: 1407556086
+      buildingsSplit_34: -241596889
+      buildingsSplit_35: 1412469571
+      buildingsSplit_36: -927451170
+      buildingsSplit_37: -38486872
+      buildingsSplit_38: -1290348668
+      buildingsSplit_39: -1926000250
+      buildingsSplit_4: -595303878
+      buildingsSplit_40: -1504026296
+      buildingsSplit_41: 272166635
+      buildingsSplit_42: -1630259647
+      buildingsSplit_43: 980787843
+      buildingsSplit_44: 1410759768
+      buildingsSplit_45: 1744861737
+      buildingsSplit_46: -103435536
+      buildingsSplit_47: 1223074413
+      buildingsSplit_48: 49091318
+      buildingsSplit_49: -829095465
+      buildingsSplit_5: -1080128465
+      buildingsSplit_50: 542124932
+      buildingsSplit_51: 584804354
+      buildingsSplit_52: 961992727
+      buildingsSplit_53: 389708187
+      buildingsSplit_54: -1266284950
+      buildingsSplit_55: 1937898506
+      buildingsSplit_56: -1844930613
+      buildingsSplit_57: -1762826136
+      buildingsSplit_58: 319658488
+      buildingsSplit_59: -1654948381
+      buildingsSplit_6: -1964591954
+      buildingsSplit_60: -182411076
+      buildingsSplit_61: 135679136
+      buildingsSplit_7: -1036704611
+      buildingsSplit_8: 1161351124
+      buildingsSplit_9: 569943118
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,6 +8,9 @@ TagManager:
   - GameManager
   - InteriorTP
   - EmoteObject
+  - NPC
+  - Inventory
+  - ToolBar
   layers:
   - Default
   - TransparentFX
