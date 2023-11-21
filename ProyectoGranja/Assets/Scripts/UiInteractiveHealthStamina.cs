@@ -30,8 +30,6 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     }
 
     void RellenaVida(){
-        //Hacemos esto ya que el fill amount debe estar entre 0 y 1
-        //healthBar.fillAmount = vida/vidaMax;
 
         for(int i = 0 ; i< healthPoints.Length ;i++){
             healthPoints[i].enabled = !MostrarPuntoDeSalud(vida, i);
