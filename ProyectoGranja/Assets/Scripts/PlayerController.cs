@@ -23,6 +23,15 @@ public class PlayerController : MonoBehaviour
     private float timeSinceLastMovement;
     public int timeBetweenStaminaLoss = 10;
 
+    //CONFIGURACIÓN ESPADA
+    public GameObject swordHitbox;
+    Collider2D swordCollider;
+
+    void Start(){
+        //Inicializamos collider de la espada con el objeto
+        swordCollider = swordHitbox.GetComponent<Collider2D>(); 
+    }
+
     void FixedUpdate()
     {
         Animator animator = GetComponent<Animator>();
@@ -39,7 +48,6 @@ public class PlayerController : MonoBehaviour
         transform.Translate(direction * speed);
 
         interiorTPObject = transform.Find("Emotes").gameObject;
-
 
 
         //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
