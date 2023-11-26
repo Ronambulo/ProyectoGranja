@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class SwordHitBox : MonoBehaviour
 {
-    public float swordDamage = 1f;
+     public float swordDamage = 1f;
+     public bool si = false;
 
-    public Collider2D swordCollider;
+     public Collider2D swordCollider;
 
-   void Start(){
-        swordCollider.GetComponent<Collider2D>();
-   }
+     void Start(){
+          if(swordCollider == null){
+               Debug.LogWarning("El Collider de la espada no está establecido.");
+          }
+     }
 
+     //Busca una física del enemigo (su Rigidbody) y manda on hit daño al gameObject
+     void OnCollisionEnter2D(Collision2D colision){
+    
+          colision.collider.SendMessage("OnHit", swordDamage);
+  
+     }
 
-   //
-   void SeDa(Collider2D collider){
-        //Cuando se da, nos llega este mensaje
-        collider.SendMessage("OnHIt", swordDamage);
-   }
+ 
 }
