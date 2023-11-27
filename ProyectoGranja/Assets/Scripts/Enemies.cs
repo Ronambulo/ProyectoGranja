@@ -62,8 +62,12 @@ public class Enemies : MonoBehaviour, IDamageable
         Destroy(gameObject);
     }
 
-    /*void OnCollisionEnter2D(Collision2D colision){
-        colision.collider.SendMessage("OnHit", damage);
-         Debug.Log("LE HA HECHO "+ damage + " DE DAÑO");
-    }*/
+    void OnCollisionEnter2D(Collision2D colision){
+        
+        IDamageable damageable = colision.collider.GetComponent<IDamageable>();
+
+        if (damageable != null) {
+            damageable.OnHit(damage);
+        }
+    }
 }

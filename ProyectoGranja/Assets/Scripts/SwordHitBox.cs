@@ -43,7 +43,7 @@ public class SwordHitBox : MonoBehaviour
         //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre
          Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
         //calculamos el vector que apunta desde el objeto colisionado hacia la posición del objeto padre, luego normaliza para obtener solo la dirección
-         Vector2 direction = (Vector2)(parentPosition - collision.collider.gameObject.transform.position).normalized;
+         Vector2 direction = (Vector2)(collision.collider.gameObject.transform.position- parentPosition).normalized;
         //Añadimos fuerza
          Vector2  knockback = direction * knockBackForce;
 
@@ -55,5 +55,5 @@ public class SwordHitBox : MonoBehaviour
            else{
                 Debug.LogWarning("El collider no contiene la interfaz IDamageable!!");
            }*/
-      }
+    }
 }
