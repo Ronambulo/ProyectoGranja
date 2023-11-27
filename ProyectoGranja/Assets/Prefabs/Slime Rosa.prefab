@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8699059868706924295}
   - component: {fileID: 7331791324034574177}
   - component: {fileID: 3122662530949721486}
+  - component: {fileID: 7213499955715254078}
   m_Layer: 0
   m_Name: Slime Rosa
   m_TagString: Untagged
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec10f49a5ac77a043a43a434550fa6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  si: 0
+  damage: 1
 --- !u!50 &7331791324034574177
 Rigidbody2D:
   serializedVersion: 4
@@ -184,3 +185,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1875
+--- !u!114 &7213499955715254078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704486269973502693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targeteable: 1
+  vida: 10

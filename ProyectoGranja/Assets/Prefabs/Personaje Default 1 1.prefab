@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1430765702607289508}
   - component: {fileID: 8555633050921104248}
   - component: {fileID: 6296283781117034473}
-  - component: {fileID: 5273567348708996734}
   - component: {fileID: 8534526987654407619}
-  - component: {fileID: 7165549775720184216}
+  - component: {fileID: 1785884003507507909}
+  - component: {fileID: 6408199625007793928}
+  - component: {fileID: 6129565719738246178}
   m_Layer: 0
   m_Name: Personaje Default 1 1
   m_TagString: Player
@@ -207,20 +208,6 @@ MonoBehaviour:
   stamina: 100
   timeBetweenStaminaLoss: 10
   swordHitbox: {fileID: 1718099994080209771}
---- !u!114 &5273567348708996734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427017469730705083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483ff9fd96819434781fe2889fe68156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 10
-  targeteable: 0
 --- !u!114 &8534526987654407619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +224,7 @@ MonoBehaviour:
     slots: []
   toolbar:
     slots: []
---- !u!114 &7165549775720184216
+--- !u!114 &1785884003507507909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,12 +233,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1427017469730705083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e31ad9bb828e2438a064c78af5d371, type: 3}
+  m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: []
-  vida: 0
-  vidaMax: 100
+  targeteable: 1
+  vida: 10
+--- !u!114 &6408199625007793928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427017469730705083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targeteable: 0
+  vida: 10
+--- !u!114 &6129565719738246178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427017469730705083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targeteable: 0
+  vida: 10
 --- !u!1 &1718099994080209771
 GameObject:
   m_ObjectHideFlags: 0

@@ -572,7 +572,7 @@ TextureImporter:
         width: 16
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,7 +593,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,7 +614,7 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -632,10 +632,10 @@ TextureImporter:
         serializedVersion: 2
         x: 80
         y: 528
-        width: 5
+        width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,7 +656,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,6 +664,90 @@ TextureImporter:
       bones: []
       spriteID: 48fd1c88af46f3e4bb69512e07faed26
       internalID: -706409703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallpapers_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 528
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f3721de58f7ed4ca32fcc05cb4909b
+      internalID: -1519525878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallpapers_27
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 734
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c84138d7e91c849a218e199b14ddbf
+      internalID: -100406869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallpapers_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 734
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4a02180055b4e428ebdfeb7979654b
+      internalID: 1160411688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallpapers_29
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 556
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807ae821b573c494883e1891e7e94222
+      internalID: -2035991315
       vertices: []
       indices: 
       edges: []
@@ -698,6 +782,10 @@ TextureImporter:
       wallpapers_23: -1942827219
       wallpapers_24: 1656235670
       wallpapers_25: -706409703
+      wallpapers_26: -1519525878
+      wallpapers_27: -100406869
+      wallpapers_28: 1160411688
+      wallpapers_29: -2035991315
       wallpapers_3: -944876678
       wallpapers_4: -1650865861
       wallpapers_5: -1778051961

@@ -3,70 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
                                     //Añadimos nuestra interfaz creada
-public class Enemies : MonoBehaviour, IDamageable
+public class Enemies : MonoBehaviour
 {
     public float damage = 1;
-    Animator animator;
-    Rigidbody2D rb; 
-
-    public float VidaEnemigo{
-        //Encapsulamos variables en una clase y proporcionamos un control más preciso (es un setter)
-        set{
-
-            //Implica que el valor será menor, entonces realiza la animación del hit
-            if(value < vida){
-                animator.SetTrigger("hit");
-            }
-
-            //asignamos nuevo valor a la variable (value es un valor que le daremos más adelante)
-            vida = value;
-
-            if(vida <= 0){
-                animator.SetBool("isAlive", false);
-            }
-        }
-        //GETTER
-        get{
-            return vida;
-        }
-    }
-
-    public float vida = 10f;
-
-    public void Start(){
-        animator = GetComponent<Animator>();
-
-        // Para estar seguros de que está vivo desde el principio
-        animator.SetBool("isAlive", true);
-
-        rb = GetComponent<Rigidbody2D>();
-    }  
     
-
-    // //Te lo añade automáticamente el programa cuando añades la interfaz
-     public void OnHit(float danio, Vector2 knockback){
-         Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
-         VidaEnemigo -= danio;
-
-         //Aplicar fuerza al enemigo
-         rb.AddForce(knockback); 
-     }
-
-    public void OnHit(float danio){
-        Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
-
-        VidaEnemigo -= danio;
-    }
-
-    public void ObjectDestroy(){
-        Destroy(gameObject);
-    }
-
+    //Este método lo que hace es llamarse cuando el objeto colisiona con otro objeto
     void OnCollisionEnter2D(Collision2D colision){
         
+        // obtenemos componente que implementa la interfaz IDamageable del collider del objeto con el que ha colisionado
         IDamageable damageable = colision.collider.GetComponent<IDamageable>();
 
         if (damageable != null) {
+            //Pasamos valor del daño
             damageable.OnHit(damage);
         }
     }
