@@ -7,9 +7,13 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 {
     Animator animator;
     Rigidbody2D rb;
-    public bool targeteable = true;
+    Collider2D physicsCollider;
 
-    public float VidaEnemigo
+    //Para más adelante decidir si queremos desactivar las físicas
+    public bool disableSimulation = false;
+
+
+    public float VidaCharacter
     {
         //Encapsulamos variables en una clase y proporcionamos un control más preciso (es un setter)
         set
@@ -26,6 +30,8 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             if (vida <= 0)
             {
                 animator.SetBool("isAlive", false);
+                //Ya no será targeteable
+                this.Targeteable = false;
             }
         }
         //GETTER
@@ -35,7 +41,33 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
     }
 
+    //Getter y setter de targeteable (ser un objetivo)
+    public bool Targeteable
+    {
+        get { 
+            return targeteable; 
+        }
+        set
+        {
+            //determninará si el objeto que es targeteable está activo o no
+            targeteable = value;
+
+            //Cuando desactivamos targeteable, Queremos descativar la simulación de las físicas (osea desactivar el sistema de físicas), aunque no queremos 
+            // que siempre se desactive, por eso creamos disableSimulation y ponemos condición
+            //NO SE POR QUÉ NO ME FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-----------------------------------------
+            if (disableSimulation==true) {
+                Debug.Log("DESACTIVADO");
+                rb.simulated = false;
+            } 
+
+            physicsCollider.enabled = false;
+        }
+    }
+
+
     public float vida = 10f;
+    //Para que un objeto sea targeteable (objetivo)
+    public bool targeteable = true;
 
     public void Start()
     {
@@ -45,14 +77,15 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         animator.SetBool("isAlive", true);
 
         rb = GetComponent<Rigidbody2D>();
+        physicsCollider = GetComponent<Collider2D>();
     }
 
 
     // //Te lo añade automáticamente el programa cuando añades la interfaz
     public void OnHit(float danio, Vector2 knockback)
     {
-        Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
-        VidaEnemigo -= danio;
+        Debug.Log("Le ha dado con " + danio + " de daño.");
+        VidaCharacter -= danio;
 
         //Aplicar fuerza al enemigo
         rb.AddForce(knockback);
@@ -60,9 +93,9 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void OnHit(float danio)
     {
-        Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
+        Debug.Log("Le ha dado con " + danio + " de daño.");
 
-        VidaEnemigo -= danio;
+        VidaCharacter -= danio;
     }
 
     public void ObjectDestroy()

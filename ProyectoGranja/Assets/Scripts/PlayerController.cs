@@ -96,11 +96,11 @@ public class PlayerController : MonoBehaviour
         
         if(ataque){
             //Debug.Log("Le estas dando");
-            animator.SetBool("AttackDerecha", true);
+            animator.SetBool("Attack", true);
         }
         else{
             //Debug.Log("NO le estas dando");
-            animator.SetBool("AttackDerecha", false);
+            animator.SetBool("Attack", false);
         }
 
     }

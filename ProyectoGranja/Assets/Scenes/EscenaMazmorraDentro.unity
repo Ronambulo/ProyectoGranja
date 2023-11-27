@@ -533,6 +533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje Default 1 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1785884003507507909, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
+      propertyPath: vida
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8377870547688419119, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.201366
@@ -11813,7 +11817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11870,6 +11874,14 @@ PrefabInstance:
     - target: {fileID: 7213499955715254078, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: vida
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331791324034574177, guid: deec85e56a9f19c429392767eac04351, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699059868706924295, guid: deec85e56a9f19c429392767eac04351, type: 3}
+      propertyPath: knockbackForce
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

@@ -37,7 +37,7 @@ public class SwordHitBox : MonoBehaviour
 
         damageableObject.OnHit(swordDamage);
 
-        //YA HARÉ ESTO BIEN PORQUE NO VEAS CON LAS FÍSICAS
+        //YA HARÉ ESTO BIEN PORQUE NO VEAS CON LAS FÍSICAS-------------------------------------------------------------
 
         /*if(damageableObject != null){
         //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre

@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: 6296283781117034473}
   - component: {fileID: 8534526987654407619}
   - component: {fileID: 1785884003507507909}
-  - component: {fileID: 6408199625007793928}
-  - component: {fileID: 6129565719738246178}
   m_Layer: 0
   m_Name: Personaje Default 1 1
   m_TagString: Player
@@ -175,7 +173,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -236,36 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableSimulation: 1
+  vida: 3
   targeteable: 1
-  vida: 10
---- !u!114 &6408199625007793928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427017469730705083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targeteable: 0
-  vida: 10
---- !u!114 &6129565719738246178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427017469730705083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22d514a143deb70458bf5ff48e7e5d37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targeteable: 0
-  vida: 10
 --- !u!1 &1718099994080209771
 GameObject:
   m_ObjectHideFlags: 0
