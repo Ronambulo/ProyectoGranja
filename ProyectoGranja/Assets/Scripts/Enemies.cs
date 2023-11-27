@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
                                     //Añadimos nuestra interfaz creada
-public class Enemies : MonoBehaviour 
-//, IDamageable
+public class Enemies : MonoBehaviour, IDamageable
 {
+    public float damage = 1;
     Animator animator;
     Rigidbody2D rb; 
 
     public float VidaEnemigo{
         //Encapsulamos variables en una clase y proporcionamos un control más preciso (es un setter)
         set{
-            //Para realizar la animación de daño:
-            // if(value < vida){
-            //     animator.SetTrigger("hit");
-            // }
+
+            //Implica que el valor será menor, entonces realiza la animación del hit
+            if(value < vida){
+                animator.SetTrigger("hit");
+            }
 
             //asignamos nuevo valor a la variable (value es un valor que le daremos más adelante)
             vida = value;
@@ -43,12 +44,13 @@ public class Enemies : MonoBehaviour
     
 
     // //Te lo añade automáticamente el programa cuando añades la interfaz
-    // public void OnHit(float danio, Vector2 knockback){
-    //     VidaEnemigo -= danio;
+     public void OnHit(float danio, Vector2 knockback){
+         Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
+         VidaEnemigo -= danio;
 
-    //     //Aplicar fuerza al enemigo
-    //     rb.AddForce(knockback); 
-    // }
+         //Aplicar fuerza al enemigo
+         rb.AddForce(knockback); 
+     }
 
     public void OnHit(float danio){
         Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
@@ -60,4 +62,8 @@ public class Enemies : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /*void OnCollisionEnter2D(Collision2D colision){
+        colision.collider.SendMessage("OnHit", damage);
+         Debug.Log("LE HA HECHO "+ damage + " DE DAÑO");
+    }*/
 }

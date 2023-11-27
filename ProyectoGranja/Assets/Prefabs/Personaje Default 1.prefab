@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordDamage: 1
-  si: 0
+  knockBackForce: 5000
   swordCollider: {fileID: 8111291730921155430}
 --- !u!61 &8111291730921155430
 BoxCollider2D:
@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 7200399026937778645}
   - component: {fileID: 8831322934013925365}
   - component: {fileID: 5770038950018733802}
+  - component: {fileID: 5574360060572215069}
   - component: {fileID: 8313962479584048622}
   m_Layer: 0
   m_Name: Personaje Default 1
@@ -502,6 +503,18 @@ MonoBehaviour:
   stamina: 100
   timeBetweenStaminaLoss: 10
   swordHitbox: {fileID: 7416767002484930007}
+--- !u!114 &5574360060572215069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580822406297749768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483ff9fd96819434781fe2889fe68156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8313962479584048622
 MonoBehaviour:
   m_ObjectHideFlags: 0

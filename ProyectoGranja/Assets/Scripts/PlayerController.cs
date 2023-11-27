@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float prueba;
+    public float prueba; 
     public float valor = 10f;
     private EmoteManager emoteManager;
     public GameObject interiorTPObject;
