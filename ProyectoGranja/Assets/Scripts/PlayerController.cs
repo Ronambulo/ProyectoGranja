@@ -10,13 +10,14 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float prueba;
+    public float prueba; 
     public float valor = 10f;
     private EmoteManager emoteManager;
     public GameObject interiorTPObject;
     private float horizontal;
     private float vertical;
 
+    private bool ataque;
     public int vida = 100;
     public int stamina = 100;
 
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     void Start(){
         //Inicializamos collider de la espada con el objeto
-        swordCollider = swordHitbox.GetComponent<Collider2D>(); 
+        swordCollider = swordHitbox.GetComponent<Collider2D>();
     }
 
     void FixedUpdate()
@@ -38,7 +39,8 @@ public class PlayerController : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-
+        //Dentro de los Inputs, el String Jump pertenece al espacio
+        ataque = Input.GetButton("Jump");
 
         prueba = horizontal;
         Animaciones(horizontal, vertical, animator);
@@ -49,9 +51,9 @@ public class PlayerController : MonoBehaviour
 
         interiorTPObject = transform.Find("Emotes").gameObject;
 
-
         //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
         perididaStamina(1);
+
 
     }
 
@@ -91,6 +93,16 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Walking", false);
         }
+        
+        if(ataque){
+            //Debug.Log("Le estas dando");
+            animator.SetBool("AttackDerecha", true);
+        }
+        else{
+            //Debug.Log("NO le estas dando");
+            animator.SetBool("AttackDerecha", false);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
