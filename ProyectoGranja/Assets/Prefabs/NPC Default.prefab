@@ -372,3 +372,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerInside: 0
+  InventoryParent: {fileID: 0}
+  ToolBar: {fileID: 0}
