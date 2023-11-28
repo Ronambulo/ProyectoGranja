@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 75e760cb252999c46b8277f32e1d33c0
+  - enabled: 1
     path: Assets/Scenes/EscenaGranja.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaPueblo.unity
     guid: 2370935669cff374c954c462cac2440c
+  - enabled: 1
+    path: Assets/Scenes/EscenaCasaPlayer.unity
+    guid: dbcceeac2eedbef428ce056132fc9d26
+  - enabled: 1
+    path: Assets/Scenes/EscenaMazmorraFuera.unity
+    guid: 852718917b66bef489b9abe850b4b17e
+  - enabled: 1
+    path: Assets/Scenes/EscenaMazmorraDentro.unity
+    guid: 62ec91e202b036f48b42f17870c5c539
   m_configObjects: {}

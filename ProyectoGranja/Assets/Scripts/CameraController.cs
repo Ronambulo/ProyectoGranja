@@ -4,32 +4,37 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Vector2 minXZLimits = new Vector2(-6.66f, -5.98f); // Límites mínimos en X y Z
-    public Vector2 maxXZLimits = new Vector2(0.15f, 0); // Límites máximos en X y Z
-    public float smoothSpeed = 0.125f; // Velocidad de suavizado del movimiento de la cámara
+    public Vector2 minXYLimits = new Vector2(-6.66f, -5.98f); // Lï¿½mites mï¿½nimos en X y Z
+    public Vector2 maxXYLimits = new Vector2(0.15f, 0); // Lï¿½mites mï¿½ximos en X y Z
+    public float smoothSpeed = 0.125f; // Velocidad de suavizado del movimiento de la cï¿½mara
     public float prueba;
+    
     public Transform target;
-
     private void Start()
     {
-       target = GameObject.FindWithTag("Player").transform;
+            
     }
 
     void FixedUpdate()
         {
-            
-            if ((target) == null)
+        if(target == null)
+        {
+            target = GameObject.FindWithTag("Player").transform;
+        }
+        
+
+        if (target == null)
                 return; // Asegurarse de que hay un objetivo para seguir
 
-            // Solo ajusta la posición en el eje X y Z, mantén el valor de Y de la cámara
+            // Solo ajusta la posiciï¿½n en el eje X y Z, manten el valor de Y de la camara
             Vector3 desiredPosition = new Vector3(
-                Mathf.Clamp(target.position.x, minXZLimits.x, maxXZLimits.x),
-                Mathf.Clamp(target.position.y, minXZLimits.y, maxXZLimits.y),
+                Mathf.Clamp(target.position.x, minXYLimits.x, maxXYLimits.x),
+                Mathf.Clamp(target.position.y, minXYLimits.y, maxXYLimits.y),
                 -10f
             );
-
+            
             prueba = target.position.y;
-            // Aplicar suavizado al movimiento de la cámara
+            // Aplicar suavizado al movimiento de la camara
             transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         }
 }

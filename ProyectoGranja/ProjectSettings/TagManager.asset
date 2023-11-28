@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Invisible
   - GameManager
+  - InteriorTP
+  - EmoteObject
+  - NPC
+  - Inventory
+  - ToolBar
+  - Enemy
   layers:
   - Default
   - TransparentFX
