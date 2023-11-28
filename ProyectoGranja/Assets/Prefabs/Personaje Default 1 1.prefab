@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordDamage: 1
-  knockBackForce: 300
+  knockBackForce: 5
   swordCollider: {fileID: 3925951688815015410}
 --- !u!61 &3925951688815015410
 BoxCollider2D:

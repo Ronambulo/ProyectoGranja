@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   knockbackForce: 800
-  moveSpeed: 50
+  moveSpeed: 30
   zonaDeteccion: {fileID: 945632164264135124}
   rb: {fileID: 7331791324034574177}
 --- !u!50 &7331791324034574177

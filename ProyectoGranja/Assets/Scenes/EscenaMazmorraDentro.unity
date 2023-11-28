@@ -959,10 +959,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje Default 1 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1785884003507507909, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
-      propertyPath: vida
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 8377870547688419119, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.201366
@@ -14215,11 +14211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.24
+      value: -7.96
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.12
+      value: -5.57
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14373,7 +14369,7 @@ SceneRoots:
   - {fileID: 460387007}
   - {fileID: 1647319113}
   - {fileID: 419743275}
+  - {fileID: 780567510802966067}
   - {fileID: 1952606825}
   - {fileID: 1448164215}
   - {fileID: 393237312}
-  - {fileID: 780567510802966067}

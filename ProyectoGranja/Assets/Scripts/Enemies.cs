@@ -31,7 +31,6 @@ public class Enemies : MonoBehaviour
 
             //Ir hacia el objeto
             rb.AddForce(direction * moveSpeed * Time.deltaTime);
-            Debug.Log("si");
         }
     
     }
@@ -40,20 +39,11 @@ public class Enemies : MonoBehaviour
     void OnCollisionEnter2D(Collision2D colision) {
 
         // obtenemos componente que implementa la interfaz IDamageable del collider del objeto con el que ha colisionado
-         //IDamageable damageable = colision.collider.GetComponent<IDamageable>();
 
         Collider2D collider = colision.collider;
-         IDamageable damageableObject = collider.GetComponent<IDamageable>();
-
-        /*if (damageable != null)
-        {
-            //Pasamos valor del daño
-             damageable.OnHit(damage);
-        }*/
-        
+        IDamageable damageableObject = collider.GetComponent<IDamageable>();
 
 
-        //IGUAL, FÍSICAS QUE NO ME SALEN---------------------------------------
         if (damageableObject != null) {
 
             //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre
