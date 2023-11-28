@@ -29,6 +29,15 @@ public class PlayerController : MonoBehaviour
     Collider2D swordCollider;
 
 
+    //Colisiones con objetos
+    Vector2 movementInput;
+
+    void Start(){
+        //Inicializamos collider de la espada con el objeto
+        swordCollider = swordHitbox.GetComponent<Collider2D>();
+    }
+ fca8674 (si)
+
     void FixedUpdate()
     {
         swordCollider = swordHitbox.GetComponent<Collider2D>();
@@ -41,12 +50,37 @@ public class PlayerController : MonoBehaviour
 
         prueba = horizontal;
         Animaciones(horizontal, vertical, animator);
-        
+
         Vector3 direction = new Vector3(horizontal, vertical);
         direction.Normalize();
         transform.Translate(direction * speed);
 
         interiorTPObject = transform.Find("Emotes").gameObject;
+
+        //Como hemos cambiado el personaje de dinámico a Kynetic (como se escriba), hay que hacer que manualmente colisione con las cosas
+       /* if (movementInput != Vector2.zero)
+        {
+            bool success = TryMove(movementInput);
+
+            if (!success)
+            {
+
+                success = TryMove(new Vector2(movementInput.x, 0));
+
+                if (!success)
+                {
+
+                    success = TryMove(new Vector2(0, movementInput.y));
+
+                }
+
+            }
+        }
+       private bool TryMove(Vector2 direction);
+        void OnMove(){
+
+            movementInput = movementValue.Get<Vector2>();
+        }*/
 
         //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
         perididaStamina(1);
