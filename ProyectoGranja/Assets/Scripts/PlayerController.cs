@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private float vertical;
 
     private bool ataque;
-    public int vida = 100;
+    //public int vida = 100;
     public int stamina = 100;
 
     private float timeSinceLastMovement;
@@ -96,11 +96,11 @@ public class PlayerController : MonoBehaviour
         
         if(ataque){
             //Debug.Log("Le estas dando");
-            animator.SetBool("AttackDerecha", true);
+            animator.SetBool("Attack", true);
         }
         else{
             //Debug.Log("NO le estas dando");
-            animator.SetBool("AttackDerecha", false);
+            animator.SetBool("Attack", false);
         }
 
     }

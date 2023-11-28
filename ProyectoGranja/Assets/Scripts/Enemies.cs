@@ -2,68 +2,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-                                    //Añadimos nuestra interfaz creada
-public class Enemies : MonoBehaviour, IDamageable
+//Añadimos nuestra interfaz creada
+public class Enemies : MonoBehaviour
 {
     public float damage = 1;
+
+    public float knockbackForce = 800f;
+
+    public float moveSpeed = 500f;
+
+    public ZonaDeteccion zonaDeteccion;
+
+    public Rigidbody2D rb;
+
     Animator animator;
-    Rigidbody2D rb; 
 
-    public float VidaEnemigo{
-        //Encapsulamos variables en una clase y proporcionamos un control más preciso (es un setter)
-        set{
-
-            //Implica que el valor será menor, entonces realiza la animación del hit
-            if(value < vida){
-                animator.SetTrigger("hit");
-            }
-
-            //asignamos nuevo valor a la variable (value es un valor que le daremos más adelante)
-            vida = value;
-
-            if(vida <= 0){
-                animator.SetBool("isAlive", false);
-            }
-        }
-        //GETTER
-        get{
-            return vida;
-        }
-    }
-
-    public float vida = 10f;
-
-    public void Start(){
-        animator = GetComponent<Animator>();
-
-        // Para estar seguros de que está vivo desde el principio
-        animator.SetBool("isAlive", true);
-
+    void Strart(){
         rb = GetComponent<Rigidbody2D>();
-    }  
-    
-
-    // //Te lo añade automáticamente el programa cuando añades la interfaz
-     public void OnHit(float danio, Vector2 knockback){
-         Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
-         VidaEnemigo -= danio;
-
-         //Aplicar fuerza al enemigo
-         rb.AddForce(knockback); 
-     }
-
-    public void OnHit(float danio){
-        Debug.Log("Le ha dado al SLIME con " + danio + " de daño.");
-
-        VidaEnemigo -= danio;
     }
 
-    public void ObjectDestroy(){
-        Destroy(gameObject);
+    void FixedUpdate() {
+        //Hace referencia al primero de la lista de zonaDeteccion (dentro del Script ZonaDeteccion)
+        //Collider2D zonaDeteccion0 = zonaDeteccion.objetosDetectados[0]; -> no funcionó
+
+        if (zonaDeteccion.objetosDetectado.Count > 0) {
+
+            Vector2 direction = (zonaDeteccion.objetosDetectado[0].transform.position - transform.position).normalized;
+
+            //Ir hacia el objeto
+            rb.AddForce(direction * moveSpeed * Time.deltaTime);
+        }
     }
 
-    /*void OnCollisionEnter2D(Collision2D colision){
-        colision.collider.SendMessage("OnHit", damage);
-         Debug.Log("LE HA HECHO "+ damage + " DE DAÑO");
-    }*/
+
+    //Este método lo que hace es llamarse cuando el objeto colisiona con otro objeto
+    void OnCollisionEnter2D(Collision2D colision) {
+
+        // obtenemos componente que implementa la interfaz IDamageable del collider del objeto con el que ha colisionado
+
+        Collider2D collider = colision.collider;
+        IDamageable damageableObject = collider.GetComponent<IDamageable>();
+
+
+        if (damageableObject != null) {
+
+            //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre
+            Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
+            //calculamos el vector que apunta desde el objeto colisionado hacia la posición del objeto padre, luego normaliza para obtener solo la dirección
+            Vector2 direction = (Vector2)(collider.transform.position - transform.position).normalized;
+            //Añadimos fuerza
+            Vector2 knockback = direction * knockbackForce;
+
+            //colision.collider.SendMessage("OnHit", swordDamage, knockback);
+            //Implementamos método
+            Debug.Log(knockback);
+            damageableObject.OnHit(damage, knockback);
+        }
+    }
+
+
 }
