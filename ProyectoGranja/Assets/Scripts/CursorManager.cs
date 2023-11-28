@@ -18,7 +18,7 @@ public class CursorManager : MonoBehaviour
     private Vector2 cursorHotspot;
 
     private Vector2 cursorPosition;
-    private Vector2 previousCursorPosition = new Vector2();
+    //private Vector2 previousCursorPosition = new Vector2();
 
     void Start()
     {

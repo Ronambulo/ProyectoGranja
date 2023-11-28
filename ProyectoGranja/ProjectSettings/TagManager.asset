@@ -11,6 +11,7 @@ TagManager:
   - NPC
   - Inventory
   - ToolBar
+  - Enemy
   layers:
   - Default
   - TransparentFX

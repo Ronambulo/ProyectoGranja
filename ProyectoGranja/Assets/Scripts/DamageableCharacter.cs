@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Añadimos nuestra interfaz creada
+//Aï¿½adimos nuestra interfaz creada
 public class DamageableCharacter : MonoBehaviour, IDamageable
 {
     Animator animator;
     Rigidbody2D rb;
     Collider2D physicsCollider;
 
-    //Para más adelante decidir si queremos desactivar las físicas
+    //Para mï¿½s adelante decidir si queremos desactivar las fï¿½sicas
     public bool disableSimulation = false;
 
     public float vida = 10f;
@@ -19,22 +19,22 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public float VidaCharacter
     {
-        //Encapsulamos variables en una clase y proporcionamos un control más preciso (es un setter)
+        //Encapsulamos variables en una clase y proporcionamos un control mï¿½s preciso (es un setter)
         set
         {
-            //Implica que el valor será menor, entonces realiza la animación del hit
+            //Implica que el valor serï¿½ menor, entonces realiza la animaciï¿½n del hit
             if (value < vida)
             {
                 animator.SetTrigger("hit");
             }
 
-            //asignamos nuevo valor a la variable (value es un valor que le daremos más adelante)
+            //asignamos nuevo valor a la variable (value es un valor que le daremos mï¿½s adelante)
             vida = value;
 
             if (vida <= 0)
             {
                 animator.SetBool("isAlive", false);
-                //Ya no será targeteable
+                //Ya no serï¿½ targeteable
                 this.Targeteable = false;
             }
         }
@@ -53,12 +53,12 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
         set
         {
-            //determninará si el objeto que es targeteable está activo o no
+            //determninarï¿½ si el objeto que es targeteable estï¿½ activo o no
             targeteable = value;
 
-            //Cuando desactivamos targeteable, Queremos descativar la simulación de las físicas (osea desactivar el sistema de físicas), aunque no queremos 
-            // que siempre se desactive, por eso creamos disableSimulation y ponemos condición
-            //NO SE POR QUÉ NO ME FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-----------------------------------------
+            //Cuando desactivamos targeteable, Queremos descativar la simulaciï¿½n de las fï¿½sicas (osea desactivar el sistema de fï¿½sicas), aunque no queremos 
+            // que siempre se desactive, por eso creamos disableSimulation y ponemos condiciï¿½n
+            //NO SE POR QUï¿½ NO ME FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-----------------------------------------
             if (disableSimulation && !targeteable ){
                 Debug.Log("DESACTIVADO");
                 rb.simulated = false;
@@ -77,7 +77,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     {
         animator = GetComponent<Animator>();
 
-        // Para estar seguros de que está vivo desde el principio
+        // Para estar seguros de que estï¿½ vivo desde el principio
         animator.SetBool("isAlive", true);
 
         rb = GetComponent<Rigidbody2D>();
@@ -85,19 +85,19 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     }
 
 
-    // //Te lo añade automáticamente el programa cuando añades la interfaz
+    // //Te lo aï¿½ade automï¿½ticamente el programa cuando aï¿½ades la interfaz
     public void OnHit(float danio, Vector2 knockback)
     {
-        Debug.Log("Le ha dado con " + danio + " de daño.");
+        Debug.Log("Le ha dado con " + danio + " de daï¿½o.");
         VidaCharacter -= danio;
 
         //Aplicar fuerza al enemigo
-        rb.AddForce(knockback);
+        transform.Translate(knockback * Time.deltaTime);
     }
 
     public void OnHit(float danio)
     {
-        Debug.Log("Le ha dado con " + danio + " de daño.");
+        Debug.Log("Le ha dado con " + danio + " de daï¿½o.");
 
         VidaCharacter -= danio;
     }

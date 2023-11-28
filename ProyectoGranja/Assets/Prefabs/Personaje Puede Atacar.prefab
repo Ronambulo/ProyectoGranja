@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8534526987654407619}
   - component: {fileID: 1785884003507507909}
   m_Layer: 0
-  m_Name: Personaje Default 1 1
+  m_Name: Personaje Puede Atacar
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

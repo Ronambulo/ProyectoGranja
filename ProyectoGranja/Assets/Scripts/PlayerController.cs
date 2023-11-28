@@ -28,13 +28,10 @@ public class PlayerController : MonoBehaviour
     public GameObject swordHitbox;
     Collider2D swordCollider;
 
-    void Start(){
-        //Inicializamos collider de la espada con el objeto
-        swordCollider = swordHitbox.GetComponent<Collider2D>();
-    }
 
     void FixedUpdate()
     {
+        swordCollider = swordHitbox.GetComponent<Collider2D>();
         Animator animator = GetComponent<Animator>();
 
         horizontal = Input.GetAxisRaw("Horizontal");

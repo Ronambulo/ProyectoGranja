@@ -9,7 +9,8 @@ public class Enemies : MonoBehaviour
 
     public float knockbackForce = 800f;
 
-    public float moveSpeed = 500f;
+    //la velocidad de los Slimes es 1.3
+    public float moveSpeed = 1.3f;
 
     public ZonaDeteccion zonaDeteccion;
 
@@ -21,6 +22,8 @@ public class Enemies : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    
+
     void FixedUpdate() {
         //Hace referencia al primero de la lista de zonaDeteccion (dentro del Script ZonaDeteccion)
         //Collider2D zonaDeteccion0 = zonaDeteccion.objetosDetectados[0]; -> no funcionó
@@ -30,7 +33,8 @@ public class Enemies : MonoBehaviour
             Vector2 direction = (zonaDeteccion.objetosDetectado[0].transform.position - transform.position).normalized;
 
             //Ir hacia el objeto
-            rb.AddForce(direction * moveSpeed * Time.deltaTime);
+            //rb.AddForce(sirection * moveSpeed);
+            transform.Translate(direction * moveSpeed * Time.deltaTime);
         }
     }
 
@@ -55,8 +59,12 @@ public class Enemies : MonoBehaviour
 
             //colision.collider.SendMessage("OnHit", swordDamage, knockback);
             //Implementamos método
-            Debug.Log(knockback);
-            damageableObject.OnHit(damage, knockback);
+            //solo hace daño si no esta colisionando con un enemigo :)
+            if(!colision.gameObject.CompareTag("Enemy")){
+                Debug.Log(knockback);
+                damageableObject.OnHit(damage, knockback);
+            }
+
         }
     }
 

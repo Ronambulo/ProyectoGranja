@@ -19,24 +19,23 @@ public class SwordHitBox : MonoBehaviour
      //Busca una física del enemigo (su Rigidbody) y manda on hit daño al gameObject
      void OnCollisionEnter2D(Collision2D collision)
     {
-
         //convertimos objeto asociado a collider en una interfaz específica (para que obtenga fuerza)
         IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
-
         //damageableObject.OnHit(swordDamage);
 
-        if(damageableObject != null){
-        //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre
-         Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
-        //calculamos el vector que apunta desde el objeto colisionado hacia la posición del objeto padre, luego normaliza para obtener solo la dirección
-         Vector2 direction = (Vector2)(collision.collider.gameObject.transform.position- parentPosition).normalized;
-        //Añadimos fuerza
-         Vector2  knockback = direction * knockBackForce;
+          if(damageableObject != null){
+               //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre
+               Vector3 parentPosition = gameObject.GetComponentInParent<Transform>().position;
+               //calculamos el vector que apunta desde el objeto colisionado hacia la posición del objeto padre, luego normaliza para obtener solo la dirección
+               Vector2 direction = (Vector2)(collision.collider.gameObject.transform.position- parentPosition).normalized;
+               //Añadimos fuerza
+               Vector2  knockback = direction * knockBackForce;
 
-             //colision.collider.SendMessage("OnHit", swordDamage, knockback);
-             //Implementamos método
+               //colision.collider.SendMessage("OnHit", swordDamage, knockback);
+               //Implementamos método
                Debug.Log(knockback);
                damageableObject.OnHit(swordDamage, knockback);
+               
           }
            else{
                 Debug.LogWarning("El collider no contiene la interfaz IDamageable!!");

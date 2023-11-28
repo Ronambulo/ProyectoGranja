@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7213499955715254078}
   m_Layer: 0
   m_Name: Slime Rosa
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 704486269973502693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.12, z: -1.42}
+  m_LocalPosition: {x: -7.96, y: -4.62, z: -1.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  knockbackForce: 800
-  moveSpeed: 30
+  knockbackForce: 50
+  moveSpeed: 1.3
   zonaDeteccion: {fileID: 945632164264135124}
   rb: {fileID: 7331791324034574177}
 --- !u!50 &7331791324034574177
@@ -153,7 +153,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &3122662530949721486
 CircleCollider2D:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableSimulation: 0
-  vida: 10
+  vida: 3
   targeteable: 1
 --- !u!1 &6086690169640438041
 GameObject:
@@ -272,7 +272,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 2.7639532
 --- !u!114 &945632164264135124
 MonoBehaviour:
   m_ObjectHideFlags: 0
