@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private float vertical;
 
     private bool ataque;
-    public int vida = 100;
+    //public int vida = 100;
     public int stamina = 100;
 
     private float timeSinceLastMovement;

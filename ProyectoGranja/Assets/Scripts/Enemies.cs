@@ -15,15 +15,15 @@ public class Enemies : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    Animator animator;
 
     void Strart(){
         rb = GetComponent<Rigidbody2D>();
-    
     }
 
     void FixedUpdate() {
         //Hace referencia al primero de la lista de zonaDeteccion (dentro del Script ZonaDeteccion)
-        //Collider2D zonaDeteccion0 = zonaDeteccion.objetosDetectados[0];
+        //Collider2D zonaDeteccion0 = zonaDeteccion.objetosDetectados[0]; -> no funcionó
 
         if (zonaDeteccion.objetosDetectado.Count > 0) {
 
@@ -32,8 +32,8 @@ public class Enemies : MonoBehaviour
             //Ir hacia el objeto
             rb.AddForce(direction * moveSpeed * Time.deltaTime);
         }
-    
     }
+
 
     //Este método lo que hace es llamarse cuando el objeto colisiona con otro objeto
     void OnCollisionEnter2D(Collision2D colision) {

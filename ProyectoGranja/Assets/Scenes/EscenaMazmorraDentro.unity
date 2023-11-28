@@ -1011,6 +1011,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8795643646271803473, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
+      propertyPath: knockBackForce
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6408199625007793928, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
     - {fileID: 6129565719738246178, guid: 3d3bd4fd52078224e8b8935642022b27, type: 3}
@@ -14215,7 +14219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.57
+      value: -4.62
       objectReference: {fileID: 0}
     - target: {fileID: 977263531251261757, guid: deec85e56a9f19c429392767eac04351, type: 3}
       propertyPath: m_LocalPosition.z
