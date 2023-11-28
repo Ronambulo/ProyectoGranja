@@ -125,6 +125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   knockbackForce: 800
+  moveSpeed: 50
+  zonaDeteccion: {fileID: 945632164264135124}
+  rb: {fileID: 7331791324034574177}
 --- !u!50 &7331791324034574177
 Rigidbody2D:
   serializedVersion: 4
@@ -151,7 +154,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3122662530949721486
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -282,5 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b31faf2bd7aafc4e91855bea51c68af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagObjetivo: Player
   objetosDetectado: []
   col: {fileID: 7330557229191207208}

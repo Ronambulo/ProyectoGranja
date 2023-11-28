@@ -184,7 +184,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6296283781117034473
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordDamage: 1
-  knockBackForce: 5000
+  knockBackForce: 300
   swordCollider: {fileID: 3925951688815015410}
 --- !u!61 &3925951688815015410
 BoxCollider2D:
