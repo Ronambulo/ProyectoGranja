@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
         //Inicializamos collider de la espada con el objeto
         swordCollider = swordHitbox.GetComponent<Collider2D>();
     }
- fca8674 (si)
 
     void FixedUpdate()
     {

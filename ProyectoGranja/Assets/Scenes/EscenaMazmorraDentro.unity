@@ -1183,8 +1183,6 @@ Transform:
   - {fileID: 1008042710}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
- fca8674 (si)
 --- !u!1 &432158733
 GameObject:
   m_ObjectHideFlags: 0
@@ -15677,6 +15675,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 204975528891795199, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 204975528891795199, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5356507146694088422, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
       propertyPath: m_Name
       value: Personaje Default 1 1 1
