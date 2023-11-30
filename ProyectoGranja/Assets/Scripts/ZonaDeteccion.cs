@@ -31,3 +31,7 @@ public class ZonaDeteccion : MonoBehaviour
         }
     }
 }
+
+
+
+
