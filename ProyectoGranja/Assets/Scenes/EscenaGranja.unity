@@ -22075,7 +22075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9114eb2219fa04e8c4312655635334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolBar_UI: {fileID: 601268431}
+  inventory_UI: {fileID: 601268430}
   cursorDefault: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   inventoryPanel: {fileID: 1875645063}

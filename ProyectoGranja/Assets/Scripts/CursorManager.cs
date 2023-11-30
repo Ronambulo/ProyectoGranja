@@ -12,8 +12,8 @@ public class CursorManager : MonoBehaviour
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public Tilemap interactableMap;
 
-    private List<string> listaEspadas;
-    string objetoEnMano = null;
+    private List<string> listaEspadas = new List<string> { "Diamond Sword", "Gold Sword", "Bronze Sword" , "Iron Sword" };
+    private string objetoEnMano;
 
     private int divisor = 10;
     private Vector2 cursorHotspot;
@@ -25,10 +25,6 @@ public class CursorManager : MonoBehaviour
     {
         cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height/ divisor);
         Cursor.SetCursor(cursorDefault,cursorHotspot, CursorMode.Auto);
-        listaEspadas.Add("diamondSword");
-        listaEspadas.Add("goldSword");
-        listaEspadas.Add("bronzeSword");
-        listaEspadas.Add("ironSword");
     }
 
     // Update is called once per frame
@@ -36,7 +32,7 @@ public class CursorManager : MonoBehaviour
     {
         objetoEnMano = toolBar_UI.nombreSeleccionado;
 
-        if (inventoryPanel.activeSelf == false&&listaEspadas.Contains(objetoEnMano))
+        if (inventoryPanel.activeSelf == false && listaEspadas.Contains(objetoEnMano))
         {
             Cursor.visible = true;
             cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
@@ -44,7 +40,7 @@ public class CursorManager : MonoBehaviour
         }
         else
         {
-            if (inventoryPanel.activeSelf==true||pauseMenu.activeSelf==true)
+            if (inventoryPanel.activeSelf == true || pauseMenu.activeSelf == true)
             {
                 Cursor.visible = true;
 
@@ -55,7 +51,7 @@ public class CursorManager : MonoBehaviour
             {
                 Cursor.visible = false;
             }
-
+                
         }
     }
 
