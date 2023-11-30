@@ -13,6 +13,7 @@ public class Inventory_UI : MonoBehaviour
     [SerializeField] public GameObject pausaPanel;
     [SerializeField] public Player player;
     [SerializeField] public GameObject playerObject;
+    [SerializeField] private GameObject healthBar;
     [SerializeField] private Canvas canvas;
     private bool dragSingle;
 
@@ -82,6 +83,7 @@ public class Inventory_UI : MonoBehaviour
             if (!inventoryPanel.activeSelf)
             {
                 inventoryPanel.SetActive(true);
+                healthBar.SetActive(true);
                 playerObject.SetActive(false);
                 HUD.SetActive(true);
                 Refresh();
@@ -93,6 +95,7 @@ public class Inventory_UI : MonoBehaviour
                 playerObject.SetActive(true);
                 if (SceneManager.GetActiveScene().name != "EscenaCasaPlayer")
                     HUD.SetActive(true);
+                    healthBar.SetActive(true);
             }
         }
         

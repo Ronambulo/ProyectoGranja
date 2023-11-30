@@ -12,7 +12,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     //Para m�s adelante decidir si queremos desactivar las f�sicas
     public bool disableSimulation = false;
 
-    public float vida = 10f;
+    public float vida = 8f;
     //Para que un objeto sea targeteable (objetivo)
     public bool targeteable = true;
 
@@ -55,17 +55,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         {
             //determninar� si el objeto que es targeteable est� activo o no
             targeteable = value;
-
-            //Cuando desactivamos targeteable, Queremos descativar la simulaci�n de las f�sicas (osea desactivar el sistema de f�sicas), aunque no queremos 
-            // que siempre se desactive, por eso creamos disableSimulation y ponemos condici�n
-            //NO SE POR QU� NO ME FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-----------------------------------------
-            if (disableSimulation && !targeteable ){
-                Debug.Log("DESACTIVADO");
-                rb.simulated = false;
-            }
-            else {
-                rb.simulated = true;
-            }
 
             physicsCollider.enabled = false;
         }

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public string LastScene;
     public Transform player;
     public GameObject toolbar;
+    public GameObject healthBar;
     public GameObject CanvasDontDestroy;
     public GameObject InventoryParent;
 
@@ -62,11 +63,13 @@ public class GameManager : MonoBehaviour
         {
             player.position = new Vector3(0f, -2.146401f, -0.01f);
             toolbar.SetActive(false);
+            healthBar.SetActive(false);
         }
         else if(ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
         {
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
             toolbar.SetActive(true);
+            healthBar.SetActive(true);
         }
         else if(ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaGranja"){
             player.position = new Vector3(0.04f, -8.523807f, -0.01f);
@@ -89,13 +92,16 @@ public class GameManager : MonoBehaviour
         {
             player.gameObject.SetActive(false);
             toolbar.gameObject.SetActive(false);
+            healthBar.gameObject.SetActive(false);
             CanvasDontDestroy.SetActive(false);
+
         }
         else
         {
             if(ThisScene != "EscenaCasaPlayer")
             {
                 toolbar.gameObject.SetActive(true);
+                healthBar.gameObject.SetActive(true);
             }
 
             CanvasDontDestroy.SetActive(true);
@@ -104,7 +110,11 @@ public class GameManager : MonoBehaviour
                 inventoryUI.toggleInventory();
                 i++;
             }   
-            if (InventoryParent.activeSelf == true){player.gameObject.SetActive(false);}else{ player.gameObject.SetActive(true); }
+            if (InventoryParent.activeSelf == true){
+                player.gameObject.SetActive(false);
+            }else{ 
+                player.gameObject.SetActive(true); 
+            }
         }
 
     }

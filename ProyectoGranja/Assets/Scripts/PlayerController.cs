@@ -18,8 +18,7 @@ public class PlayerController : MonoBehaviour
     private float vertical;
 
     private bool ataque;
-    //public int vida = 100;
-    public int stamina = 100;
+    public int stamina = 80;
 
     private float timeSinceLastMovement;
     public int timeBetweenStaminaLoss = 10;
@@ -31,6 +30,21 @@ public class PlayerController : MonoBehaviour
 
     //Colisiones con objetos
     Vector2 movementInput;
+
+     //Getter y setter de stamina para utilizarlo para el UI de stamina
+    public int StaminaCharacter
+    {
+        set
+        {
+            stamina = value;
+        }
+        get
+        {
+            return stamina;
+        }
+
+    }
+
 
     void Start(){
         //Inicializamos collider de la espada con el objeto
@@ -82,7 +96,7 @@ public class PlayerController : MonoBehaviour
         }*/
 
         //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
-        perididaStamina(1);
+        perididaStamina(10);
 
 
     }
@@ -172,7 +186,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
+        Debug.Log(stamina);
 
     }
 }
