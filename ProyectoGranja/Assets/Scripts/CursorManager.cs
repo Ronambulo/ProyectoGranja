@@ -22,7 +22,7 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-        cursorHotspot = new Vector2(cursorDefault.width / 10, cursorDefault.height / 10);
+
         grid = gameObject.GetComponent<Grid>();
         cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height/ divisor);
         Cursor.SetCursor(cursorDefault,cursorHotspot, CursorMode.Auto);
@@ -35,7 +35,7 @@ public class CursorManager : MonoBehaviour
         if (inventoryPanel.activeSelf == false)
         {
             Cursor.visible = true;
-            cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+            cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
             Cursor.SetCursor(cursorAtaque, cursorHotspot, CursorMode.Auto);
         }
         else
@@ -44,7 +44,7 @@ public class CursorManager : MonoBehaviour
             {
                 Cursor.visible = true;
 
-                cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+                cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
                 Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
             }
             else
