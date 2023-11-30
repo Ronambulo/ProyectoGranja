@@ -21,7 +21,7 @@ public class SwordHitBox : MonoBehaviour
     {
         //convertimos objeto asociado a collider en una interfaz específica (para que obtenga fuerza)
         IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
-        //damageableObject.OnHit(swordDamage);
+       // damageableObject.OnHit(swordDamage);
 
           if(damageableObject != null){
                //lo hacemos vector3, para poder calcular después. Sacamos la posicion del padre
