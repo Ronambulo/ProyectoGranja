@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swordDamage: 1
   knockBackForce: 50
-  swordCollider: {fileID: 0}
+  swordCollider: {fileID: 1513832535601972103}
 --- !u!61 &1513832535601972103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008799374, y: -0.0034611225}

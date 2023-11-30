@@ -166,16 +166,14 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-
   m_GameObject: {fileID: 5356507146694088422}
-  fca8674 (si):ProyectoGranja/Assets/Prefabs/Personaje Default 1 1 1.prefab
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -186,7 +184,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2383394054314586841
 MonoBehaviour:
@@ -248,14 +246,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2942130746310877215}
   - component: {fileID: 716745961074359220}
-  fca8674 (si):ProyectoGranja/Assets/Prefabs/Personaje Default 1 1 1.prefab
   m_Layer: 0
-  m_Name: shadow
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2942130746310877215
 Transform:
   m_ObjectHideFlags: 0
