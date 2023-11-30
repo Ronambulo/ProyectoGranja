@@ -12,7 +12,7 @@ public class ToolBar_UI : MonoBehaviour
     public List<Slots_HUD> slotshud = new List<Slots_HUD>();
 
     public Slots_HUD SelectedSlot;
-    public string nombreSeccionado;
+    public string nombreSeleccionado;
 
     public void SelectSlot(int index)
     {
@@ -21,7 +21,7 @@ public class ToolBar_UI : MonoBehaviour
             if(SelectedSlot != null)
             {
                 SelectedSlot.setHighlight(true);
-                nombreSeccionado = player.inventory.slots[index].itemName;
+                nombreSeleccionado = player.inventory.slots[index].itemName;
             }
             SelectedSlot = slotshud[index];
             SelectedSlot.setHighlight(false);

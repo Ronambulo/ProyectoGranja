@@ -5,14 +5,15 @@ using UnityEngine.Tilemaps;
 
 public class CursorManager : MonoBehaviour
 {
-    [SerializeField] public Player player;
+    [SerializeField] public ToolBar_UI toolBar_UI;
     [SerializeField] public Texture2D cursorDefault;
     [SerializeField] public Texture2D cursorAtaque;
     [SerializeField] public GameObject inventoryPanel;
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public Tilemap interactableMap;
-    [SerializeField] public Tilemap floor;
-    private Grid grid;
+
+    private List<string> listaEspadas;
+    string objetoEnMano = null;
 
     private int divisor = 10;
     private Vector2 cursorHotspot;
@@ -22,29 +23,32 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-        cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
-        grid = gameObject.GetComponent<Grid>();
         cursorHotspot = new Vector2(cursorDefault.width/ divisor, cursorDefault.height/ divisor);
         Cursor.SetCursor(cursorDefault,cursorHotspot, CursorMode.Auto);
+        listaEspadas.Add("diamondSword");
+        listaEspadas.Add("goldSword");
+        listaEspadas.Add("bronzeSword");
+        listaEspadas.Add("ironSword");
     }
 
     // Update is called once per frame
     void Update()
     {
+        objetoEnMano = toolBar_UI.nombreSeleccionado;
 
-        if (inventoryPanel.activeSelf == false)
+        if (inventoryPanel.activeSelf == false&&listaEspadas.Contains(objetoEnMano))
         {
             Cursor.visible = true;
-            cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+            cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
             Cursor.SetCursor(cursorAtaque, cursorHotspot, CursorMode.Auto);
         }
         else
         {
-            if (inventoryPanel.activeSelf==true)
+            if (inventoryPanel.activeSelf==true||pauseMenu.activeSelf==true)
             {
                 Cursor.visible = true;
 
-                cursorHotspot = new Vector2(cursorDefault.width / 2, cursorDefault.height / 2);
+                cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
                 Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
             }
             else
