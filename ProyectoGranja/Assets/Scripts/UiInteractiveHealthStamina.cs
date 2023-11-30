@@ -6,22 +6,31 @@ using UnityEngine.UI;
 
 public class UiHealthInteractiveHealthStamina : MonoBehaviour
 {
+    public DamageableCharacter playerHealth;
+    public PlayerController playerStamina;
+
    // public Image healthBar;
     public Image[] healthPoints;
+    public Image[] staminaPoints;
 
-    public float vida, vidaMax = 100;
+    public int stamina;
+    public float vida, vidaMax = 8;
 
     // Start is called before the first frame update
     void Start()
     {
         //Inicializamos la vida al máximo
-        vida = vidaMax;
+        vida = playerHealth.VidaCharacter;
     }
 
     // Update is called once per frame
     void Update()
     {
+        vida = playerHealth.VidaCharacter;
+        stamina = playerStamina.StaminaCharacter;
+
         RellenaVida();
+        RellenaStamina();
 
         //Por si se rebasa la vida del jugador de la vida máxima
         if(vida > vidaMax){
@@ -30,27 +39,24 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     }
 
     void RellenaVida(){
-
-        for(int i = 0 ; i< healthPoints.Length ;i++){
+        for(int i = 0 ; i < healthPoints.Length ;i++){
             healthPoints[i].enabled = !MostrarPuntoDeSalud(vida, i);
         }
     }
-
-    //daño*
-    public void Danio(float danioPuntos){
-        if(vida  > 0){
-            vida -= danioPuntos;
+    void RellenaStamina()
+    {
+        for (int i = 0; i < staminaPoints.Length; i++)
+        {
+            staminaPoints[i].enabled = !MostrarPuntoDeStamina(stamina, i);
         }
     }
 
-    public void Recuperacion(float puntosRecuperacion){
-        if(vida < vidaMax){
-            vida+=puntosRecuperacion;
-        }
-    }
-
-    bool MostrarPuntoDeSalud(float vida, int numeroPunto){
+    bool MostrarPuntoDeSalud(float vida, int numPunto){
         //para mostrar la salud
-        return ((numeroPunto*10) >= vida);
+        return (numPunto >= vida);
+    }
+
+    bool MostrarPuntoDeStamina(int stamina, int numPunto) {
+        return ((numPunto*10) >= stamina);
     }
 }
