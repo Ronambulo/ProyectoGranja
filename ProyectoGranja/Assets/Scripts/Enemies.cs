@@ -61,7 +61,6 @@ public class Enemies : MonoBehaviour
             //Implementamos método
             //solo hace daño si no esta colisionando con un enemigo :)
             if(!colision.gameObject.CompareTag("Enemy")){
-                Debug.Log(knockback);
                 damageableObject.OnHit(damage, knockback);
             }
 

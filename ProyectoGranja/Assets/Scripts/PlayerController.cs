@@ -186,8 +186,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        Debug.Log(stamina);
-
     }
 }
 

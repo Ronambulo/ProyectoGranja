@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 //Añadimos libreria de UI
 using UnityEngine.UI;
+//Añadimos librería de TMP para texto
+using TMPro;
 
 public class UiHealthInteractiveHealthStamina : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     public int stamina;
     public float vida, vidaMax = 8;
 
+    public TMP_Text vidaText;
+    public TMP_Text staminaText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,9 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        vidaText.text = ""+vida;
+        staminaText.text = ""+stamina;
+
         vida = playerHealth.VidaCharacter;
         stamina = playerStamina.StaminaCharacter;
 

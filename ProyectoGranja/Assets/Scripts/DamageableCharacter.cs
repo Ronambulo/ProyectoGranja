@@ -36,6 +36,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
                 animator.SetBool("isAlive", false);
                 //Ya no ser� targeteable
                 this.Targeteable = false;
+                vida = 0;
             }
         }
         //GETTER
@@ -77,7 +78,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     // //Te lo a�ade autom�ticamente el programa cuando a�ades la interfaz
     public void OnHit(float danio, Vector2 knockback)
     {
-        Debug.Log("Le ha dado con " + danio + " de da�o.");
         VidaCharacter -= danio;
 
         //Aplicar fuerza al enemigo
@@ -86,8 +86,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void OnHit(float danio)
     {
-        Debug.Log("Le ha dado con " + danio + " de da�o.");
-
         VidaCharacter -= danio;
     }
 
