@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableSimulation: 0
-  vida: 3
+  vida: 20
   targeteable: 1
 --- !u!95 &2836527365757059330
 Animator:
