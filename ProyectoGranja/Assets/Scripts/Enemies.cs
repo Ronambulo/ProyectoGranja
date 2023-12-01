@@ -18,7 +18,7 @@ public class Enemies : MonoBehaviour
 
     Animator animator;
 
-    void Strart(){
+    void Start(){
         rb = GetComponent<Rigidbody2D>();
     }
 
