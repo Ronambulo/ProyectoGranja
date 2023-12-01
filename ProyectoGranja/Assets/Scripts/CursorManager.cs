@@ -11,6 +11,7 @@ public class CursorManager : MonoBehaviour
     [SerializeField] public GameObject inventoryPanel;
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public Tilemap interactableMap;
+    [SerializeField] public Tilemap floor;
 
     private List<string> listaEspadas = new List<string> { "Diamond Sword", "Gold Sword", "Bronze Sword" , "Iron Sword" };
     private string objetoEnMano;
@@ -18,8 +19,7 @@ public class CursorManager : MonoBehaviour
     private int divisor = 10;
     private Vector2 cursorHotspot;
 
-    private Vector2 cursorPosition;
-    private Vector2 previousCursorPosition = new Vector2();
+    private Vector3Int previousCursorPosition = new Vector3Int();
 
     void Start()
     {
@@ -30,7 +30,26 @@ public class CursorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Vector3Int cursorPosition = GetMousePosition(); no encuentra GetMousePosition 
         objetoEnMano = toolBar_UI.nombreSeleccionado;
+
+        Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();
+        foreach (Tilemap tilemap in tilemaps)
+        {
+            if (tilemap.name == "interactableMap")
+            {
+                interactableMap = tilemap;
+            }
+            if(tilemap.name == "Floor")
+            {
+                floor = tilemap;
+            }
+        }
+
+        if (!cursorPosition.Equals(previousCursorPosition))
+        {
+
+        }
 
         if (inventoryPanel.activeSelf == false && listaEspadas.Contains(objetoEnMano))
         {
@@ -53,10 +72,5 @@ public class CursorManager : MonoBehaviour
             }
                 
         }
-    }
-
-    void tileHover()
-    {
-
     }
 }

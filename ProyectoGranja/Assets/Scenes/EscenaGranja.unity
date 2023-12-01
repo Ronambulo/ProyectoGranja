@@ -22075,12 +22075,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9114eb2219fa04e8c4312655635334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory_UI: {fileID: 601268430}
+  toolBar_UI: {fileID: 0}
   cursorDefault: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   inventoryPanel: {fileID: 1875645063}
   pauseMenu: {fileID: 1326207596}
   interactableMap: {fileID: 633535738}
+  floor: {fileID: 1272317183}
 --- !u!114 &1717230808
 MonoBehaviour:
   m_ObjectHideFlags: 0
