@@ -33,9 +33,10 @@ public class Enemies : MonoBehaviour
             Vector2 direction = (zonaDeteccion.objetosDetectado[0].transform.position - transform.position).normalized;
 
             //Ir hacia el objeto
-            //rb.AddForce(sirection * moveSpeed);
             transform.Translate(direction * moveSpeed * Time.deltaTime);
         }
+
+
     }
 
 
