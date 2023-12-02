@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject CanvasDontDestroy;
     public GameObject InventoryParent;
     public GameObject pausePanel;
+    public GameObject muertePanel;
 
     private GameObject other;
     private EmoteManager emoteManager;
@@ -83,7 +85,6 @@ public class GameManager : MonoBehaviour
 
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;
-
     }
 
     private void Update()
@@ -95,7 +96,7 @@ public class GameManager : MonoBehaviour
             healthBar.gameObject.SetActive(false);
             CanvasDontDestroy.SetActive(false);
             pausePanel.gameObject.SetActive(false); 
-
+            muertePanel.gameObject.SetActive(false);
         }
         else
         {
