@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject healthBar;
     public GameObject CanvasDontDestroy;
     public GameObject InventoryParent;
+    public GameObject pausePanel;
 
     private GameObject other;
     private EmoteManager emoteManager;
@@ -94,6 +95,7 @@ public class GameManager : MonoBehaviour
             toolbar.gameObject.SetActive(false);
             healthBar.gameObject.SetActive(false);
             CanvasDontDestroy.SetActive(false);
+            pausePanel.gameObject.SetActive(false); 
 
         }
         else
