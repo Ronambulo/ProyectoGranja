@@ -100,7 +100,7 @@ public class CursorManager : MonoBehaviour
                     {
                         floor.SetTileFlags(previousCursorPosition, TileFlags.None);
                         floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
-                        if (objetoEnMano=="Hoe")
+                        if (objetoEnMano=="Hoe" && currentScene.name == "EscenaGranja")
                         {
                             if (Math.Abs(cursorPosition.x-playerPosition.x*2)<=3&& Math.Abs(cursorPosition.y-playerPosition.y*2)<=3)
                             {
