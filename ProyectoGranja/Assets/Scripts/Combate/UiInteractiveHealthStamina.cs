@@ -25,7 +25,7 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
 
     public GameObject muertePanel;
     public string vueltaACasa;
- 
+
 
     //COLORES
     public Color color1;
@@ -36,6 +36,7 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     public Color color6;
     public Color color7;
     public Color color8;
+
 
 
     // Start is called before the first frame update
@@ -52,13 +53,13 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
         stamina = playerStamina.StaminaCharacter;
 
         vidaText.text = "" + vida;
-        vidaText.color = Color.red;
+        //vidaText.color =  color2; 
 
         staminaText.text = "" + stamina;
 
         RellenaVida();
         RellenaStamina();
-        //ColoresTexto(vida, stamina);
+        ColoresTexto(vida, stamina);
 
 
         //Por si se rebasa la vida del jugador de la vida máxima
@@ -93,34 +94,62 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
 
         switch (vida) {
 
-            case 1:
+            case 1f:
                 vidaText.color = color1;
                 break;
-            case 2:
+            case 2f:
                 vidaText.color = color2;
                 break;
-            case 3:
+            case 3f:
                 vidaText.color = color3;
                 break;
-            case 4:
+            case 4f:
                 vidaText.color = color4;
                 break;
-            case 5:
+            case 5f:
                 vidaText.color = color5;
                 break;
-            case 6:
+            case 6f:
                 vidaText.color = color6;
                 break;
-            case 7:
+            case 7f:
                 vidaText.color = color7;
                 break;
-            case 8:
+            case 8f:
                 vidaText.color = color8;
                 break;
             default:
                 break;
         }
 
+
+        if (stamina >= 70 || stamina <= 80) {
+            staminaText.color = color8;
+        }
+        else if (stamina >= 60 || stamina < 70)
+        {
+            staminaText.color = color7;
+        }
+        else if (stamina >= 50 || stamina < 60)
+        {
+            staminaText.color = color6;
+        }
+        else if (stamina >= 40 || stamina < 50) {
+            staminaText.color = color5;
+        }
+        else if (stamina >= 30 || stamina < 40) {
+            staminaText.color = color4;
+        }
+        else if (stamina >= 20 || stamina < 30)
+        {
+            staminaText.color = color3;
+        }
+        else if (stamina >= 10 || stamina < 20) {
+            staminaText.color = color2;
+        }
+        else if (stamina >= 0 || stamina < 10) {
+            staminaText.color = color1;
+        }
     }
 
  
