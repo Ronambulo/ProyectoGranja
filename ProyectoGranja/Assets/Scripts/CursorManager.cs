@@ -16,8 +16,7 @@ public class CursorManager : MonoBehaviour
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public Tile []listaCultivo;
 
-    private Tilemap interactableMap;
-    private bool boolInteractable = false;
+    private Tilemap crops;
     private Tilemap floor;
 
     private List<string> listaEspadas = new List<string> { "Diamond Sword", "Gold Sword", "Bronze Sword" , "Iron Sword" };
@@ -56,6 +55,8 @@ public class CursorManager : MonoBehaviour
             );
         Scene currentScene = SceneManager.GetActiveScene();
         objetoEnMano = toolBar_UI.nombreSeleccionado;
+        Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
 
         if (currentScene.name=="EscenaGranja"&&!gameStarted)
             gameStarted=true;
@@ -65,9 +66,9 @@ public class CursorManager : MonoBehaviour
             Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();
             foreach (Tilemap tilemap in tilemaps)
             {
-                if (tilemap.name == "interactableMap")
+                if (tilemap.name == "Crops")
                 {
-                    interactableMap = tilemap;
+                    crops = tilemap;
                 }
                 if (tilemap.name == "Floor")
                 {
@@ -95,21 +96,16 @@ public class CursorManager : MonoBehaviour
             {
                 if (gameStarted == true && grid != null)
                 {
-                    Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                     if (!cursorPosition.Equals(previousCursorPosition))
                     {
                         floor.SetTileFlags(previousCursorPosition, TileFlags.None);
                         floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
                         if (objetoEnMano=="Hoe" && currentScene.name == "EscenaGranja")
                         {
-                            if (Math.Abs(cursorPosition.x-playerPosition.x*2)<=3&& Math.Abs(cursorPosition.y-playerPosition.y*2)<=3)
+                            if (boolReachable)
                             {
                                 floor.SetTileFlags(cursorPosition, TileFlags.None);
                                 floor.SetColor(cursorPosition, listaColores[(int)colores.green]);
-                                if (interactableMap.GetTile(cursorPosition)!=null)
-                                {
-                                    boolInteractable = true;
-                                }
                             }
                             else
                             {
@@ -122,17 +118,15 @@ public class CursorManager : MonoBehaviour
                             floor.SetTileFlags(cursorPosition, TileFlags.None);
                             floor.SetColor(cursorPosition, listaColores[(int)colores.gray]);
                         }
-                        if (boolInteractable && Input.GetMouseButton(0) && interactableMap.GetTile(cursorPosition) != null)
-                        {
-                            floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
-                            boolInteractable = false;
-                        }
-                        previousCursorPosition = cursorPosition;
                     }
                 }
                 Cursor.visible = false;
             }
-
+            if (objetoEnMano == "Hoe" && Input.GetMouseButtonDown(0) && crops.GetTile(cursorPosition) != null && boolReachable)
+            {
+                floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
+            }
+            previousCursorPosition = cursorPosition;
         }
     }
 }
