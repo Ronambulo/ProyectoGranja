@@ -24,7 +24,11 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             //Implica que el valor ser� menor, entonces realiza la animaci�n del hit
             if (value < vida)
             {
+<<<<<<< Updated upstream:ProyectoGranja/Assets/Scripts/Combate/DamageableCharacter.cs
                 
+=======
+                animator.SetTrigger("hit");
+>>>>>>> Stashed changes:ProyectoGranja/Assets/Scripts/DamageableCharacter.cs
             }
 
             //asignamos nuevo valor a la variable (value es un valor que le daremos m�s adelante)
