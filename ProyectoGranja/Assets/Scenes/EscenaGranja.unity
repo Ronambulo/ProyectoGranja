@@ -2521,6 +2521,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1998829334}
+    - target: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: damageable
+      value: 
+      objectReference: {fileID: 1998829337}
+    - target: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: panelMuerte
+      value: 
+      objectReference: {fileID: 631024008}
+    - target: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1998829337}
+    - target: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: playerStamina
+      value: 
+      objectReference: {fileID: 1998829338}
+    - target: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: transformPlayer
+      value: 
+      objectReference: {fileID: 242820844}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2531,6 +2555,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7979095347176842982, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
   m_PrefabInstance: {fileID: 242820843}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &242820845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8914405468361342490, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+  m_PrefabInstance: {fileID: 242820843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998829334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd1bb33c09de0049a1d2c6ded2cf684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &281773436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3084,6 +3119,7 @@ MonoBehaviour:
   vidaText: {fileID: 2100731172}
   staminaText: {fileID: 42553525}
   muertePanel: {fileID: 631024008}
+  vueltaACasa: EscenaCasaPlayer
   color1: {r: 0.7294118, g: 0.24313727, b: 0.19607845, a: 0}
   color2: {r: 0.7725491, g: 0.30980393, b: 0.18823531, a: 0}
   color3: {r: 0.8117648, g: 0.36862746, b: 0.1764706, a: 0}
@@ -10610,7 +10646,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023573269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242820845}
+        m_TargetAssemblyTypeName: Muerte, Assembly-CSharp
+        m_MethodName: Vuelta
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EscenaCasaPlayer
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1023573269
 MonoBehaviour:
   m_ObjectHideFlags: 0

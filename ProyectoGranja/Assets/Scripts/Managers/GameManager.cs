@@ -95,15 +95,18 @@ public class GameManager : MonoBehaviour
             toolbar.gameObject.SetActive(false);
             healthBar.gameObject.SetActive(false);
             CanvasDontDestroy.SetActive(false);
-            pausePanel.gameObject.SetActive(false); 
+            pausePanel.gameObject.SetActive(false);
             muertePanel.gameObject.SetActive(false);
         }
         else
         {
-            if(ThisScene != "EscenaCasaPlayer")
+            if (ThisScene != "EscenaCasaPlayer")
             {
                 toolbar.gameObject.SetActive(true);
                 healthBar.gameObject.SetActive(true);
+            }
+            else{
+                muertePanel.gameObject.SetActive(false);
             }
 
             CanvasDontDestroy.SetActive(true);

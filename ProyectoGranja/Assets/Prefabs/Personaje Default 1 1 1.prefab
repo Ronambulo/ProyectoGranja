@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2383394054314586841}
   - component: {fileID: 9000589471288147123}
   - component: {fileID: 6939073703657343022}
+  - component: {fileID: 8914405468361342490}
   m_Layer: 0
   m_Name: Personaje Default 1 1 1
   m_TagString: Player
@@ -236,6 +237,18 @@ MonoBehaviour:
   disableSimulation: 1
   vida: 8
   targeteable: 1
+--- !u!114 &8914405468361342490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356507146694088422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd1bb33c09de0049a1d2c6ded2cf684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8084848246914693556
 GameObject:
   m_ObjectHideFlags: 0

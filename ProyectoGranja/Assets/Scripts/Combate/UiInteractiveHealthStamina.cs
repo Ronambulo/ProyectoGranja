@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 //Añadimos librería de TMP para texto
 using TMPro;
+//Añadimos librería para cambiar de escena cuando mueras
+using UnityEngine.SceneManagement;
 
 public class UiHealthInteractiveHealthStamina : MonoBehaviour
 {
     public DamageableCharacter playerHealth;
     public PlayerController playerStamina;
 
-   // public Image healthBar;
+    // public Image healthBar;
     public Image[] healthPoints;
     public Image[] staminaPoints;
 
@@ -22,6 +24,8 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     public TMP_Text staminaText;
 
     public GameObject muertePanel;
+    public string vueltaACasa;
+ 
 
     //COLORES
     public Color color1;
@@ -39,7 +43,6 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     {
         //Inicializamos la vida al máximo
         vida = playerHealth.VidaCharacter;
-        //muertePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,28 +51,24 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
         vida = playerHealth.VidaCharacter;
         stamina = playerStamina.StaminaCharacter;
 
-        vidaText.text = ""+vida;
+        vidaText.text = "" + vida;
         vidaText.color = Color.red;
 
-        staminaText.text = ""+stamina;
+        staminaText.text = "" + stamina;
 
         RellenaVida();
         RellenaStamina();
         //ColoresTexto(vida, stamina);
-        
+
 
         //Por si se rebasa la vida del jugador de la vida máxima
-        if(vida > vidaMax){
+        if (vida > vidaMax) {
             vida = vidaMax;
-        }
-        else if(vida <= 0)
-        {
-            panelMuerte();
         }
     }
 
-    void RellenaVida(){
-        for(int i = 0 ; i < healthPoints.Length ;i++){
+    void RellenaVida() {
+        for (int i = 0; i < healthPoints.Length; i++) {
             healthPoints[i].enabled = !MostrarPuntoDeSalud(vida, i);
         }
     }
@@ -81,13 +80,13 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
         }
     }
 
-    bool MostrarPuntoDeSalud(float vida, int numPunto){
+    bool MostrarPuntoDeSalud(float vida, int numPunto) {
         //para mostrar la salud
         return (numPunto >= vida);
     }
 
     bool MostrarPuntoDeStamina(int stamina, int numPunto) {
-        return ((numPunto*10) >= stamina);
+        return ((numPunto * 10) >= stamina);
     }
 
     void ColoresTexto(float vida, int stamina) {
@@ -121,12 +120,8 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
             default:
                 break;
         }
-    
+
     }
 
-    private void panelMuerte() {
-
-        muertePanel.SetActive(true);
-        Time.timeScale = 0;
-    }
+ 
 }
