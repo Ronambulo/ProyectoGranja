@@ -22,18 +22,12 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         //Encapsulamos variables en una clase y proporcionamos un control m�s preciso (es un setter)
         set
         {
-            //Implica que el valor ser� menor, entonces realiza la animaci�n del hit
-<<<<<<< Updated upstream
+
             if (value < vida)
             {
                 animator.SetTrigger("hit");
             }
-=======
-            //if (value < vida)
-            //{
-                
-            //}
->>>>>>> Stashed changes
+
 
             //asignamos nuevo valor a la variable (value es un valor que le daremos m�s adelante)
             vida = value;
