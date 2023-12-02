@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemyQueSpawnea, transform.position, Quaternion.identity);
 
                 enemigosGenerados++;
-                if (enemigosGenerados >= 3) { 
+                if (enemigosGenerados >= 10) { 
                     puedeSpawnear=false;
                     enemigosGenerados=0;
                     //yield return waitForSeconds();
