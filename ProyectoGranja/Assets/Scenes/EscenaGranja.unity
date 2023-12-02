@@ -4513,7 +4513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1875645063}
   HUD: {fileID: 1092723179}
-  pausaPanel: {fileID: 112322005}
+  pausaPanel: {fileID: 1915865449}
   player: {fileID: 1998829336}
   playerObject: {fileID: 1998829334}
   healthBar: {fileID: 399801974}
@@ -24004,6 +24004,7 @@ MonoBehaviour:
   healthBar: {fileID: 399801974}
   CanvasDontDestroy: {fileID: 1731083475}
   InventoryParent: {fileID: 1875645063}
+  pausePanel: {fileID: 1915865449}
   interiorTPObject: {fileID: 652338578}
   itemManager: {fileID: 1717230806}
   inventoryUI: {fileID: 601268433}
