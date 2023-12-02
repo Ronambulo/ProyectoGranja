@@ -2481,6 +2481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje Default 1 1 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5365228590145850841, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: knockBackForce
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7979095347176842982, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.96
