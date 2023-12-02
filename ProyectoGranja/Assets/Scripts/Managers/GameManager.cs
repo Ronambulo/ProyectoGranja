@@ -67,20 +67,30 @@ public class GameManager : MonoBehaviour
             toolbar.SetActive(false);
             healthBar.SetActive(false);
         }
-        else if(ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
+        else if (ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
         {
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
             toolbar.SetActive(true);
             healthBar.SetActive(true);
         }
-        else if(ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaGranja"){
-            player.position = new Vector3(0.04f, -8.523807f, -0.01f);
+        else if (ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaGranja") {
+            player.position = new Vector3(0.03f, -8.14f, -0.01f);
         }
-        else if(ThisScene == "EscenaMazmorraDentro" && LastScene == "EscenaMazmorraFuera"){
+        else if (ThisScene == "EscenaMazmorraDentro" && LastScene == "EscenaMazmorraFuera") {
             player.position = new Vector3(-2.494712f, -7.835793f, -0.01f);
         }
-        else if(ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaMazmorraDentro"){
+        else if (ThisScene == "EscenaMazmorraFuera" && LastScene == "EscenaMazmorraDentro") {
             player.position = new Vector3(0.2467017f, 1.883749f, -0.01f);
+        }
+        else if (ThisScene == "EscenaGranja" && LastScene == "EscenaMazmorraFuera")
+        {
+            player.position = new Vector3(-5.58f, 2.329f, -0.01f);
+        }
+
+        //Cuando mueres, aparecen de nuevo, por ello tenemos que especificar que cuando estamos dentro de la casa no aparezcan
+        if (ThisScene == "EscenaCasaPlayer") {
+            toolbar.SetActive(false);
+            healthBar.SetActive(false);
         }
 
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
