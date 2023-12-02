@@ -33,7 +33,6 @@ public class SwordHitBox : MonoBehaviour
 
                //colision.collider.SendMessage("OnHit", swordDamage, knockback);
                //Implementamos método
-               Debug.Log(knockback);
                damageableObject.OnHit(swordDamage, knockback);
                
           }
