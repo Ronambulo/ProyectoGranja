@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         }*/
 
         //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
-        perididaStamina(10);
+        perididaStamina(1);
 
 
     }

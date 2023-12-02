@@ -6,7 +6,6 @@ using UnityEngine;
 public class DamageableCharacter : MonoBehaviour, IDamageable
 {
     Animator animator;
-    Rigidbody2D rb;
     Collider2D physicsCollider;
 
     //Para m�s adelante decidir si queremos desactivar las f�sicas
@@ -25,7 +24,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             //Implica que el valor ser� menor, entonces realiza la animaci�n del hit
             if (value < vida)
             {
-                animator.SetTrigger("hit");
+                
             }
 
             //asignamos nuevo valor a la variable (value es un valor que le daremos m�s adelante)
@@ -69,17 +68,15 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
         // Para estar seguros de que est� vivo desde el principio
         animator.SetBool("isAlive", true);
-
-        rb = GetComponent<Rigidbody2D>();
         physicsCollider = GetComponent<Collider2D>();
     }
 
 
-    // //Te lo a�ade autom�ticamente el programa cuando a�ades la interfaz
+    //Te lo a�ade autom�ticamente el programa cuando a�ades la interfaz
     public void OnHit(float danio, Vector2 knockback)
     {
         VidaCharacter -= danio;
-
+        animator.SetTrigger("hit");
         //Aplicar fuerza al enemigo
         transform.Translate(knockback * Time.deltaTime);
     }
