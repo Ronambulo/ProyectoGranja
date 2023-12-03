@@ -18,6 +18,7 @@ public class CursorManager : MonoBehaviour
     private Tilemap interactableMap;
     private Tilemap floor;
 
+
     private List<string> listaEspadas = new List<string> { "Diamond Sword", "Gold Sword", "Bronze Sword" , "Iron Sword" };
     private static string azada="Azada";
     private string objetoEnMano;
