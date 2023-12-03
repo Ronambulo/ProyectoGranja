@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Music : MonoBehaviour
 {
+    [Header("----------- Instancee -----------")]
+    public static Music instance;
+
     [Header("----------- Audio Source -----------")]
     public AudioSource musicTitle;
     public AudioSource musicFarm;
@@ -13,6 +16,7 @@ public class Music : MonoBehaviour
     public AudioSource musicBarrera; 
     public AudioSource musicHome;
 
+    [Header ("----------- Confi Player -----------")]
     public string ThisScene; 
     public Transform player;
 
@@ -26,6 +30,20 @@ public class Music : MonoBehaviour
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded; // Suscribirse al evento
+
+        // asefurar que solo haya una instancia de Music
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // No destruyas este objeto al cargar una nueva escena
+        }
+        else
+        {
+            Destroy(gameObject); // Ya existe una instancia, destruye esta
+            return;
+        }
+
+        StopAllMusic();
         PlayDefaultMusic(); // Iniciar la música predeterminada al principio
 
     }
@@ -35,64 +53,65 @@ public class Music : MonoBehaviour
     {
         ThisScene = scene.name;
 
-        // Detener todas las músicas al principio
-        StopAllMusic();
-
         // Seleccionar y reproducir la música según la escena actual
-       PlayMusicForScene(ThisScene);
+         PlayMusicForScene(ThisScene);
     }
 
-   void PlayMusicForScene(string sceneName)
+    void PlayMusicForScene(string sceneName)
     {
-
         switch (sceneName)
         {
             case "TitleScreen":
-                musicTitle.Play();
-                musicFarm.Stop();
-                musicDeath.Stop();
-                musicBarrera.Stop();
-                musicMazmorra.Stop();
-                musicHome.Stop();
+                StopAllMusicExcept(musicTitle);
+                PlayMusic(musicTitle);
                 break;
             case "EscenaGranja":
-                musicTitle.Stop();
-                musicFarm.Play();
-                musicDeath.Stop();
-                musicBarrera.Stop();
-                musicMazmorra.Stop();
-                musicHome.Stop();
+            case "EscenaPueblo":
+            case "EscenaCamino":
+                StopAllMusicExcept(musicFarm);
+                PlayMusic(musicFarm);
                 break;
             case "EscenaCasaPlayer":
-                musicTitle.Stop();
-                musicFarm.Stop();
-                musicDeath.Stop();
-                musicBarrera.Stop();
-                musicMazmorra.Stop();
-                musicHome.Play();
+                StopAllMusicExcept(musicHome);
+                PlayMusic(musicHome);
                 break;
             case "EscenaMazmorraDentro":
-                musicTitle.Stop();
-                musicFarm.Stop();
-                musicDeath.Stop();
-                musicBarrera.Stop();
-                musicMazmorra.Play();
-                musicHome.Stop();
+                StopAllMusicExcept(musicMazmorra);
+                PlayMusic(musicMazmorra);
                 break;
-
             case "EscenaMazmorraFuera":
-                musicTitle.Stop();
-                musicFarm.Stop();
-                musicDeath.Stop();
-                musicBarrera.Play();
-                musicMazmorra.Stop();
-                musicHome.Stop();
+                StopAllMusicExcept(musicBarrera);
+                PlayMusic(musicBarrera);
                 break;
-
             default:
+                StopAllMusicExcept(musicTitle);
                 PlayDefaultMusic(); // Reproducir música predeterminada si no coincide con ninguna escena específica
                 break;
         }
+    }
+
+    void PlayDefaultMusic()
+    {
+        // Puedes ajustar esto para que coincida con la música que quieras reproducir al principio
+        PlayMusic(musicTitle);
+    }
+
+    void PlayMusic(AudioSource audioSource)
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+
+    void StopAllMusicExcept(AudioSource exceptionSource)
+    {
+        if (musicTitle != exceptionSource) musicTitle.Stop();
+        if (musicFarm != exceptionSource) musicFarm.Stop();
+        if (musicDeath != exceptionSource) musicDeath.Stop();
+        if (musicMazmorra != exceptionSource) musicMazmorra.Stop();
+        if (musicBarrera != exceptionSource) musicBarrera.Stop();
+        if (musicHome != exceptionSource) musicHome.Stop();
     }
 
     void StopAllMusic()
@@ -101,25 +120,8 @@ public class Music : MonoBehaviour
         musicFarm.Stop();
         musicDeath.Stop();
         musicMazmorra.Stop();
-        musicHome.Stop();
-    }
-
-    void PlayDefaultMusic()
-    {
-        // Puedes ajustar esto para que coincida con la música que quieras reproducir al principio
-        musicTitle.Play();
-        musicFarm.Stop();
-        musicDeath.Stop();
-        musicMazmorra.Stop();
         musicBarrera.Stop();
         musicHome.Stop();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
- 
-        
-
-    }
 }
