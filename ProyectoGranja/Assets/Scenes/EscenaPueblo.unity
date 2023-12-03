@@ -591,7 +591,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 4
   m_Sprite: {fileID: 665834402, guid: 79d8126d47b5b4c49adda1d5053f39ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1920,7 +1920,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2085594836, guid: d6001abebccef3f4dbdf5d0f5f9c4b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4942,7 +4942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2144965169, guid: d6001abebccef3f4dbdf5d0f5f9c4b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30859,7 +30859,7 @@ GameObject:
   - component: {fileID: 1350199263}
   m_Layer: 5
   m_Name: DialoWindow
-  m_TagString: Untagged
+  m_TagString: VentanaDialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30881,7 +30881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000051498, y: -224.42}
+  m_AnchoredPosition: {x: -0.000051498, y: -179}
   m_SizeDelta: {x: 1281.7983, y: 448.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350199261
@@ -30929,17 +30929,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350199259}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e4f8a24e79a8458364078e63785a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textoDialogo: {fileID: 1870125754}
-  numFrases: 0
+  numFrases: 2
   frasesDialogo:
   - "\xA1Buenos d\xEDas! El sol brilla especialmente fuerte hoy"
   - "\xBFHas venido a comprar flores?"
   velocidadMostrar: 0.05
+  playerInDialo: 0
+  DialoWindow: {fileID: 0}
+  ToolBar: {fileID: 0}
 --- !u!1 &1382363098
 GameObject:
   m_ObjectHideFlags: 0
@@ -31350,7 +31353,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1817689801, guid: d6001abebccef3f4dbdf5d0f5f9c4b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31814,7 +31817,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 3
   m_Sprite: {fileID: 867687648, guid: d6001abebccef3f4dbdf5d0f5f9c4b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41448,7 +41451,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 4
   m_Sprite: {fileID: -989490687, guid: 0fc80abeac0e37c4981502d39cd61757, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41649,7 +41652,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1618305807, guid: d6001abebccef3f4dbdf5d0f5f9c4b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41877,7 +41880,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7580822406297749768, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2129201122}
+      addedObject: {fileID: 2129201124}
     - targetCorrespondingSourceObject: {fileID: 7580822406297749768, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2129201121}
@@ -41949,18 +41952,6 @@ PolygonCollider2D:
       - {x: 0.21994495, y: -0.21074672}
       - {x: 0.2199378, y: -0.14217392}
   m_UseDelaunayMesh: 0
---- !u!114 &2129201122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129201120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9259b27fa938745b1290d9b9c9faf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2129201123
 MonoBehaviour:
   m_ObjectHideFlags: 0
