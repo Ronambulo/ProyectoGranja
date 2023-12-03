@@ -83,41 +83,44 @@ public class CursorManager : MonoBehaviour
                 Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
             }
             else
-            {
-                Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-                bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
-                if (grid != null)
-                {
-                    if (!cursorPosition.Equals(previousCursorPosition))
+            {   
+                if(Camera.main != null){
+                    Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                
+                    bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
+                    if (grid != null)
                     {
-                        floor.SetTileFlags(previousCursorPosition, TileFlags.None);
-                        floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
-                        if (objetoEnMano==azada && interactableMap != null)
+                        if (!cursorPosition.Equals(previousCursorPosition))
                         {
-                            if (boolReachable && interactableMap.GetTile(cursorPosition) != null)
+                            floor.SetTileFlags(previousCursorPosition, TileFlags.None);
+                            floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
+                            if (objetoEnMano==azada && interactableMap != null)
                             {
-                                floor.SetTileFlags(cursorPosition, TileFlags.None);
-                                floor.SetColor(cursorPosition, listaColores[(int)colores.green]);
+                                if (boolReachable && interactableMap.GetTile(cursorPosition) != null)
+                                {
+                                    floor.SetTileFlags(cursorPosition, TileFlags.None);
+                                    floor.SetColor(cursorPosition, listaColores[(int)colores.green]);
+                                }
+                                else
+                                {
+                                    floor.SetTileFlags(cursorPosition, TileFlags.None);
+                                    floor.SetColor(cursorPosition, listaColores[(int)colores.red]);
+                                }
                             }
                             else
                             {
                                 floor.SetTileFlags(cursorPosition, TileFlags.None);
-                                floor.SetColor(cursorPosition, listaColores[(int)colores.red]);
+                                floor.SetColor(cursorPosition, listaColores[(int)colores.gray]);
                             }
                         }
-                        else
-                        {
-                            floor.SetTileFlags(cursorPosition, TileFlags.None);
-                            floor.SetColor(cursorPosition, listaColores[(int)colores.gray]);
-                        }
                     }
+                    Cursor.visible = false;
+                    if (objetoEnMano == azada && Input.GetMouseButtonDown(0) && interactableMap != null && boolReachable)
+                    {
+                        floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
+                    }
+                    previousCursorPosition = cursorPosition;
                 }
-                Cursor.visible = false;
-                if (objetoEnMano == azada && Input.GetMouseButtonDown(0) && interactableMap != null && boolReachable)
-                {
-                    floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
-                }
-                previousCursorPosition = cursorPosition;
             }
         }
     }

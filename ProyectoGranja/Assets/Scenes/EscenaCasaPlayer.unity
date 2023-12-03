@@ -631,26 +631,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 20
-      m_TileSpriteIndex: 20
-      m_TileMatrixIndex: 1
-      m_TileColorIndex: 1
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 20
-      m_TileSpriteIndex: 20
-      m_TileMatrixIndex: 1
-      m_TileColorIndex: 1
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -693,7 +673,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 40
+  - m_RefCount: 38
     m_Data: {fileID: 11400000, guid: b72511bea7425fc4f93ec558685b3bfc, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -736,28 +716,28 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 40
+  - m_RefCount: 38
     m_Data: {fileID: -5008925626312153057, guid: d670142e9ccd3914d8beeb5dff931732, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 2.2193976e+11
-      e01: NaN
-      e02: 2.0866608e+38
+      e00: -2.8050004e-38
+      e01: 7e-45
+      e02: -9.625482e+16
       e03: 0
-      e10: 3.3e-43
+      e10: 6.6e-44
       e11: NaN
       e12: 4.5905e-41
       e13: 0
-      e20: 6.3123e-41
+      e20: 1.26969e-40
       e21: 0
-      e22: 2.219395e+11
+      e22: -2.804996e-38
       e23: 0
       e30: 0
       e31: 7.34684e-40
-      e32: 3.3e-43
+      e32: 6.6e-44
       e33: 1
-  - m_RefCount: 40
+  - m_RefCount: 38
     m_Data:
       e00: 1
       e01: 0
@@ -778,7 +758,7 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: 4.5164e-41, g: 4.5164e-41, b: 4.5164e-41, a: 4.5164e-41}
-  - m_RefCount: 40
+  - m_RefCount: 38
     m_Data: {r: 1, g: 1, b: 1, a: 0}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1231,6 +1211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367769389}
   - component: {fileID: 367769388}
+  - component: {fileID: 367769390}
   m_Layer: 0
   m_Name: chairs_shadow_137
   m_TagString: Untagged
@@ -1305,6 +1286,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013793480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &367769390
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367769387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.375, y: 0.59375}
+    newSize: {x: 0.375, y: 0.59375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.1875, y: 0.296875}
+      - {x: -0.1875, y: -0.296875}
+      - {x: 0.1875, y: -0.296875}
+      - {x: 0.1875, y: 0.171875}
+      - {x: 0.0625, y: 0.296875}
+  m_UseDelaunayMesh: 0
 --- !u!1 &390656091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,6 +1690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745589180}
   - component: {fileID: 745589179}
+  - component: {fileID: 745589181}
   m_Layer: 0
   m_Name: tables_80
   m_TagString: Untagged
@@ -1733,6 +1765,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013793480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &745589181
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745589178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.75}
+    newSize: {x: 1, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.375}
+      - {x: -0.5, y: -0.375}
+      - {x: 0.5, y: -0.375}
+      - {x: 0.5, y: 0.051738024}
+      - {x: 0.5, y: 0.375}
+  m_UseDelaunayMesh: 0
 --- !u!1 &772635878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,6 +3045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795962158}
   - component: {fileID: 795962157}
+  - component: {fileID: 795962159}
   m_Layer: 0
   m_Name: chairs_shadow_138
   m_TagString: Untagged
@@ -3037,6 +3120,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013793480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &795962159
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795962156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.375, y: 0.59375}
+    newSize: {x: 0.375, y: 0.59375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.03125, y: 0.296875}
+      - {x: -0.1875, y: 0.140625}
+      - {x: -0.1875, y: -0.296875}
+      - {x: 0.1875, y: -0.296875}
+      - {x: 0.1875, y: 0.296875}
+  m_UseDelaunayMesh: 0
 --- !u!1 &830919364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4137,6 +4270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876149248}
   - component: {fileID: 1876149247}
+  - component: {fileID: 1876149249}
   m_Layer: 0
   m_Name: chairs_shadow_96
   m_TagString: Untagged
@@ -4211,6 +4345,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013793480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1876149249
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876149246}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.40625, y: 0.59375}
+    newSize: {x: 0.40625, y: 0.59375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.203125, y: 0.296875}
+      - {x: -0.203125, y: -0.296875}
+      - {x: 0.203125, y: -0.296875}
+      - {x: 0.203125, y: 0.296875}
+  m_UseDelaunayMesh: 0
 --- !u!1001 &1974614724
 PrefabInstance:
   m_ObjectHideFlags: 0

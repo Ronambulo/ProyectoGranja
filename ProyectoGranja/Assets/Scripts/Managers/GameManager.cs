@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -145,8 +144,8 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneUnloaded(Scene scene, LoadSceneMode mode) {
         LastScene = SceneManager.GetActiveScene().name;
-        interiorTPObject = transform.Find("Emotes").gameObject;
-        emoteManager = interiorTPObject.GetComponent<EmoteManager>();
-        emoteManager.interact = false;
+        //interiorTPObject = transform.Find("Emotes").gameObject;
+        //emoteManager = interiorTPObject.GetComponent<EmoteManager>();
+        //emoteManager.interact = false;
     }
 }
