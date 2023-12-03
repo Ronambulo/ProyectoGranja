@@ -12,14 +12,15 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private bool playerInDialo;
     [SerializeField] private GameObject DialoWindow;
     [SerializeField] private GameObject ToolBar;
-    private int index;
+    [SerializeField] private int index;
 
     void Awake()
     {
-        textoDialogo.text = string.Empty;
+        textoDialogo.text = "";
         DialoWindow = GameObject.FindWithTag("VentanaDialogo");
         ToolBar = GameObject.FindWithTag("ToolBar");
-        DialoWindow.GetComponent<Image>().enabled = false;
+        index = 0;
+        DialoWindow.SetActive(false);
     }
 
 
@@ -31,13 +32,13 @@ public class Dialogue : MonoBehaviour
             ToolBar = GameObject.FindWithTag("ToolBar");
         }
 
-        if (Input.GetKey("f") && playerInDialo) {
+        if (Input.GetKeyDown("f") && playerInDialo) {
             ToolBar.SetActive(false);
-            DialoWindow.GetComponent<Image>().enabled = true;
             DialoWindow.SetActive(true);
             StartDialogue();
             while (index < numFrases) {
-                if (Input.GetKey("e")) {
+                if (Input.GetKeyDown("f")) {
+                    Debug.Log("next luine");
                     NextLine();
                 } else {
                         
@@ -45,14 +46,13 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 textoDialogo.text = frasesDialogo[index];
                 ToolBar.SetActive(true);
-                DialoWindow.GetComponent<Image>().enabled = false;
-                 DialoWindow.SetActive(false);
+                DialoWindow.SetActive(false);
             }
         }
     }
        
     void StartDialogue() {
-        index = 0;
+        StopAllCoroutines();
         StartCoroutine(TypeLine());
     }
 
@@ -64,10 +64,11 @@ public class Dialogue : MonoBehaviour
     void NextLine() {
         if (index < numFrases-1) {
             index++;
-            textoDialogo.text = string.Empty;
+            textoDialogo.text = "";
+            StopAllCoroutines();
             StartCoroutine(TypeLine());
         } else {
-            gameObject.SetActive(false);
+            DialoWindow.SetActive(false);
         }
     }
 
@@ -83,6 +84,8 @@ public class Dialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInDialo = false;
+            DialoWindow.SetActive(false);
+            ToolBar.SetActive(true);
         }
     }
 }
