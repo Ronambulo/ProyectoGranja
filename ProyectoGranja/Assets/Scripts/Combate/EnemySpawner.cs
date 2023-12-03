@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     int enemigosGenerados = 0;
 
     private void Start() {
-        //Start coroutine es para iniciar la ejecución de una rutina: son funciones especiales que se utilizan para tareas como animaciones graduales,
+        //Start coroutine es para iniciar la ejecuciï¿½n de una rutina: son funciones especiales que se utilizan para tareas como animaciones graduales,
         // dividirr el trabajo en fotogramas...
         StartCoroutine(Spawner());
 
@@ -31,14 +31,14 @@ public class EnemySpawner : MonoBehaviour
                 int rand = Random.Range(0, enemyPrefabs.Length);
                 GameObject enemyQueSpawnea = enemyPrefabs[rand];
 
-                //rotanión neutra o sin rotación
+                //rotaniï¿½n neutra o sin rotaciï¿½n
                 Instantiate(enemyQueSpawnea, transform.position, Quaternion.identity);
 
                 enemigosGenerados++;
                 if (enemigosGenerados >= enemigosQueSpawnea) { 
                     puedeSpawnear=false;
                     enemigosGenerados=0;
-                    Destroy(spawneador);
+                    Destroy(this.gameObject);
                     //yield return waitForSeconds();
                     //puedeSpawnear = true;
                 }

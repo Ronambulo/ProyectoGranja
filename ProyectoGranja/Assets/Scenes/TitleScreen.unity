@@ -154,10 +154,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 750337925}
   - {fileID: 1048956204}
   - {fileID: 2038374046}
   - {fileID: 1509165084}
-  - {fileID: 750337925}
   - {fileID: 323791352}
   - {fileID: 1229298824}
   m_Father: {fileID: 481040179}
@@ -2307,7 +2307,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6f22d9b7dd29184dbde0cc3f360bf7e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4562,7 +4562,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430823453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1509165085}
+        m_TargetAssemblyTypeName: Inventory_UI, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430823453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4645,7 +4657,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 90c251c8a8887c541ac0d548a66b374c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4773,7 +4785,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7b59cb10ff286f04787b58ef880ed61a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6141,7 +6153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732326939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1509165085}
+        m_TargetAssemblyTypeName: Inventory_UI, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &732326939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,7 +6283,6 @@ MonoBehaviour:
   vidaText: {fileID: 154779573}
   staminaText: {fileID: 365095083}
   muertePanel: {fileID: 1229298820}
-  vueltaACasa: EscenaCasaPlayer
   color1: {r: 0.6745098, g: 0.19607845, b: 0.19607845, a: 1}
   color2: {r: 0.7725491, g: 0.30980393, b: 0.18823531, a: 1}
   color3: {r: 0.8117648, g: 0.36862746, b: 0.1764706, a: 1}
@@ -8905,7 +8928,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7c719ecc322df0a47b806905d2fbf826, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11660,7 +11683,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a011e007d4396e418479ab3fba33ad7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12544,6 +12567,8 @@ MonoBehaviour:
   interiorTPObject: {fileID: 785298936}
   itemManager: {fileID: 1529191639}
   inventoryUI: {fileID: 1509165085}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
   musica: {fileID: 1620042530}
 --- !u!114 &1529191639
 MonoBehaviour:
@@ -12559,6 +12584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 4628796551346524235, guid: 60c9b88ce21dd4548980b287fabbe272, type: 3}
+  - {fileID: 4628796551346524235, guid: 45da7dbde5eb9234bad24073b613c31d, type: 3}
+  - {fileID: 4628796551346524235, guid: 93195081b28c00742ae1b775e8d1f84d, type: 3}
+  - {fileID: 4628796551346524235, guid: f900bfb97712c32438eecad9205df212, type: 3}
 --- !u!114 &1529191640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12571,13 +12599,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9114eb2219fa04e8c4312655635334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 785298940}
+  player: {fileID: 785298937}
+  toolBar_UI: {fileID: 1509165086}
   cursorDefault: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   inventoryPanel: {fileID: 776010290}
-  pauseMenu: {fileID: 0}
-  interactableMap: {fileID: 0}
-  floor: {fileID: 0}
+  pauseMenu: {fileID: 323791351}
+  listaCultivo:
+  - {fileID: 11400000, guid: 7b808182c4d635a438b652340edf615f, type: 2}
+  - {fileID: 11400000, guid: 4fb54710434e8cd40ae4d0d49cb3bca9, type: 2}
+  - {fileID: 11400000, guid: 1a70ee295653a264e9247461b77dd611, type: 2}
+  - {fileID: 11400000, guid: ffdb05c34a3437e4fa858d58dfed70e5, type: 2}
 --- !u!114 &1529191641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15596,7 +15628,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3c269f13e264bab4c9b2ce792a25f6de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0

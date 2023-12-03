@@ -4,23 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dialogue : MonoBehaviour
-{
-    public TextMeshProUGUI textoDialogo;
-    public int numFrases;
-    public string[] frasesDialogo;
-    public float velocidadMostrar;
-    private int index;
 
-    // Start is called before the first frame update
+
+public class Dialogue : MonoBehaviour
+
+{
+    public GameObject dialoguePanel;
+    public TextMeshProUGUI dialogueText;
+    public string[] dialogue;
+    private int index = 0;
+
+    public float wordSpeed;
+    public bool playerIsClose;
+    public bool DialogoCumplido = false;
+
+
     void Start()
     {
-        textoDialogo.text = string.Empty;
-        StartDialogue();
+        dialogueText.text = "";
+        RemoveText();
     }
 
+    // Update is called once per frame
 
-   // Update is called once per frame
     void Update()
     {
 
@@ -53,30 +59,65 @@ public class Dialogue : MonoBehaviour
                 {
                     NextLine();
                 }
-
             }
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+        {
+            RemoveText();
         }
     }
 
-    void StartDialogue() {
+
+
+    public void RemoveText()
+
+    {
+        dialogueText.text = "";
         index = 0;
-        StartCoroutine(TypeLine());
+        dialoguePanel.SetActive(false);
     }
 
-    IEnumerator TypeLine() {
-        foreach(char c in frasesDialogo[index].ToCharArray()) {
-            textoDialogo.text += c;
-            yield return new WaitForSeconds(velocidadMostrar);
+
+
+    IEnumerator Typing()
+    {
+        foreach(char letter in dialogue[index].ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(wordSpeed);
         }
     }
 
-    void NextLine() {
-        if (index < numFrases-1) {
+    public void NextLine()
+    {
+        if (index < dialogue.Length - 1)
+        {
             index++;
-            textoDialogo.text = string.Empty;
-            StartCoroutine(TypeLine());
-        } else {
-            gameObject.SetActive(false);
+            dialogueText.text = "";
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            RemoveText();
+            DialogoCumplido = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsClose = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsClose = false;
+            RemoveText();
         }
     }
 }

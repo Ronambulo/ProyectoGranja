@@ -13,6 +13,7 @@ TagManager:
   - ToolBar
   - Enemy
   - NPCFlores
+  - VentanaDialogo
   layers:
   - Default
   - TransparentFX

@@ -169,12 +169,12 @@ public class Inventory_UI : MonoBehaviour
         draggedIcon.rectTransform.sizeDelta = new Vector2(100,100);
 
         MoveToMousePosition(draggedIcon.gameObject);
-        Debug.Log("start drag: " + draggedSlot.name);
+        //Debug.Log("start drag: " + draggedSlot.name);
     }
 
     public void SlotDrag()
     {
-        Debug.Log("Dragging: "+ draggedSlot.name);
+        //Debug.Log("Dragging: "+ draggedSlot.name);
         MoveToMousePosition(draggedIcon.gameObject);
     }
 
@@ -182,14 +182,14 @@ public class Inventory_UI : MonoBehaviour
     {
         Destroy(draggedIcon.gameObject);
         draggedIcon = null;
-        Debug.Log("Dragged finish: " + draggedSlot.name);
+        //Debug.Log("Dragged finish: " + draggedSlot.name);
     }
 
     public void SlotDrop(Slots_UI slot)
     {
         player.inventory.moveSlot(draggedSlot.slotID, slot.slotID);
         Refresh();
-        Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
+        //Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
     }
 
     private void MoveToMousePosition(GameObject toMove)

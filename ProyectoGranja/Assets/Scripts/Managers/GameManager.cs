@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,9 +23,11 @@ public class GameManager : MonoBehaviour
     public ItemManager itemManager;
     public Inventory_UI inventoryUI;
 
+
     int i = 0;
 
     public Music musica;
+
 
     private void OnEnable()
     {
@@ -66,6 +68,12 @@ public class GameManager : MonoBehaviour
         else if (ThisScene == "EscenaCasaPlayer" && LastScene == "EscenaGranja")
         {
             player.position = new Vector3(0f, -2.146401f, -0.01f);
+            toolbar.SetActive(false);
+            healthBar.SetActive(false);
+        }
+        else if (ThisScene == "EscenaCasaPlayer" && LastScene == "")
+        {
+            player.position = new Vector3(1.88f, -1.7f, -0.01f);
             toolbar.SetActive(false);
             healthBar.SetActive(false);
         }
@@ -140,7 +148,8 @@ public class GameManager : MonoBehaviour
     private void OnSceneUnloaded(Scene scene, LoadSceneMode mode) {
         LastScene = SceneManager.GetActiveScene().name;
         //interiorTPObject = transform.Find("Emotes").gameObject;
-        emoteManager = interiorTPObject.GetComponent<EmoteManager>();
-        emoteManager.interact = false;
+        //emoteManager = interiorTPObject.GetComponent<EmoteManager>();
+        //emoteManager.interact = false;
     }
+
 }
