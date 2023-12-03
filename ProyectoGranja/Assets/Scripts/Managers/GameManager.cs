@@ -69,6 +69,12 @@ public class GameManager : MonoBehaviour
             toolbar.SetActive(false);
             healthBar.SetActive(false);
         }
+        else if (ThisScene == "EscenaCasaPlayer" && LastScene == "")
+        {
+            player.position = new Vector3(1.88f, -1.7f, -0.01f);
+            toolbar.SetActive(false);
+            healthBar.SetActive(false);
+        }
         else if (ThisScene == "EscenaGranja" && LastScene == "EscenaCasaPlayer")
         {
             player.position = new Vector3(-1.270355f, 0.5595689f, -0.01f);
