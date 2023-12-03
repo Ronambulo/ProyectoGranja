@@ -14,7 +14,11 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject ToolBar;
     [SerializeField] private int index;
 
-    void Awake()
+    public float wordSpeed;
+    public bool playerIsClose;
+
+
+    void Start()
     {
         textoDialogo.text = "";
         DialoWindow = GameObject.FindWithTag("VentanaDialogo");
@@ -23,8 +27,7 @@ public class Dialogue : MonoBehaviour
         DialoWindow.SetActive(false);
     }
 
-
-   // Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         if(DialoWindow == null){
@@ -48,6 +51,15 @@ public class Dialogue : MonoBehaviour
                 ToolBar.SetActive(true);
                 DialoWindow.SetActive(false);
             }
+            else if (dialogueText.text == dialogue[index])
+            {
+                NextLine();
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+        {
+            RemoveText();
         }
     }
        
@@ -56,13 +68,19 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine() {
-        textoDialogo.text = frasesDialogo[index];
-        return null;
+    IEnumerator Typing()
+    {
+        foreach(char letter in dialogue[index].ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(wordSpeed);
+        }
     }
 
-    void NextLine() {
-        if (index < numFrases-1) {
+    public void NextLine()
+    {
+        if (index < dialogue.Length - 1)
+        {
             index++;
             textoDialogo.text = "";
             StopAllCoroutines();
@@ -72,15 +90,16 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerInDialo = true;
+            playerIsClose = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
+    private void OnTriggerExit2D(Collider2D other)
+    {
         if (other.CompareTag("Player"))
         {
             playerInDialo = false;
