@@ -6,29 +6,47 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-    public TextMeshProUGUI textoDialogo;
-    public int numFrases;
-    public string[] frasesDialogo;
-    public float velocidadMostrar;
+    [SerializeField] private TextMeshProUGUI textoDialogo;
+    [SerializeField] private int numFrases;
+    [SerializeField] private string[] frasesDialogo;
+    [SerializeField] private bool playerInDialo;
+    [SerializeField] private GameObject DialoWindow;
+    [SerializeField] private GameObject ToolBar;
     private int index;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         textoDialogo.text = string.Empty;
-        StartDialogue();
+        DialoWindow = GameObject.FindWithTag("VentanaDialogo");
+        ToolBar = GameObject.FindWithTag("ToolBar");
+        DialoWindow.GetComponent<Image>().enabled = false;
     }
 
 
    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("e")) {
+        if(DialoWindow == null){
+            DialoWindow = GameObject.FindWithTag("VentanaDialogo");
+            ToolBar = GameObject.FindWithTag("ToolBar");
+        }
+
+        if (Input.GetKey("e") && playerInDialo) {
+            ToolBar.SetActive(false);
+            DialoWindow.GetComponent<Image>().enabled = true;
+            DialoWindow.SetActive(true);
+            StartDialogue();
+        }
+
+        if (Input.GetKey(0)) {
             if (textoDialogo.text == frasesDialogo[index]) {
                 NextLine();
             } else {
                 StopAllCoroutines();
                 textoDialogo.text = frasesDialogo[index];
+                ToolBar.SetActive(true);
+                DialoWindow.GetComponent<Image>().enabled = false;
+                DialoWindow.SetActive(false);
             }
         }
     }
@@ -39,10 +57,8 @@ public class Dialogue : MonoBehaviour
     }
 
     IEnumerator TypeLine() {
-        foreach(char c in frasesDialogo[index].ToCharArray()) {
-            textoDialogo.text += c;
-            yield return new WaitForSeconds(velocidadMostrar);
-        }
+        textoDialogo.text = frasesDialogo[index];
+        return null;
     }
 
     void NextLine() {
@@ -52,6 +68,21 @@ public class Dialogue : MonoBehaviour
             StartCoroutine(TypeLine());
         } else {
             gameObject.SetActive(false);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInDialo = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.CompareTag("Player"))
+        {
+            playerInDialo = false;
         }
     }
 }
