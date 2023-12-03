@@ -22,13 +22,6 @@ public class GameManager : MonoBehaviour
 
     int i = 0;
 
-<<<<<<< Updated upstream:ProyectoGranja/Assets/Scripts/GameManager.cs
-=======
-    public Music musica;
-    public float tiempo = 0; 
-    public bool isJuego = true; 
-
->>>>>>> Stashed changes:ProyectoGranja/Assets/Scripts/Managers/GameManager.cs
     private void OnEnable()
     {
         SceneManager.sceneLoaded -= OnSceneUnloaded;
