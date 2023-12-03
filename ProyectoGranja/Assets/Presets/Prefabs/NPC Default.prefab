@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 6322241142441550948}
   - component: {fileID: 2012006451600107432}
   - component: {fileID: 7200399026937778645}
-  - component: {fileID: 2703465769867498741}
   - component: {fileID: 8244533367590649762}
   m_Layer: 0
   m_Name: NPC Default
@@ -360,22 +359,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9659138, y: 1.0573475}
   m_EdgeRadius: 0
---- !u!114 &2703465769867498741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7580822406297749768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d76e1b4e01313746ba926acf519cfae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerInside: 0
-  InventoryParent: {fileID: 0}
-  ToolBar: {fileID: 0}
-  npcDialogo: {fileID: 0}
 --- !u!114 &8244533367590649762
 MonoBehaviour:
   m_ObjectHideFlags: 0

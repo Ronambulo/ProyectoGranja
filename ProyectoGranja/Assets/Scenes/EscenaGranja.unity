@@ -391,8 +391,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TEXTO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
-  m_sharedMaterial: {fileID: -21559918116640004, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63b96357c78445f48bd51d85d998d65f, type: 2}
+  m_sharedMaterial: {fileID: -5612328932633574468, guid: 63b96357c78445f48bd51d85d998d65f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -416,8 +416,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11610,6 +11610,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: wordSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 40488058}
@@ -11619,15 +11623,65 @@ PrefabInstance:
       objectReference: {fileID: 385632322}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogue.Array.size
-      value: 2
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: ola
+      value: HOMBRE, como tamos.
       objectReference: {fileID: 0}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: tu
+      value: "\xA1Bienvenido de nuevo a U-Farm!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: Bueno... como buenisima (por no decir la mejor) anfitriona que hay por
+        aqui... Me dedicare a darte algunos consejillos...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: Vale vamos a romper un poco la cuarta pared.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: Para moverte, lo tipico; "awsd" o flechita para arriba, flechita para
+        abajo... BUENO, me entiendes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: Ademas para ver tus maravillosos objetos, podras darle al "tabulador",
+        y VOALA aparecera tu inventario.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[6]
+      value: Para poder atacar, deberas darle a la "barra espaciadora", pero OJO
+        solo teniendo la espada en la mano. Igual con la azada.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[7]
+      value: "L\xF3gico, \xBFno?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[8]
+      value: Por si no te has dado cuenta, la "e" sirve para interactuar y tal...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[9]
+      value: Que si que bueno, ya me callo un mes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[10]
+      value: "Lo unico que te voy a decir es habla, pasea, planta, \xA1y pasalo en
+        grande!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[11]
+      value: "\xA1\xA1AUNQUE TEN CUIDADO!! Hay una mazmorra ahi arriba, con \"Slimes\"
+        bastante aterradores......."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[12]
+      value: Ala, a difrutar.
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2703465769867498741, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
