@@ -41418,21 +41418,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
-    - target: {fileID: 6322241142441550948, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1191233474, guid: 0defadae72d0bcd40a5199935e9897b4, type: 3}
-    - target: {fileID: 7200399026937778645, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7200399026937778645, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.65625
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 7580822406297749768, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: m_Name
       value: NPC Default
