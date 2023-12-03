@@ -72,6 +72,11 @@ public class CursorManager : MonoBehaviour
             Cursor.visible = true;
             cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
             Cursor.SetCursor(cursorAtaque, cursorHotspot, CursorMode.Auto);
+            if (grid != null)
+            {
+                floor.SetTileFlags(previousCursorPosition, TileFlags.None);
+                floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
+            }
         }
         else
         {
@@ -81,14 +86,21 @@ public class CursorManager : MonoBehaviour
 
                 cursorHotspot = new Vector2(cursorDefault.width / divisor, cursorDefault.height / divisor);
                 Cursor.SetCursor(cursorDefault, cursorHotspot, CursorMode.Auto);
+
+                if (grid!=null)
+                {
+                    floor.SetTileFlags(previousCursorPosition, TileFlags.None);
+                    floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
+                }
             }
             else
             {
-                Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-                bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
-                if (grid != null)
-                {
-                    if (!cursorPosition.Equals(previousCursorPosition))
+                Cursor.visible = false;
+                if (Camera.main != null){
+                    Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                
+                    bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
+                    if (grid != null)
                     {
                         floor.SetTileFlags(previousCursorPosition, TileFlags.None);
                         floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
@@ -111,13 +123,15 @@ public class CursorManager : MonoBehaviour
                             floor.SetColor(cursorPosition, listaColores[(int)colores.gray]);
                         }
                     }
+                    if (objetoEnMano == azada && Input.GetMouseButtonDown(0) && interactableMap != null && boolReachable)
+                    {
+                        if (interactableMap.GetTile(cursorPosition)!=null)
+                        {
+                            floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
+                        }
+                    }
+                    previousCursorPosition = cursorPosition;
                 }
-                Cursor.visible = false;
-                if (objetoEnMano == azada && Input.GetMouseButtonDown(0) && interactableMap != null && boolReachable)
-                {
-                    floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
-                }
-                previousCursorPosition = cursorPosition;
             }
         }
     }
