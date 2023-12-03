@@ -6685,6 +6685,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 481040179}
     m_Modifications:
     - target: {fileID: 2383394054314586841, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: espadas
+      value: 
+      objectReference: {fileID: 1509165086}
+    - target: {fileID: 2383394054314586841, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
       propertyPath: interiorTPObject
       value: 
       objectReference: {fileID: 785298936}
@@ -12555,6 +12559,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 4628796551346524235, guid: 60c9b88ce21dd4548980b287fabbe272, type: 3}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 4628796551346524235, guid: 45da7dbde5eb9234bad24073b613c31d, type: 3}
+  - {fileID: 4628796551346524235, guid: 93195081b28c00742ae1b775e8d1f84d, type: 3}
+  - {fileID: 4628796551346524235, guid: f900bfb97712c32438eecad9205df212, type: 3}
+  - {fileID: 4628796551346524235, guid: 73c900fa9c1830745b6f2abf0b58ec24, type: 3}
+  - {fileID: 4628796551346524235, guid: 1551e4b288eb38d40a003ce5c76d48be, type: 3}
+  - {fileID: 4628796551346524235, guid: 73cbc6f361eee6744b6156eaa91cc5b0, type: 3}
+  - {fileID: 4628796551346524235, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+>>>>>>> Stashed changes
 --- !u!114 &1529191640
 MonoBehaviour:
   m_ObjectHideFlags: 0

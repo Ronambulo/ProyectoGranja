@@ -147,18 +147,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25263018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.298, y: -4.852631, z: -0.89934576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.4280005, y: 2.647369, z: -0.6639724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 877112817}
   - {fileID: 261245691}
   - {fileID: 1075471668}
-  - {fileID: 727795691}
   - {fileID: 745106812}
-  - {fileID: 1453161926}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1647319113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &113866143
 PrefabInstance:
@@ -4371,6 +4369,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!1001 &727795690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4483,6 +4482,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3793995409922253441, guid: 37cf77d103a12b8498d55c7e21923220, type: 3}
   m_PrefabInstance: {fileID: 727795690}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &741798740
 GameObject:
   m_ObjectHideFlags: 0
@@ -14088,6 +14089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378270049}
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.01, y: -10.14, z: -2.2625766}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -14095,6 +14097,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_Name
+      value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 961354361}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: enemigosQueSpawnea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2625766
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &1433402547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14196,6 +14261,7 @@ Transform:
   - {fileID: 604551990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &1453161925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14308,6 +14374,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3793995409922253441, guid: 37cf77d103a12b8498d55c7e21923220, type: 3}
   m_PrefabInstance: {fileID: 1453161925}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1500086135
 GameObject:
   m_ObjectHideFlags: 0
@@ -14695,6 +14763,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1553732547}
+  - {fileID: 25263019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765222098
@@ -14957,6 +15026,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!1 &1935728271
 GameObject:
   m_ObjectHideFlags: 0
@@ -15006,6 +15076,8 @@ MonoBehaviour:
   - {fileID: 704486269973502693, guid: deec85e56a9f19c429392767eac04351, type: 3}
   - {fileID: 3729214877941880591, guid: 62cf6a1c56a20c94b88345fc0367fc05, type: 3}
   puedeSpawnear: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1976486984
 GameObject:
   m_ObjectHideFlags: 0
@@ -15399,7 +15471,15 @@ SceneRoots:
   - {fileID: 460387007}
   - {fileID: 1647319113}
   - {fileID: 1448164215}
+<<<<<<< Updated upstream
   - {fileID: 1935728272}
   - {fileID: 1378270051}
   - {fileID: 1452123110}
   - {fileID: 687486062}
+=======
+  - {fileID: 1335503177}
+  - {fileID: 490619743}
+  - {fileID: 1566544273}
+  - {fileID: 532086822}
+  - {fileID: 113866143}
+>>>>>>> Stashed changes

@@ -18,8 +18,6 @@ public class Enemies : MonoBehaviour
 
     Animator animator;
 
-
-
     void Start(){
         rb = GetComponent<Rigidbody2D>();
     }
@@ -67,5 +65,6 @@ public class Enemies : MonoBehaviour
         }
     }
 
+ 
 
 }

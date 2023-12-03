@@ -3143,6 +3143,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &337496569
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2834755612658802225, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_Name
+      value: Iron Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.81068134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0208924
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908490801831286197, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 017f58a2b87c9b349b60a83d1d70f45c, type: 3}
 --- !u!1 &362712571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,7 +3373,6 @@ MonoBehaviour:
   vidaText: {fileID: 2100731172}
   staminaText: {fileID: 42553525}
   muertePanel: {fileID: 631024008}
-  vueltaACasa: EscenaCasaPlayer
   color1: {r: 0.6745098, g: 0.19607845, b: 0.19607845, a: 1}
   color2: {r: 0.7725491, g: 0.30980393, b: 0.18823531, a: 1}
   color3: {r: 0.8117648, g: 0.36862746, b: 0.1764706, a: 1}
@@ -28213,3 +28269,10 @@ SceneRoots:
   - {fileID: 1964763695}
   - {fileID: 1977715785}
   - {fileID: 1062882863}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 1284838048}
+  - {fileID: 870193635}
+  - {fileID: 420163911}
+  - {fileID: 337496569}
+>>>>>>> Stashed changes
