@@ -24712,7 +24712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9114eb2219fa04e8c4312655635334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   player: {fileID: 1998829336}
   cursorDefault: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
@@ -24720,15 +24719,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   interactableMap: {fileID: 0}
   floor: {fileID: 0}
-=======
-  player: {fileID: 1998829334}
-  toolBar_UI: {fileID: 601268431}
-  cursorDefault: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
-  cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
-  inventoryPanel: {fileID: 1875645063}
-  pauseMenu: {fileID: 1915865449}
-  listaCultivo: []
->>>>>>> Stashed changes
 --- !u!114 &1717230808
 MonoBehaviour:
   m_ObjectHideFlags: 0
