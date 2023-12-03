@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "ProyectoGranja/ProyectoGranja.sln"
+    "dotnet.defaultSolution": "ProyectoGranja/ProyectoGranja.sln",
+    "dotnet.preferCSharpExtension": true
 }
