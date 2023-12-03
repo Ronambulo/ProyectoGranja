@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,9 +23,11 @@ public class GameManager : MonoBehaviour
     public ItemManager itemManager;
     public Inventory_UI inventoryUI;
 
+
     int i = 0;
 
     public Music musica;
+
 
     private void OnEnable()
     {
@@ -148,4 +151,5 @@ public class GameManager : MonoBehaviour
         //emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         //emoteManager.interact = false;
     }
+
 }

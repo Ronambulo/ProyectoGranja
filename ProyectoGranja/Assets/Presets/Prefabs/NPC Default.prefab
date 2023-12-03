@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 2012006451600107432}
   - component: {fileID: 7200399026937778645}
   - component: {fileID: 2703465769867498741}
+  - component: {fileID: 8244533367590649762}
   m_Layer: 0
   m_Name: NPC Default
   m_TagString: NPC
@@ -374,3 +375,22 @@ MonoBehaviour:
   isPlayerInside: 0
   InventoryParent: {fileID: 0}
   ToolBar: {fileID: 0}
+  npcDialogo: {fileID: 0}
+--- !u!114 &8244533367590649762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580822406297749768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5e4f8a24e79a8458364078e63785a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogue: []
+  wordSpeed: 0
+  playerIsClose: 0
+  DialogoCumplido: 0

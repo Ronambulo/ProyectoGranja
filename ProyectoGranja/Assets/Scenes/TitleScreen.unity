@@ -12567,6 +12567,8 @@ MonoBehaviour:
   interiorTPObject: {fileID: 785298936}
   itemManager: {fileID: 1529191639}
   inventoryUI: {fileID: 1509165085}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
   musica: {fileID: 1620042530}
 --- !u!114 &1529191639
 MonoBehaviour:

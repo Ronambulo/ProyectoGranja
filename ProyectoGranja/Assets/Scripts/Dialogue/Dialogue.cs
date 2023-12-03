@@ -19,15 +19,11 @@ public class Dialogue : MonoBehaviour
     public bool DialogoCumplido = false;
 
 
-
-
     void Start()
     {
         dialogueText.text = "";
         RemoveText();
     }
-
-
 
     // Update is called once per frame
 
