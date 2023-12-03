@@ -10,41 +10,95 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float prueba;
+    public float prueba; 
     public float valor = 10f;
     private EmoteManager emoteManager;
     public GameObject interiorTPObject;
     private float horizontal;
     private float vertical;
 
-    public int vida = 100;
-    public int stamina = 100;
+    private bool ataque;
+    public int stamina = 80;
 
     private float timeSinceLastMovement;
     public int timeBetweenStaminaLoss = 10;
-    private int staminaLossAmount = 1;
+
+    //CONFIGURACIÓN ESPADA
+    public GameObject swordHitbox;
+    Collider2D swordCollider;
+    public ToolBar_UI espadas;
+
+
+    //Colisiones con objetos
+    Vector2 movementInput;
+
+     //Getter y setter de stamina para utilizarlo para el UI de stamina
+    public int StaminaCharacter
+    {
+        set
+        {
+            stamina = value;
+        }
+        get
+        {
+            return stamina;
+        }
+
+    }
+
+
+    void Start(){
+        //Inicializamos collider de la espada con el objeto
+        swordCollider = swordHitbox.GetComponent<Collider2D>();
+    }
 
     void FixedUpdate()
     {
+        swordCollider = swordHitbox.GetComponent<Collider2D>();
         Animator animator = GetComponent<Animator>();
 
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-
+        //Dentro de los Inputs, el String Jump pertenece al espacio
+        ataque = Input.GetButton("Jump");
 
         prueba = horizontal;
         Animaciones(horizontal, vertical, animator);
-        
+
         Vector3 direction = new Vector3(horizontal, vertical);
         direction.Normalize();
         transform.Translate(direction * speed);
 
         interiorTPObject = transform.Find("Emotes").gameObject;
 
+        //Como hemos cambiado el personaje de dinámico a Kynetic (como se escriba), hay que hacer que manualmente colisione con las cosas
+       /* if (movementInput != Vector2.zero)
+        {
+            bool success = TryMove(movementInput);
 
+            if (!success)
+            {
 
-        //PERDIDA DE STAMINA
-        perididaStamina();
+                success = TryMove(new Vector2(movementInput.x, 0));
+
+                if (!success)
+                {
+
+                    success = TryMove(new Vector2(0, movementInput.y));
+
+                }
+
+            }
+        }
+       private bool TryMove(Vector2 direction);
+        void OnMove(){
+
+            movementInput = movementValue.Get<Vector2>();
+        }*/
+
+        //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
+        perididaStamina(1);
+
 
     }
 
@@ -84,14 +138,28 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Walking", false);
         }
+        
+        if(ataque && espadas.nombreSeccionado == "Iron Sword")
+        {
+            //Debug.Log("Le estas dando");
+            animator.SetBool("Attack", true);
+        }
+        else{
+            //Debug.Log("NO le estas dando");
+            animator.SetBool("Attack", false);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("InteriorTP"))
+        if (other.CompareTag("InteriorTP") || other.CompareTag("NPC") || other.CompareTag("NPCFlores"))
         {
             emoteManager = interiorTPObject.GetComponent<EmoteManager>();
             emoteManager.interact = true;
+            if(other.CompareTag("NPCFlores") && Input.GetKey("e")){
+                
+            }
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -106,7 +174,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void perididaStamina()
+    void perididaStamina(int staminaLossAmount)
     {
         if (vertical != 0 || horizontal != 0)
         {
@@ -120,8 +188,6 @@ public class PlayerController : MonoBehaviour
                 timeSinceLastMovement = 0.0f;
             }
         }
-
-
 
     }
 }

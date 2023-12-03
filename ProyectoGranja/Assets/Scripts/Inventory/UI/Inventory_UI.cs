@@ -13,7 +13,9 @@ public class Inventory_UI : MonoBehaviour
     [SerializeField] public GameObject pausaPanel;
     [SerializeField] public Player player;
     [SerializeField] public GameObject playerObject;
+    [SerializeField] private GameObject healthBar;
     [SerializeField] private Canvas canvas;
+
     private bool dragSingle;
 
     private Slots_UI draggedSlot;
@@ -30,6 +32,7 @@ public class Inventory_UI : MonoBehaviour
     private void Awake()
     {
         Refresh();
+        toggleInventory();
         canvas = FindAnyObjectByType<Canvas>();
     }
 
@@ -37,6 +40,7 @@ public class Inventory_UI : MonoBehaviour
     {
         SetupSlots();
         Refresh();
+        toggleInventory();
     }
 
     void Update()
@@ -44,9 +48,14 @@ public class Inventory_UI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (!pausaPanel.activeSelf) {
+                Refresh();
+                inventoryPanel.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
                 toggleInventory();
             }
 
+        }
+        if(Input.GetKeyDown(KeyCode.E)){
+            Refresh();
         }
 
         if(Input.GetKey(KeyCode.LeftShift)) 
@@ -75,6 +84,7 @@ public class Inventory_UI : MonoBehaviour
             if (!inventoryPanel.activeSelf)
             {
                 inventoryPanel.SetActive(true);
+                healthBar.SetActive(true);
                 playerObject.SetActive(false);
                 HUD.SetActive(true);
                 Refresh();
@@ -86,6 +96,7 @@ public class Inventory_UI : MonoBehaviour
                 playerObject.SetActive(true);
                 if (SceneManager.GetActiveScene().name != "EscenaCasaPlayer")
                     HUD.SetActive(true);
+                    healthBar.SetActive(true);
             }
         }
         
@@ -158,12 +169,12 @@ public class Inventory_UI : MonoBehaviour
         draggedIcon.rectTransform.sizeDelta = new Vector2(100,100);
 
         MoveToMousePosition(draggedIcon.gameObject);
-        Debug.Log("start drag: " + draggedSlot.name);
+        //Debug.Log("start drag: " + draggedSlot.name);
     }
 
     public void SlotDrag()
     {
-        Debug.Log("Dragging: "+ draggedSlot.name);
+        //Debug.Log("Dragging: "+ draggedSlot.name);
         MoveToMousePosition(draggedIcon.gameObject);
     }
 
@@ -171,14 +182,14 @@ public class Inventory_UI : MonoBehaviour
     {
         Destroy(draggedIcon.gameObject);
         draggedIcon = null;
-        Debug.Log("Dragged finish: " + draggedSlot.name);
+        //Debug.Log("Dragged finish: " + draggedSlot.name);
     }
 
     public void SlotDrop(Slots_UI slot)
     {
         player.inventory.moveSlot(draggedSlot.slotID, slot.slotID);
         Refresh();
-        Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
+        //Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
     }
 
     private void MoveToMousePosition(GameObject toMove)
@@ -200,13 +211,29 @@ public class Inventory_UI : MonoBehaviour
             inventoryPanel.SetActive(false);
             playerObject.SetActive(false);
             pausaPanel.SetActive(true);
-            
-           }
-        else { 
-        
-            pausaPanel.SetActive(false);
-            playerObject.SetActive(true);
+
+            Time.timeScale = 0;
         }
+        else {
+            Resume();
+        }
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        pausaPanel.SetActive(false);
+        playerObject.SetActive(true);
+    }
+
+    //para el panel de pausa
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TitleScreen");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private void SetupSlots()

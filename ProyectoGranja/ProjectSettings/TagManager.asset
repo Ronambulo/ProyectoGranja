@@ -8,6 +8,12 @@ TagManager:
   - GameManager
   - InteriorTP
   - EmoteObject
+  - NPC
+  - Inventory
+  - ToolBar
+  - Enemy
+  - NPCFlores
+  - VentanaDialogo
   layers:
   - Default
   - TransparentFX
