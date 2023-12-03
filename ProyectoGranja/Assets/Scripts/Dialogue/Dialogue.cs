@@ -23,14 +23,7 @@ public class Dialogue : MonoBehaviour
    // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-        if (Input.GetKey("e")) {
-            if (textoDialogo.text == frasesDialogo[index]) {
-                NextLine();
-            } else {
-                StopAllCoroutines();
-                textoDialogo.text = frasesDialogo[index];
-=======
+
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (gameObject.tag != "NPCFlores") {
@@ -61,7 +54,6 @@ public class Dialogue : MonoBehaviour
                     NextLine();
                 }
 
->>>>>>> Stashed changes
             }
         }
     }
