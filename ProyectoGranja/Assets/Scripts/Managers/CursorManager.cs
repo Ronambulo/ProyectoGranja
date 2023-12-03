@@ -48,7 +48,7 @@ public class CursorManager : MonoBehaviour
             Mathf.RoundToInt(player.transform.position.z)
             );
         Scene currentScene = SceneManager.GetActiveScene();
-        objetoEnMano = toolBar_UI.nombreSeccionado;
+        objetoEnMano = toolBar_UI.nombreSeleccionado;
 
         if (!currentScene.Equals(prevScene))
         {
