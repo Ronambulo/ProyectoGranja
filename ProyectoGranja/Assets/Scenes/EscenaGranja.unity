@@ -11147,6 +11147,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c22e1f0bc79b4544889630e78fbff09a, type: 2}
+    - target: {fileID: 2703465769867498741, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: ToolBar
+      value: 
+      objectReference: {fileID: 1907195766}
+    - target: {fileID: 2703465769867498741, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: InventoryParent
+      value: 
+      objectReference: {fileID: 1875645063}
     - target: {fileID: 4214707214720247882, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6266718
