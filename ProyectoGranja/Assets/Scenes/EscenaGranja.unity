@@ -2251,8 +2251,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c233673a6c54ae429a9d4cbcb5a9f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 328637527}
-  background: {fileID: 8300000, guid: 8b3140008e6bc21489192da674b1ad46, type: 3}
+  musicTitle: {fileID: 0}
+  musicFarm: {fileID: 0}
+  musicDeath: {fileID: 0}
+  musicMazmorra: {fileID: 0}
+  titulo: 0
+  granja: 1
+  muerte: 0
+  mazmorra: 0
+  ThisScene: EscenaGranja
+  player: {fileID: 0}
 --- !u!1 &233661899
 GameObject:
   m_ObjectHideFlags: 0
@@ -24656,6 +24664,7 @@ MonoBehaviour:
   interiorTPObject: {fileID: 652338578}
   itemManager: {fileID: 1717230806}
   inventoryUI: {fileID: 601268433}
+  musica: {fileID: 0}
 --- !u!114 &1717230806
 MonoBehaviour:
   m_ObjectHideFlags: 0
