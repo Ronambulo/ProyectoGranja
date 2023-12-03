@@ -41123,8 +41123,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: TEXTO
   m_isRightToLeft: 0
+<<<<<<< Updated upstream
   m_fontAsset: {fileID: 11400000, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
   m_sharedMaterial: {fileID: -21559918116640004, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: a0324baba33789a469f2faaa345e7316, type: 2}
+  m_sharedMaterial: {fileID: -9068428443373486560, guid: a0324baba33789a469f2faaa345e7316, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

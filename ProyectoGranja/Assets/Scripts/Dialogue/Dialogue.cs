@@ -29,43 +29,17 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            if (gameObject.tag != "NPCFlores") {
-
-                if (!dialoguePanel.activeInHierarchy)
-                {
-                    dialoguePanel.SetActive(true);
-                    StartCoroutine(Typing());
-
-
-                }
-                else if (dialogueText.text == dialogue[index])
-                {
-                    NextLine();
-                }
-
-            }
-            if (gameObject.tag == "NPCFlores" && !DialogoCumplido) {
-                if (!dialoguePanel.activeInHierarchy)
-                {
-                    dialoguePanel.SetActive(true);
-                    StartCoroutine(Typing());
-
-
-                }
-                else if (dialogueText.text == dialogue[index])
-                {
-                    NextLine();
-                }
-            }
+            if (gameObject.tag != "NPCFlores")
+            {
 
         }
         if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
         {
             RemoveText();
         }
+
     }
 
 
