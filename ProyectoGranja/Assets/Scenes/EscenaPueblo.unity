@@ -4375,7 +4375,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< Updated upstream
 --- !u!1 &940962716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,8 +4616,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949161356}
   m_CullTransparentMesh: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &954252180
 GameObject:
   m_ObjectHideFlags: 0
