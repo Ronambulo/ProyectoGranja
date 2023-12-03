@@ -18,24 +18,24 @@ public class Enemies : MonoBehaviour
 
     Animator animator;
 
+
+
     void Start(){
         rb = GetComponent<Rigidbody2D>();
     }
-
-    
 
     void FixedUpdate() {
         //Hace referencia al primero de la lista de zonaDeteccion (dentro del Script ZonaDeteccion)
         //Collider2D zonaDeteccion0 = zonaDeteccion.objetosDetectados[0]; -> no funcionó
 
-        if (zonaDeteccion.objetosDetectado.Count > 0) {
+        if (zonaDeteccion.objetosDetectado.Count > 0)
+        {
 
             Vector2 direction = (zonaDeteccion.objetosDetectado[0].transform.position - transform.position).normalized;
 
             //Ir hacia el objeto
             transform.Translate(direction * moveSpeed * Time.deltaTime);
         }
-
 
     }
 
@@ -58,7 +58,6 @@ public class Enemies : MonoBehaviour
             //Añadimos fuerza
             Vector2 knockback = direction * knockbackForce;
 
-            //colision.collider.SendMessage("OnHit", swordDamage, knockback);
             //Implementamos método
             //solo hace daño si no esta colisionando con un enemigo :)
             if(!colision.gameObject.CompareTag("Enemy")){

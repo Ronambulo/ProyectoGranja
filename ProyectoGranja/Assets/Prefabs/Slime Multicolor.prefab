@@ -105,6 +105,8 @@ MonoBehaviour:
   damage: 1
   knockbackForce: 50
   moveSpeed: 1.3
+  maxDistancia: 6
+  rango: 0.5
   zonaDeteccion: {fileID: 8717642744353809103}
   rb: {fileID: 5569661025721589416}
 --- !u!50 &5569661025721589416
