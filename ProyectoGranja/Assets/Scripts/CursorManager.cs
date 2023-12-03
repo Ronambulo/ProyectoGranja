@@ -22,13 +22,7 @@ public class CursorManager : MonoBehaviour
     private List<string> listaEspadas = new List<string> { "Diamond Sword", "Gold Sword", "Bronze Sword" , "Iron Sword" };
     private string objetoEnMano;
     private enum colores { noColor, red, green, gray }
-    private List<Color> listaColores = new List<Color> 
-                                                        {
-                                                            Color.white,
-                                                            Color.red,
-                                                            Color.green,
-                                                            new Color(0.75f, 0.75f, 0.75f, 1f)
-                                                        }; 
+    private List<Color> listaColores = new List<Color>{Color.white, Color.red, Color.green, new Color(0.75f, 0.75f, 0.75f, 1f) }; 
 
 
     private int divisor = 10;
