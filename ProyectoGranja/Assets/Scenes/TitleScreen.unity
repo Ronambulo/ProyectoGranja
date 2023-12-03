@@ -496,7 +496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPTIONS
+  m_text: BACK TO MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
   m_sharedMaterial: {fileID: -21559918116640004, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
@@ -3976,7 +3976,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 323791351}
-  isPaused: 0
 --- !u!114 &323791354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5341,7 +5340,7 @@ GameObject:
   - component: {fileID: 533937007}
   - component: {fileID: 533937006}
   m_Layer: 0
-  m_Name: ButtonOptions
+  m_Name: ButtonMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5410,7 +5409,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 533937007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1509165085}
+        m_TargetAssemblyTypeName: Inventory_UI, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533937007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8651,7 +8662,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1229298820}
-  isPaused: 0
 --- !u!114 &1229298822
 MonoBehaviour:
   m_ObjectHideFlags: 0
