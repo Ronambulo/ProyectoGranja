@@ -94,7 +94,7 @@ public class CursorManager : MonoBehaviour
                     {
                         floor.SetTileFlags(previousCursorPosition, TileFlags.None);
                         floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
-                        if (objetoEnMano=="Hoe" && currentScene.name == "EscenaGranja")
+                        if (objetoEnMano=="Azada" && currentScene.name == "EscenaGranja")
                         {
                             if (boolReachable)
                             {
@@ -116,7 +116,7 @@ public class CursorManager : MonoBehaviour
                 }
                 Cursor.visible = false;
             }
-            if (objetoEnMano == "Hoe" && Input.GetMouseButtonDown(0) && crops.GetTile(cursorPosition) != null && boolReachable)
+            if (objetoEnMano == "Azada" && Input.GetMouseButtonDown(0) && crops.GetTile(cursorPosition).name == "Interact" && boolReachable)
             {
                 floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
             }
