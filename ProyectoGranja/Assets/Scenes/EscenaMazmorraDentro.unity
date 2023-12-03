@@ -136,6 +136,10 @@ PrefabInstance:
       value: Spawner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 74717386}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
       propertyPath: tiempoSpawn
       value: 10
       objectReference: {fileID: 0}
@@ -188,6 +192,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+--- !u!1 &74717386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 74717385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &179510498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3841,6 +3850,10 @@ PrefabInstance:
       value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 724389681}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
       propertyPath: enemigosQueSpawnea
       value: 3
       objectReference: {fileID: 0}
@@ -3889,6 +3902,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+--- !u!1 &724389681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 724389680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &741798740
 GameObject:
   m_ObjectHideFlags: 0
@@ -12436,6 +12454,10 @@ PrefabInstance:
       value: Spawner (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 791137220}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
       propertyPath: tiempoSpawn
       value: 30
       objectReference: {fileID: 0}
@@ -12488,6 +12510,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+--- !u!1 &791137220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 791137219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &906104216
 GameObject:
   m_ObjectHideFlags: 0
@@ -12823,6 +12850,10 @@ PrefabInstance:
       value: Spawner (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 1170906816}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
       propertyPath: tiempoSpawn
       value: 10
       objectReference: {fileID: 0}
@@ -12875,6 +12906,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+--- !u!1 &1170906816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 1170906815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1199236873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12887,6 +12923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 1199236874}
     - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
       propertyPath: tiempoSpawn
       value: 10
@@ -12940,6 +12980,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+--- !u!1 &1199236874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 1199236873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1206368398
 GameObject:
   m_ObjectHideFlags: 0
@@ -13607,6 +13652,10 @@ PrefabInstance:
       value: Spawner (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 1759985631}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
       propertyPath: tiempoSpawn
       value: 10
       objectReference: {fileID: 0}
@@ -13659,6 +13708,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+--- !u!1 &1759985631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 1759985630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765222098
 GameObject:
   m_ObjectHideFlags: 0
@@ -14316,5 +14370,5 @@ SceneRoots:
   - {fileID: 791137219}
   - {fileID: 74717385}
   - {fileID: 1199236873}
-  - {fileID: 1759985630}
   - {fileID: 1170906815}
+  - {fileID: 1759985630}

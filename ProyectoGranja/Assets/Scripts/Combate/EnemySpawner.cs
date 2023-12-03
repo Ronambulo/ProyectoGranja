@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] GameObject spawneador;
     [SerializeField] private float tiempoSpawn = 1f;
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private bool puedeSpawnear = true;
@@ -37,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
                 if (enemigosGenerados >= enemigosQueSpawnea) { 
                     puedeSpawnear=false;
                     enemigosGenerados=0;
+                    Destroy(spawneador);
                     //yield return waitForSeconds();
                     //puedeSpawnear = true;
                 }
