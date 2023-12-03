@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
             toolbar.gameObject.SetActive(false);
             healthBar.gameObject.SetActive(false);
             CanvasDontDestroy.SetActive(false);
-            pausePanel.gameObject.SetActive(false);
+            pausePanel.gameObject.SetActive(false); 
             muertePanel.gameObject.SetActive(false);
         }
         else

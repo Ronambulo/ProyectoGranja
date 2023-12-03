@@ -1,43 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pausePanel;
-
-    public bool isPaused;
-
-    void Start()
-    {
-        pausePanel.SetActive(false);
-    }
+    private bool isPaused = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-
-            if (isPaused)
-            {
-                Continue();
-            }
-            else {
-                Pause();
-            }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
         }
     }
 
-    public void Pause() {
+    void TogglePause()
+    {
+        isPaused = !isPaused;
 
-        pausePanel.SetActive(true);
-        //PAUSA EL JUEGO
-        Time.timeScale = 0;
+        if (isPaused)
+        {
+            Pause();
+        }
+        else
+        {
+            Resume();
+        }
     }
 
-    public void Continue()
+    void Pause()
     {
+        Debug.Log("PAUSADO");
+        Time.timeScale = 0f;
+        pausePanel.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        Debug.Log("resumido");
+        Time.timeScale = 1f;
         pausePanel.SetActive(false);
-        //VUELVE A SEGUIR EL JUEGO
-        Time.timeScale = 1;
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TitleScreen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

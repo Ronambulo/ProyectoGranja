@@ -15,6 +15,7 @@ public class Inventory_UI : MonoBehaviour
     [SerializeField] public GameObject playerObject;
     [SerializeField] private GameObject healthBar;
     [SerializeField] private Canvas canvas;
+
     private bool dragSingle;
 
     private Slots_UI draggedSlot;
@@ -210,13 +211,29 @@ public class Inventory_UI : MonoBehaviour
             inventoryPanel.SetActive(false);
             playerObject.SetActive(false);
             pausaPanel.SetActive(true);
-            
-           }
-        else { 
-        
-            pausaPanel.SetActive(false);
-            playerObject.SetActive(true);
+
+            Time.timeScale = 0;
         }
+        else {
+            Resume();
+        }
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        pausaPanel.SetActive(false);
+        playerObject.SetActive(true);
+    }
+
+    //para el panel de pausa
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TitleScreen");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private void SetupSlots()

@@ -24,8 +24,6 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     public TMP_Text staminaText;
 
     public GameObject muertePanel;
-    public string vueltaACasa;
-
 
     //COLORES
     public Color color1;
@@ -44,6 +42,7 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     {
         //Inicializamos la vida al máximo
         vida = playerHealth.VidaCharacter;
+        //muertePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,6 +64,10 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
         //Por si se rebasa la vida del jugador de la vida máxima
         if (vida > vidaMax) {
             vida = vidaMax;
+        }
+        else if(vida <= 0)
+        {
+            panelMuerte();
         }
     }
 
@@ -152,5 +155,9 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
         }
     }
 
- 
+    private void panelMuerte() {
+
+        muertePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
 }

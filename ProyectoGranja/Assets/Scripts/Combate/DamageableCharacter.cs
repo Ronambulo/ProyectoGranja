@@ -22,7 +22,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         //Encapsulamos variables en una clase y proporcionamos un control m�s preciso (es un setter)
         set
         {
-
             if (value < vida)
             {
                 animator.SetTrigger("hit");
