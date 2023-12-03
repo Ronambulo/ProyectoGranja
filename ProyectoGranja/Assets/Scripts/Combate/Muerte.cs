@@ -13,6 +13,7 @@ public class Muerte : MonoBehaviour
 
     public DamageableCharacter playerHealth;
     public PlayerController playerStamina;
+    public DineroScript playerDinero;
 
     void Start()
     {
@@ -35,11 +36,12 @@ public class Muerte : MonoBehaviour
         //REINICIAMOS SUS STATS
         playerHealth.VidaCharacter = 8f;
         playerStamina.StaminaCharacter = 80;
+        playerDinero.dineroCaracter = playerDinero.dineroCaracter/2;
 
         //VOLVEMOS AL IDLE
         animator.SetBool("isAlive", true);
 
-        //reseteamos posición del Player
+        //reseteamos posiciï¿½n del Player
         transformPlayer.position = new Vector3(1.88f, -1.7f, -0.01f);
     }
 

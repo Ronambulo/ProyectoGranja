@@ -16,6 +16,9 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     //Para que un objeto sea targeteable (objetivo)
     public bool targeteable = true;
 
+    public ZonaDeteccion zonaDeteccion;
+
+
 
     public float VidaCharacter
     {
@@ -79,7 +82,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     public void OnHit(float danio, Vector2 knockback)
     {
         VidaCharacter -= danio;
-
         //Aplicar fuerza al enemigo
         transform.Translate(knockback * Time.deltaTime);
     }
@@ -91,8 +93,8 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void ObjectDestroy()
     {
+        zonaDeteccion.dineroObject.dinero += 5;
         Destroy(gameObject);
     }
-
     
 }
