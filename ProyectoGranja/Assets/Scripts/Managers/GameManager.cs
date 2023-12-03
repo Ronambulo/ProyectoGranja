@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneUnloaded(Scene scene, LoadSceneMode mode) {
         LastScene = SceneManager.GetActiveScene().name;
-        //interiorTPObject = transform.Find("Emotes").gameObject;
+        interiorTPObject = transform.Find("Emotes").gameObject;
         emoteManager = interiorTPObject.GetComponent<EmoteManager>();
         emoteManager.interact = false;
     }

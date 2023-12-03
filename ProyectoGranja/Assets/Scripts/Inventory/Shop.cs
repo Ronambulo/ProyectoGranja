@@ -21,8 +21,8 @@ public class Shop : MonoBehaviour {
         }
 
         if (Input.GetKey("e") && isPlayerInside){
-            InventoryParent.GetComponent<RectTransform>().localPosition = new Vector3(0, -126, 0);
             InventoryParent.SetActive(true);
+            InventoryParent.GetComponent<RectTransform>().localPosition = new Vector3(0, -126, 0);
             ToolBar.SetActive(false);
         }
 
