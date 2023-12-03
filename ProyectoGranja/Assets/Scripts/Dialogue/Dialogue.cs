@@ -31,7 +31,7 @@ public class Dialogue : MonoBehaviour
             ToolBar = GameObject.FindWithTag("ToolBar");
         }
 
-        if (Input.GetKey("e") && playerInDialo) {
+        if (Input.GetKey("f") && playerInDialo) {
             ToolBar.SetActive(false);
             DialoWindow.GetComponent<Image>().enabled = true;
             DialoWindow.SetActive(true);

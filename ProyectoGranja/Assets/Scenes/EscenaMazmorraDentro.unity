@@ -3758,11 +3758,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60904e40fd524ad40bb1b79c69fbdb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawneador: {fileID: 0}
   tiempoSpawn: 20
   enemyPrefabs:
   - {fileID: 704486269973502693, guid: deec85e56a9f19c429392767eac04351, type: 3}
   - {fileID: 3729214877941880591, guid: 62cf6a1c56a20c94b88345fc0367fc05, type: 3}
   puedeSpawnear: 1
+  enemigosQueSpawnea: 5
 --- !u!4 &687486062
 Transform:
   m_ObjectHideFlags: 0
@@ -12532,6 +12534,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &961354361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+  m_PrefabInstance: {fileID: 1335503177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1065844906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12949,55 +12956,71 @@ Transform:
   - {fileID: 536455296}
   m_Father: {fileID: 460387007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1378270049
-GameObject:
+--- !u!1001 &1335503177
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1378270051}
-  - component: {fileID: 1378270050}
-  m_Layer: 0
-  m_Name: Spawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1378270050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378270049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60904e40fd524ad40bb1b79c69fbdb47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiempoSpawn: 10
-  enemyPrefabs:
-  - {fileID: 704486269973502693, guid: deec85e56a9f19c429392767eac04351, type: 3}
-  - {fileID: 3729214877941880591, guid: 62cf6a1c56a20c94b88345fc0367fc05, type: 3}
-  puedeSpawnear: 1
---- !u!4 &1378270051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378270049}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.01, y: -10.14, z: -2.2625766}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3698071576423550483, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_Name
+      value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: spawneador
+      value: 
+      objectReference: {fileID: 961354361}
+    - target: {fileID: 4677359612348653201, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: enemigosQueSpawnea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.836858
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.671026
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2625766
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245188896607544115, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd4d7616e16c1494380157bd6d0b0f87, type: 3}
 --- !u!1001 &1433402547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13128,11 +13151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60904e40fd524ad40bb1b79c69fbdb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawneador: {fileID: 0}
   tiempoSpawn: 20
   enemyPrefabs:
   - {fileID: 704486269973502693, guid: deec85e56a9f19c429392767eac04351, type: 3}
   - {fileID: 3729214877941880591, guid: 62cf6a1c56a20c94b88345fc0367fc05, type: 3}
   puedeSpawnear: 1
+  enemigosQueSpawnea: 5
 --- !u!4 &1452123110
 Transform:
   m_ObjectHideFlags: 0
@@ -13780,11 +13805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60904e40fd524ad40bb1b79c69fbdb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawneador: {fileID: 0}
   tiempoSpawn: 6
   enemyPrefabs:
   - {fileID: 704486269973502693, guid: deec85e56a9f19c429392767eac04351, type: 3}
   - {fileID: 3729214877941880591, guid: 62cf6a1c56a20c94b88345fc0367fc05, type: 3}
   puedeSpawnear: 1
+  enemigosQueSpawnea: 5
 --- !u!1 &1976486984
 GameObject:
   m_ObjectHideFlags: 0
@@ -14179,6 +14206,6 @@ SceneRoots:
   - {fileID: 1647319113}
   - {fileID: 1448164215}
   - {fileID: 1935728272}
-  - {fileID: 1378270051}
   - {fileID: 1452123110}
   - {fileID: 687486062}
+  - {fileID: 1335503177}
