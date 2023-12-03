@@ -1,5 +1,4 @@
 using System;
-//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,10 +15,11 @@ public class CursorManager : MonoBehaviour
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public Tile []listaCultivo;
 
-    private Tilemap crops;
+    private Tilemap interactableMap;
     private Tilemap floor;
 
     private List<string> listaEspadas = new List<string> { "Diamond Sword", "Gold Sword", "Bronze Sword" , "Iron Sword" };
+    private static string azada="Azada";
     private string objetoEnMano;
     private enum colores { noColor, red, green, gray }
     private List<Color> listaColores = new List<Color>{Color.white, Color.red, Color.green, new Color(0.75f, 0.75f, 0.75f, 1f) }; 
@@ -30,7 +30,6 @@ public class CursorManager : MonoBehaviour
     private Vector3Int previousCursorPosition = new Vector3Int();
 
     private Scene prevScene= new Scene();
-    private bool gameStarted=false;
 
     void Start()
     {
@@ -48,21 +47,17 @@ public class CursorManager : MonoBehaviour
             Mathf.RoundToInt(player.transform.position.z)
             );
         Scene currentScene = SceneManager.GetActiveScene();
-        objetoEnMano = toolBar_UI.nombreSeleccionado;
-        Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
+        objetoEnMano = toolBar_UI.nombreSeccionado;
 
-        if (currentScene.name=="EscenaGranja"&&!gameStarted)
-            gameStarted=true;
         if (!currentScene.Equals(prevScene))
         {
             prevScene = currentScene;
             Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();
             foreach (Tilemap tilemap in tilemaps)
             {
-                if (tilemap.name == "Crops")
+                if (tilemap.name == "interactableMap")
                 {
-                    crops = tilemap;
+                    interactableMap = tilemap;
                 }
                 if (tilemap.name == "Floor")
                 {
@@ -88,15 +83,17 @@ public class CursorManager : MonoBehaviour
             }
             else
             {
-                if (gameStarted == true && grid != null)
+                Vector3Int cursorPosition = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                bool boolReachable = Math.Abs(cursorPosition.x - playerPosition.x * 2) <= 3 && Math.Abs(cursorPosition.y - playerPosition.y * 2) <= 3;
+                if (grid != null)
                 {
                     if (!cursorPosition.Equals(previousCursorPosition))
                     {
                         floor.SetTileFlags(previousCursorPosition, TileFlags.None);
                         floor.SetColor(previousCursorPosition, listaColores[(int)colores.noColor]);
-                        if (objetoEnMano=="Azada" && currentScene.name == "EscenaGranja")
+                        if (objetoEnMano==azada && interactableMap != null)
                         {
-                            if (boolReachable)
+                            if (boolReachable && interactableMap.GetTile(cursorPosition) != null)
                             {
                                 floor.SetTileFlags(cursorPosition, TileFlags.None);
                                 floor.SetColor(cursorPosition, listaColores[(int)colores.green]);
@@ -115,12 +112,12 @@ public class CursorManager : MonoBehaviour
                     }
                 }
                 Cursor.visible = false;
+                if (objetoEnMano == azada && Input.GetMouseButtonDown(0) && interactableMap != null && boolReachable)
+                {
+                    floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
+                }
+                previousCursorPosition = cursorPosition;
             }
-            if (objetoEnMano == "Azada" && Input.GetMouseButtonDown(0) && crops.GetTile(cursorPosition).name == "Interact" && boolReachable)
-            {
-                floor.SetTile(cursorPosition, listaCultivo[new System.Random().Next(0, 3)]);
-            }
-            previousCursorPosition = cursorPosition;
         }
     }
 }
