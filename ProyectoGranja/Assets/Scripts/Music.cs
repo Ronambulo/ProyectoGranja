@@ -13,11 +13,16 @@ public class Music : MonoBehaviour
     public AudioSource musicFarm;
     public AudioSource musicDeath;
     public AudioSource musicMazmorra;
-    public AudioSource musicBarrera; 
+    public AudioSource musicBarrera;
     public AudioSource musicHome;
 
+<<<<<<< Updated upstream
     [Header ("----------- Confi Player -----------")]
     public string ThisScene; 
+=======
+    [Header("----------- Confi Player -----------")]
+    public string ThisScene;
+>>>>>>> Stashed changes
     public Transform player;
 
     /*[Header("----------- Audio Clip -----------")]
@@ -54,7 +59,11 @@ public class Music : MonoBehaviour
         ThisScene = scene.name;
 
         // Seleccionar y reproducir la música según la escena actual
+<<<<<<< Updated upstream
          PlayMusicForScene(ThisScene);
+=======
+        PlayMusicForScene(ThisScene);
+>>>>>>> Stashed changes
     }
 
     void PlayMusicForScene(string sceneName)
