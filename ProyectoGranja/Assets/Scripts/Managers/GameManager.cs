@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     int i = 0;
 
+    public Music musica;
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded -= OnSceneUnloaded;
@@ -131,6 +133,7 @@ public class GameManager : MonoBehaviour
                 player.gameObject.SetActive(true); 
             }
         }
+    
 
     }
 
