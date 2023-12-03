@@ -10,6 +10,7 @@ public class ZonaDeteccion : MonoBehaviour
     public List<Collider2D> objetosDetectado = new List<Collider2D>();
 
     public Collider2D col;
+    public DineroScript dineroObject;
 
 
     //Detecta cuando el enemigo entra en el rango
@@ -18,6 +19,10 @@ public class ZonaDeteccion : MonoBehaviour
         //si el tag es el del jugador
         if (collider.gameObject.tag == tagObjetivo){
             objetosDetectado.Add(collider);
+        }
+
+        if(collider.CompareTag("Player")){
+            dineroObject = collider.GetComponent<DineroScript>();
         }
     }
 

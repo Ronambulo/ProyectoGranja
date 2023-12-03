@@ -105,8 +105,6 @@ MonoBehaviour:
   damage: 1
   knockbackForce: 50
   moveSpeed: 1.3
-  maxDistancia: 6
-  rango: 0.5
   zonaDeteccion: {fileID: 945632164264135124}
   rb: {fileID: 7331791324034574177}
 --- !u!50 &7331791324034574177
@@ -186,6 +184,7 @@ MonoBehaviour:
   disableSimulation: 0
   vida: 3
   targeteable: 1
+  zonaDeteccion: {fileID: 945632164264135124}
 --- !u!95 &4119250385412541534
 Animator:
   serializedVersion: 5
@@ -290,3 +289,4 @@ MonoBehaviour:
   tagObjetivo: Player
   objetosDetectado: []
   col: {fileID: 7330557229191207208}
+  dineroObject: {fileID: 0}

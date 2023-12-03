@@ -7,11 +7,13 @@ using UnityEngine.UI;
 using TMPro;
 //Añadimos librería para cambiar de escena cuando mueras
 using UnityEngine.SceneManagement;
+using UnityEditor.Tilemaps;
 
 public class UiHealthInteractiveHealthStamina : MonoBehaviour
 {
     public DamageableCharacter playerHealth;
     public PlayerController playerStamina;
+    public DineroScript playerDinero;
 
     // public Image healthBar;
     public Image[] healthPoints;
@@ -19,9 +21,10 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
 
     public int stamina;
     public float vida, vidaMax = 8;
-
+    public int dinero = 0;
     public TMP_Text vidaText;
     public TMP_Text staminaText;
+    public TMP_Text dineroText;
 
     public GameObject muertePanel;
 
@@ -42,6 +45,7 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     {
         //Inicializamos la vida al máximo
         vida = playerHealth.VidaCharacter;
+        dinero = playerDinero.dineroCaracter;
         //muertePanel.SetActive(false);
     }
 
@@ -50,11 +54,14 @@ public class UiHealthInteractiveHealthStamina : MonoBehaviour
     {
         vida = playerHealth.VidaCharacter;
         stamina = playerStamina.StaminaCharacter;
+        dinero = playerDinero.dineroCaracter;
 
         vidaText.text = "" + vida;
         //vidaText.color =  color2; 
 
         staminaText.text = "" + stamina;
+
+        dineroText.text = "" + dinero;
 
         RellenaVida();
         RellenaStamina();
