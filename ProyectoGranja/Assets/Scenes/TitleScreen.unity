@@ -12591,7 +12591,11 @@ MonoBehaviour:
   cursorAtaque: {fileID: 2800000, guid: 576f530b96b80e247bbe76617a61bf42, type: 3}
   inventoryPanel: {fileID: 776010290}
   pauseMenu: {fileID: 323791351}
-  listaCultivo: []
+  listaCultivo:
+  - {fileID: 11400000, guid: 7b808182c4d635a438b652340edf615f, type: 2}
+  - {fileID: 11400000, guid: 4fb54710434e8cd40ae4d0d49cb3bca9, type: 2}
+  - {fileID: 11400000, guid: 1a70ee295653a264e9247461b77dd611, type: 2}
+  - {fileID: 11400000, guid: ffdb05c34a3437e4fa858d58dfed70e5, type: 2}
 --- !u!114 &1529191641
 MonoBehaviour:
   m_ObjectHideFlags: 0
