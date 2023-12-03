@@ -214,12 +214,26 @@ public class Inventory_UI : MonoBehaviour
 
             Time.timeScale = 0;
         }
-        else { 
-        
-            pausaPanel.SetActive(false);
-            playerObject.SetActive(true);
-            Time.timeScale = 1;
+        else {
+            Resume();
         }
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        pausaPanel.SetActive(false);
+        playerObject.SetActive(true);
+    }
+
+    //para el panel de pausa
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TitleScreen");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private void SetupSlots()

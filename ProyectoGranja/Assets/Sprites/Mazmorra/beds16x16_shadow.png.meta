@@ -131,7 +131,7 @@ TextureImporter:
         width: 25
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 31
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 16
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 25
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 25
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 16
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
         width: 29
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
         width: 32
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,153 @@ TextureImporter:
       bones: []
       spriteID: 11d158cd4a4a2b64e8b296e9a57865b2
       internalID: 1432989813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 160
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d8e034b79580644900223e359d9c4e
+      internalID: -561902193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 182
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee49fdefe19a864419e0d5cb72d84256
+      internalID: 398281986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 181
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ea191c7d02c934a955c16850f95d1f
+      internalID: 1682573493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 182
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4a72bef03c1e449a5a866d8f68d877
+      internalID: -1020293294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_12
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 160
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8ae12a584791249a9b15d87a7e6b4c
+      internalID: 1256953634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 182
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ee4e3953de7704eb5d2043d6ed197a
+      internalID: 479711352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beds16x16_shadow_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 181
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7109353a6d14942b84d9a17b1aeb26
+      internalID: 2095610907
       vertices: []
       indices: 
       edges: []
@@ -303,12 +450,19 @@ TextureImporter:
     nameFileIdTable:
       beds16x16_shadow_0: -1531778967
       beds16x16_shadow_1: 1025784676
+      beds16x16_shadow_10: 1682573493
+      beds16x16_shadow_11: -1020293294
+      beds16x16_shadow_12: 1256953634
+      beds16x16_shadow_13: 479711352
+      beds16x16_shadow_14: 2095610907
       beds16x16_shadow_2: 1238904544
       beds16x16_shadow_3: 591858166
       beds16x16_shadow_4: 2132920776
       beds16x16_shadow_5: 1124675400
       beds16x16_shadow_6: -452453489
       beds16x16_shadow_7: 1432989813
+      beds16x16_shadow_8: -561902193
+      beds16x16_shadow_9: 398281986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

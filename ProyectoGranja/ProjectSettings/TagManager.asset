@@ -12,6 +12,7 @@ TagManager:
   - Inventory
   - ToolBar
   - Enemy
+  - NPCFlores
   layers:
   - Default
   - TransparentFX

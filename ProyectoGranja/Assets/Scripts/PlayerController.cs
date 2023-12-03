@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         }*/
 
         //PERDIDA DE STAMINA EL PARAMETRO ES LA CANTIDAD DE ESTAMINA QUE SE PIERDE
-        perididaStamina(10);
+        perididaStamina(1);
 
 
     }
@@ -151,11 +151,12 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("InteriorTP") || other.CompareTag("NPC"))
+        if (other.CompareTag("InteriorTP") || other.CompareTag("NPC") || other.CompareTag("NPCFlores"))
         {
             emoteManager = interiorTPObject.GetComponent<EmoteManager>();
             emoteManager.interact = true;
-            if(other.CompareTag("NPC")){
+            if(other.CompareTag("NPCFlores") && Input.GetKey("e")){
+                
             }
         }
     }
