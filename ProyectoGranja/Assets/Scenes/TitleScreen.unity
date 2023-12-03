@@ -4562,7 +4562,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430823453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1509165085}
+        m_TargetAssemblyTypeName: Inventory_UI, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430823453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,7 +6271,6 @@ MonoBehaviour:
   vidaText: {fileID: 154779573}
   staminaText: {fileID: 365095083}
   muertePanel: {fileID: 1229298820}
-  vueltaACasa: EscenaCasaPlayer
   color1: {r: 0.6745098, g: 0.19607845, b: 0.19607845, a: 1}
   color2: {r: 0.7725491, g: 0.30980393, b: 0.18823531, a: 1}
   color3: {r: 0.8117648, g: 0.36862746, b: 0.1764706, a: 1}
