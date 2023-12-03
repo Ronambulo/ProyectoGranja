@@ -36,21 +36,21 @@ public class Dialogue : MonoBehaviour
             DialoWindow.GetComponent<Image>().enabled = true;
             DialoWindow.SetActive(true);
             StartDialogue();
-        }
-
-        if (Input.GetKey(0)) {
-            if (textoDialogo.text == frasesDialogo[index]) {
-                NextLine();
-            } else {
+            while (index < numFrases) {
+                if (Input.GetKey("e")) {
+                    NextLine();
+                } else {
+                        
+                }
                 StopAllCoroutines();
                 textoDialogo.text = frasesDialogo[index];
                 ToolBar.SetActive(true);
                 DialoWindow.GetComponent<Image>().enabled = false;
-                DialoWindow.SetActive(false);
+                 DialoWindow.SetActive(false);
             }
         }
     }
-
+       
     void StartDialogue() {
         index = 0;
         StartCoroutine(TypeLine());
