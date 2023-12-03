@@ -11607,7 +11607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580822406297749768, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: m_TagString
-      value: NPCFlores
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogueText
@@ -11619,11 +11619,15 @@ PrefabInstance:
       objectReference: {fileID: 385632322}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogue.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: ola
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: tu
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2703465769867498741, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}

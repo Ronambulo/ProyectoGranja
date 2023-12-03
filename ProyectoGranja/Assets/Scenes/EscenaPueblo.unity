@@ -30833,6 +30833,7 @@ MonoBehaviour:
   dialogue: []
   wordSpeed: 0
   playerIsClose: 0
+  DialogoCumplido: 0
 --- !u!1 &1382363098
 GameObject:
   m_ObjectHideFlags: 0
@@ -41780,7 +41781,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NPCFlores
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8244533367590649762, guid: 102c6c220a932ca45a7d550aa4745161, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -41812,6 +41814,7 @@ MonoBehaviour:
   - que tal
   wordSpeed: 0
   playerIsClose: 0
+  DialogoCumplido: 0
 --- !u!1 &2130689612
 GameObject:
   m_ObjectHideFlags: 0
