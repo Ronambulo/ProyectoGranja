@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
     {
         if (ThisScene == "TitleScreen")
         {
-            player.gameObject.SetActive(false);
+            player.gameObject.SetActive(true);
             toolbar.gameObject.SetActive(false);
             healthBar.gameObject.SetActive(false);
             CanvasDontDestroy.SetActive(false);

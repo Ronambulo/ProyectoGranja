@@ -7,7 +7,6 @@ using UnityEngine.UI;
 using TMPro;
 //Añadimos librería para cambiar de escena cuando mueras
 using UnityEngine.SceneManagement;
-using UnityEditor.Tilemaps;
 
 public class UiHealthInteractiveHealthStamina : MonoBehaviour
 {

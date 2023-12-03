@@ -16,23 +16,23 @@ public class DayNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isJuego){
-            gameManager.tiempo += Time.deltaTime;
-            testSignificantTime();
-        }
+        // if (gameManager.isJuego){
+        //     gameManager.tiempo += Time.deltaTime;
+        //     testSignificantTime();
+        // }
 
     }
 
     public void testSignificantTime(){
         //Resetear tiempo cuando pasan 24 min (24 horas en juego)
-        if (gameManager.tiempo == 1440){
-            gameManager.tiempo = 0;
-        }
+        // if (gameManager.tiempo == 1440){
+        //     gameManager.tiempo = 0;
+        // }
 
-        if (gameManager.tiempo >= 0 && gameManager.tiempo <= 540) {
-            esDeDia = true;
-        } else {
-            esDeDia = false;
-        }
+        // if (gameManager.tiempo >= 0 && gameManager.tiempo <= 540) {
+        //     esDeDia = true;
+        // } else {
+        //     esDeDia = false;
+        // }
     }
 }
