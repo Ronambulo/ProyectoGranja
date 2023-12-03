@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float tiempoSpawn = 1f;
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private bool puedeSpawnear = true;
+    [SerializeField] private int enemigosQueSpawnea = 5;
 
     int enemigosGenerados = 0;
 
@@ -33,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemyQueSpawnea, transform.position, Quaternion.identity);
 
                 enemigosGenerados++;
-                if (enemigosGenerados >= 10) { 
+                if (enemigosGenerados >= enemigosQueSpawnea) { 
                     puedeSpawnear=false;
                     enemigosGenerados=0;
                     //yield return waitForSeconds();

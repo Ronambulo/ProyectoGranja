@@ -2255,10 +2255,8 @@ MonoBehaviour:
   musicFarm: {fileID: 0}
   musicDeath: {fileID: 0}
   musicMazmorra: {fileID: 0}
-  titulo: 0
-  granja: 1
-  muerte: 0
-  mazmorra: 0
+  musicBarrera: {fileID: 0}
+  musicHome: {fileID: 0}
   ThisScene: EscenaGranja
   player: {fileID: 0}
 --- !u!1 &233661899
