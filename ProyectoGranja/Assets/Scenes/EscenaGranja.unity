@@ -534,8 +534,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
-  m_sharedMaterial: {fileID: -21559918116640004, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3689,6 +3689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1998829337}
   playerStamina: {fileID: 1998829338}
+  playerDinero: {fileID: 0}
   healthPoints:
   - {fileID: 486050039}
   - {fileID: 1912881100}
@@ -3710,8 +3711,10 @@ MonoBehaviour:
   stamina: 0
   vida: 0
   vidaMax: 8
+  dinero: 0
   vidaText: {fileID: 2100731172}
   staminaText: {fileID: 42553525}
+  dineroText: {fileID: 0}
   muertePanel: {fileID: 631024008}
   color1: {r: 0.6745098, g: 0.19607845, b: 0.19607845, a: 1}
   color2: {r: 0.7725491, g: 0.30980393, b: 0.18823531, a: 1}
@@ -28371,8 +28374,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
-  m_sharedMaterial: {fileID: -21559918116640004, guid: c5c775aa405e7c140b0cd646d6eb39c0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
