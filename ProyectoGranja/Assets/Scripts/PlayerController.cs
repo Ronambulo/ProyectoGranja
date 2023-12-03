@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     //CONFIGURACIÓN ESPADA
     public GameObject swordHitbox;
     Collider2D swordCollider;
+    public ToolBar_UI espadas;
 
 
     //Colisiones con objetos
@@ -138,7 +139,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Walking", false);
         }
         
-        if(ataque){
+        if(ataque && espadas.nombreSeccionado == "Iron Sword")
+        {
             //Debug.Log("Le estas dando");
             animator.SetBool("Attack", true);
         }

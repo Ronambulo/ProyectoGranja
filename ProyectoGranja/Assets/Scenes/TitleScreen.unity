@@ -6696,6 +6696,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 481040179}
     m_Modifications:
     - target: {fileID: 2383394054314586841, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
+      propertyPath: espadas
+      value: 
+      objectReference: {fileID: 1509165086}
+    - target: {fileID: 2383394054314586841, guid: 9240ea62490c7584cbedc2e263325e52, type: 3}
       propertyPath: interiorTPObject
       value: 
       objectReference: {fileID: 785298936}
